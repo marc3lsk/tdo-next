@@ -1,11 +1,10 @@
 import Link from "next/link";
-import mainLogo from "../static/logo.svg";
 
 const Header = () => (
   <>
     <Link href="/">
       <a>
-        <img src={mainLogo} alt="logo" />
+        <img src={require("../static/logo.png")} alt="logo" />
       </a>
     </Link>
     <Link href="2012">

@@ -5,6 +5,7 @@ const withImages = require("next-images");
 
 module.exports = withImages(
   withTypescript({
+    //inlineImageLimit: 16384,
     //assetPrefix: "/tdo",
     webpack: function(config) {
       if (ANALYZE) {

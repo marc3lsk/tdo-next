@@ -1,15 +1,13 @@
 import Link from "next/link";
 
-const linkStyle = {
-  marginRight: 15
-};
-
 const Header = () => (
-  <div>
+  <>
     <Link href="/">
-      <a style={linkStyle}>Domov</a>
+      <a>
+        <img src="/static/logo.svg" alt="logo" />
+      </a>
     </Link>
-  </div>
+  </>
 );
 
 export default Header;

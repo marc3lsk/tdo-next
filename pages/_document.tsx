@@ -1,9 +1,5 @@
 import Document, { Head, Main, NextScript } from "next/document";
 
-const htmlStyle = {
-  height: "100%"
-};
-
 export default class MyDocument extends Document {
   static getInitialProps(ctx) {
     return Document.getInitialProps(ctx);
@@ -11,7 +7,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html style={htmlStyle}>
+      <html style={{ height: "100%" }}>
         <Head />
         <body>
           <style jsx>

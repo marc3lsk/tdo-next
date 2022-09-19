@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header {
+  background-image: url("../../public/IMG_20220703_111424.jpg");
+  background-repeat: no-repeat;
+}

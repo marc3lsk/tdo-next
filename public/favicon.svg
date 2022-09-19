@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Gravit.io -->
+
+<svg
+   style="isolation:isolate;background-color:white;"
+   viewBox="0 0 71.999999 72"
+   width="72"
+   height="72"
+   version="1.1"
+   id="svg65"
+   sodipodi:docname="favicon.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview67"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="4.3116218"
+     inkscape:cx="-25.28051"
+     inkscape:cy="51.37278"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g63" />
+  <defs
+     id="defs12">
+    <clipPath
+       id="_clipPath_gjluYydYhCR1rW934L2JyrhK6ePrqdHy">
+      <rect
+         width="189.024"
+         height="189.024"
+         id="rect9"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#_clipPath_gjluYydYhCR1rW934L2JyrhK6ePrqdHy)"
+     id="g63"
+     transform="translate(-118.725,-42.724)">
+    <path
+       d="m 149.80294,107.93442 c 3.121,1.986 6.81,3.405 11.067,3.688 4.256,0.284 8.513,0 12.486,-1.135 3.972,-1.419 7.377,-3.689 9.931,-6.243 2.554,-2.837 3.973,-6.243 4.256,-10.216 0.285,-3.405 0,-7.094 -1.418,-10.783 -1.135,-3.689 -2.838,-6.81 -5.392,-9.648 -2.554,-2.554 -5.108,-4.257 -7.945,-5.108 -4.824,-1.418 -9.648,-1.135 -14.756,0.284 -4.541,1.419 -7.946,3.406 -10.5,5.96 -2.553,3.405 -4.54,6.81 -5.391,10.215 -0.851,3.689 -0.568,8.229 0.851,13.053 1.135,4.257 3.406,7.378 6.811,9.933 z"
+       fill-rule="evenodd"
+       fill="#faaf3b"
+       id="path16" />
+    <path
+       d="m 162.28894,52.31442 c 0,1.987 0.851,3.122 2.269,3.974 1.419,0.567 2.839,0.567 3.69,-0.284 2.269,-1.987 2.269,-3.973 0.283,-6.243 -1.687,-1.688 -6.851,0.121 -6.242,2.553 z"
+       fill="#373535"
+       id="path24" />
+    <path
+       d="m 153.77594,49.47742 c 3.688,1.703 5.391,3.689 5.675,5.676 0,1.702 -1.135,3.405 -3.122,5.391 -2.081,1.513 -4.162,3.027 -6.243,4.54 -0.757,0.662 -1.513,1.325 -2.27,1.987 4.162,3.405 8.324,6.81 12.486,10.215 -0.095,0.284 -0.189,0.568 -0.284,0.852 -3.878,-1.798 -7.756,-3.595 -11.634,-5.392 -3.121,-1.419 -5.108,-2.838 -5.959,-4.257 -0.567,-1.418 -0.567,-2.554 0.284,-3.405 2.554,-2.648 5.107,-5.297 7.662,-7.945 0.283,-0.284 0.567,-0.567 0.851,-0.851 -0.568,-0.095 -1.136,-0.189 -1.703,-0.284 -1.703,-0.094 -3.405,-0.189 -5.107,-0.284 -2.46,0.473 -4.919,0.946 -7.379,1.419 -0.851,0.284 -1.702,0.568 -2.554,0.851 -0.189,0.19 -0.378,0.379 -0.567,0.568 -0.189,2.932 -0.378,5.865 -0.568,8.796 -1.135,14.189 -2.838,26.958 -5.391,38.593 -0.663,1.229 -1.325,2.459 -1.987,3.689 0,-7.095 0,-14.189 0,-21.283 0,-7.094 0,-14.188 0,-21.282 -0.094,-3.121 -0.189,-6.243 -0.283,-9.364 0,-1.419 0.567,-2.839 1.418,-4.257 0.852,-1.419 2.271,-2.27 3.69,-2.838 2.553,-1.418 5.391,-2.27 8.513,-2.554 3.215,0.095 6.431,0.19 9.647,0.284 1.703,0.284 3.406,0.567 4.825,1.135 z"
+       fill="#373535"
+       id="path26" />
+    <defs
+       id="defs55">
+      <filter
+         id="KSWRyNcHq7HPrZwZM2PGDHrpjVb5CiiX"
+         x="-0.14154556"
+         y="-0.41532636"
+         width="1.2830911"
+         height="1.8306527"
+         filterUnits="objectBoundingBox"
+         color-interpolation-filters="sRGB">
+        <feGaussianBlur
+           in="SourceGraphic"
+           stdDeviation="8.587218125678056"
+           id="feGaussianBlur44" />
+        <feOffset
+           dx="0"
+           dy="0"
+           result="pf_100_offsetBlur"
+           id="feOffset46" />
+        <feFlood
+           flood-color="#FF00FF"
+           flood-opacity="1"
+           id="feFlood48" />
+        <feComposite
+           in2="pf_100_offsetBlur"
+           operator="in"
+           result="pf_100_dropShadow"
+           id="feComposite50" />
+        <feBlend
+           in="SourceGraphic"
+           in2="pf_100_dropShadow"
+           mode="normal"
+           id="feBlend52" />
+      </filter>
+    </defs>
+  </g>
+</svg>

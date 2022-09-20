@@ -18,7 +18,7 @@ export default function Header() {
         </a>
       </Link>
       <nav className="space-x-5 pt-4 pb-0 bg-white">
-        <MyLink url="/o-tour" text="Tour de Orava" />
+        <MyLink url="/o-tour" text="Čo je Tour de Orava" />
         <span>∕</span>
         <MyLink url="/jazdci" text="Jazdci" />
         <span>∕</span>

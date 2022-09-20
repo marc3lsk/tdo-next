@@ -2,10 +2,10 @@
 <!-- Generator: Gravit.io -->
 
 <svg
-   style="isolation:isolate;background-color:white;"
-   viewBox="0 0 71.999999 72"
-   width="72"
-   height="72"
+   style="isolation:isolate"
+   viewBox="0 0 61.959392 63.666447"
+   width="61.959393"
+   height="63.666447"
    version="1.1"
    id="svg65"
    sodipodi:docname="favicon.svg"
@@ -25,8 +25,8 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="4.3116218"
-     inkscape:cx="-25.28051"
-     inkscape:cy="51.37278"
+     inkscape:cx="-32.238449"
+     inkscape:cy="46.038361"
      inkscape:window-width="1920"
      inkscape:window-height="1018"
      inkscape:window-x="-6"
@@ -48,7 +48,7 @@
   <g
      clip-path="url(#_clipPath_gjluYydYhCR1rW934L2JyrhK6ePrqdHy)"
      id="g63"
-     transform="translate(-118.725,-42.724)">
+     transform="translate(-125.68294,-48.05842)">
     <path
        d="m 149.80294,107.93442 c 3.121,1.986 6.81,3.405 11.067,3.688 4.256,0.284 8.513,0 12.486,-1.135 3.972,-1.419 7.377,-3.689 9.931,-6.243 2.554,-2.837 3.973,-6.243 4.256,-10.216 0.285,-3.405 0,-7.094 -1.418,-10.783 -1.135,-3.689 -2.838,-6.81 -5.392,-9.648 -2.554,-2.554 -5.108,-4.257 -7.945,-5.108 -4.824,-1.418 -9.648,-1.135 -14.756,0.284 -4.541,1.419 -7.946,3.406 -10.5,5.96 -2.553,3.405 -4.54,6.81 -5.391,10.215 -0.851,3.689 -0.568,8.229 0.851,13.053 1.135,4.257 3.406,7.378 6.811,9.933 z"
        fill-rule="evenodd"

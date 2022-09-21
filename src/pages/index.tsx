@@ -1,32 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
-import Slider, { Settings } from "react-slick";
-import ImageGallery from "react-image-gallery";
-import { Carousel } from "react-responsive-carousel";
 
-const images = [
-  2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021,
-].map((rocnik) => ({
-  original: `/index/header${rocnik}.jpg`,
-  thumbnail: `/index/header${rocnik}.jpg`,
-}));
-
-export default function HomePage({ posts }) {
-  const settings: Settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    vertical: true,
-    verticalSwiping: true,
-    beforeChange: function (currentSlide, nextSlide) {
-      console.log("before change", currentSlide, nextSlide);
-    },
-    afterChange: function (currentSlide) {
-      console.log("after change", currentSlide);
-    },
-    adaptiveHeight: false,
-  };
+export default function HomePage() {
   return (
     <>
       <Head>
@@ -46,63 +21,6 @@ export default function HomePage({ posts }) {
               ></img>
             </div>
           ))}
-      </div>
-      <div className="hidden">
-        <Carousel axis="vertical">
-          {[2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021].map(
-            (rocnik) => (
-              <div key={rocnik}>
-                <img
-                  src={`/index/header${rocnik}.jpg`}
-                  alt={`Ročník ${rocnik}`}
-                  className="w-full"
-                ></img>
-                <p className="legend">Legend 1</p>
-              </div>
-            )
-          )}
-        </Carousel>
-        <ImageGallery items={images} thumbnailPosition="left" />
-      </div>
-      <div className="hidden mt-6 mx-auto">
-        <div className="w-10/12 mx-auto">
-          <Slider {...settings}>
-            {[2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021].map(
-              (rocnik) => (
-                <div>
-                  <img
-                    key={rocnik}
-                    src={`/index/header${rocnik}.jpg`}
-                    alt={`Ročník ${rocnik}`}
-                    className="w-full"
-                  ></img>
-                </div>
-              )
-            )}
-          </Slider>
-        </div>
-        <ul className="block space-y-12">
-          {posts?.map((post) => (
-            <li key={post.slug}>
-              <figure className="alignwide wp-block-post-featured-image">
-                <Link href={`/rocnik/${post.slug}`}>
-                  <a>
-                    <img
-                      width="798"
-                      height="198"
-                      src={post.featuredImage.node.sourceUrl}
-                      srcSet={post.featuredImage.node.srcSet}
-                      sizes={post.featuredImage.node.sizes}
-                      className="attachment-post-thumbnail size-post-thumbnail wp-post-image"
-                      alt={post.slug}
-                      loading="lazy"
-                    />
-                  </a>
-                </Link>
-              </figure>
-            </li>
-          ))}
-        </ul>
       </div>
     </>
   );

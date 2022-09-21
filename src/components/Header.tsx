@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Logo from "../../public/logo.svg";
 
+const Rocniky = [2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012];
+
 function MyLink({ url, text }) {
   return (
     <Link href={url}>
@@ -19,10 +21,20 @@ export default function Header() {
       </Link>
       <nav className="space-x-5 pt-4 pb-0 bg-white">
         <MyLink url="/o-tour" text="Čo je Tour de Orava" />
-        <span>∕</span>
+        <span className="text-slate-300">•</span>
         <MyLink url="/jazdci" text="Jazdci" />
-        <span>∕</span>
+        <span className="text-slate-300">•</span>
         <MyLink url="/galeria" text="Galéria" />
+      </nav>
+      <nav className="space-x-5 pt-4 pb-0 bg-white flex flex-wrap justify-center">
+        {Rocniky.map((rocnik, i) => (
+          <>
+            <MyLink url="/galeria" text={rocnik} />
+            {i < Rocniky.length - 1 ? (
+              <span className="text-slate-300">•</span>
+            ) : null}
+          </>
+        ))}
       </nav>
     </header>
   );

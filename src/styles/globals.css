@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-size: 18px;
+}
+
 header {
   background-image: url("../../public/IMG_20220703_111424.jpg");
   background-repeat: no-repeat;

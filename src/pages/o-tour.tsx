@@ -26,7 +26,7 @@ export default () => (
         počas jazdy príslušné tričko.
       </p>
       <div className="flex mt-5 space-x-5">
-        <img src="/dresy/zlty.jpg" alt="Žltý dres" className="w-28" />
+        <img src="/dresy/zlty.jpg" alt="Žltý dres" className="w-28 h-full" />
         <p>
           <strong>Žlté tričko</strong> nosí vedúci jazdec celých pretekov a cení
           sa zo všetkých najviac. Po skončení pretekov je vedúci jazdec
@@ -34,23 +34,31 @@ export default () => (
         </p>
       </div>
       <div className="flex mt-5 space-x-5">
-        <img src="/dresy/zeleny.jpg" alt="Zelený dres" className="w-28" />
+        <img
+          src="/dresy/zeleny.jpg"
+          alt="Zelený dres"
+          className="w-28 h-full"
+        />
         <p>
           <strong>Zelené tričko</strong> je udeľované za šprintérske body. Na
           konci každej etapy sa tieto body udelia jazdcom, ktorí skončia prví,
-          druhí atď.V priebehu etapy možno získať nejaké body aj za najrýchlejší
-          prejazd určitými kontrolnými miestami.
+          druhí atď. V priebehu etapy možno získať nejaké body aj za
+          najrýchlejší prejazd určitými kontrolnými miestami.
         </p>
       </div>
       <div className="flex mt-5 space-x-5">
-        <img src="/dresy/bodkovany.jpg" alt="Bodkovaný dres" className="w-28" />
+        <img
+          src="/dresy/bodkovany.jpg"
+          alt="Bodkovaný dres"
+          className="w-28 h-full"
+        />
         <p>
           <strong>Bodkované tričko</strong> je určené pre kráľa hôr. Na vrchole
           každého výjazdu sú najrýchlejším jazdcom rozdeľované body.
         </p>
       </div>
       <div className="flex mt-5 space-x-5">
-        <img src="/dresy/biely.jpg" alt="Biely dres" className="w-28" />
+        <img src="/dresy/biely.jpg" alt="Biely dres" className="w-28 h-full" />
         <p>
           <strong>Biele tričko</strong> je obdobou žltého trička, je však určené
           jazdcom, ktorí na pretekoch štartujú po prvý krát.

@@ -7,7 +7,7 @@ const Rocniky = [2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012];
 function HeaderLink({ url, text }) {
   return (
     <Link href={url}>
-      <a className="text-xl">{text}</a>
+      <a className="text-xl whitespace-nowrap">{text}</a>
     </Link>
   );
 }
@@ -21,7 +21,7 @@ export default function Header() {
             <Logo className="mx-auto h-[246px]" />
           </a>
         </Link>
-        <nav className="space-x-5 pt-4 pb-0 bg-white">
+        <nav className=" flex flex-wrap justify-center space-x-5 pt-4 pb-0 px-5 lg:px-0 bg-white">
           <HeaderLink url="/o-tour" text="Čo je Tour de Orava" />
           <span className="text-slate-300">•</span>
           <HeaderLink url="/jazdci" text="Jazdci" />

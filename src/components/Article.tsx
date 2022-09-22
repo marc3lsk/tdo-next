@@ -1,8 +1,8 @@
 export default function Article({ children }) {
   return (
     <>
-      <hr className="my-5"></hr>
-      <article className="max-w-3xl mx-auto lg:px-0 px-5">{children}</article>
+      <hr className="mb-5"></hr>
+      <article className="mx-auto max-w-3xl px-5 lg:px-0">{children}</article>
     </>
   );
 }

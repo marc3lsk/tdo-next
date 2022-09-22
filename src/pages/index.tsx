@@ -9,10 +9,10 @@ export default function HomePage() {
       <Head>
         <title>Tour de Orava</title>
       </Head>
-      <div className="space-y-16 mt-5">
+      <div className="space-y-5 lg:space-y-16">
         {Rocniky.map((rocnik) => (
           <div key={rocnik} className="text-center">
-            <h2 className="text-6xl hidden">{rocnik}</h2>
+            <h2 className="hidden text-6xl">{rocnik}</h2>
             <img
               src={`/index/header${rocnik}.jpg`}
               alt={`Ročník ${rocnik}`}

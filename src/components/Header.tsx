@@ -1,8 +1,10 @@
-import { Collapse, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Collapse, IconButton } from "@mui/material";
 import Link from "next/link";
-import { Fragment, useState } from "react";
+import { useRouter } from "next/router";
+import { Fragment, useEffect, useState } from "react";
 import Logo from "../../public/logo.svg";
+import useResponsiveBreakpoints from "../hooks/useResponsiveBreakpoints";
 
 const Rocniky = [2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012];
 
@@ -41,7 +43,13 @@ function MenuItems() {
 }
 
 export default function Header() {
+  const router = useRouter();
+  const responsiveBreakPoints = useResponsiveBreakpoints();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [router.asPath]);
 
   return (
     <>
@@ -51,21 +59,21 @@ export default function Header() {
             <Logo className="mx-auto h-[246px]" />
           </a>
         </Link>
-        <IconButton
-          className="lg:hidden"
-          onClick={() => setIsMenuOpen((isMenuOpen) => !isMenuOpen)}
-          size="large"
-        >
-          <MenuIcon fontSize="large" />
-        </IconButton>
-        <div className="block lg:hidden">
-          <Collapse in={isMenuOpen}>
-            <MenuItems />
-          </Collapse>
-        </div>
-        <div className="hidden lg:block">
+        {responsiveBreakPoints.isLg ? (
           <MenuItems />
-        </div>
+        ) : (
+          <>
+            <IconButton
+              onClick={() => setIsMenuOpen((isMenuOpen) => !isMenuOpen)}
+              size="large"
+            >
+              <MenuIcon fontSize="large" />
+            </IconButton>
+            <Collapse in={isMenuOpen}>
+              <MenuItems />
+            </Collapse>
+          </>
+        )}
       </header>
     </>
   );

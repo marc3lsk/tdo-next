@@ -1,7 +1,3 @@
-import "../styles/gutenberg/common.css";
-import "../styles/gutenberg/style.css";
-import "../styles/gutenberg/theme.css";
-import "../styles/gutenberg-custom.scss";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Layout from "../components/_layout";

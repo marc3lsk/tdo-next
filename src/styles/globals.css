@@ -10,8 +10,3 @@ header {
   background-image: url("../../public/IMG_20220703_111424.jpg");
   background-repeat: no-repeat;
 }
-
-.slick-prev:before,
-.slick-next:before {
-  color: black;
-}

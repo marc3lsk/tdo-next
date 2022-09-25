@@ -12,6 +12,7 @@ import bg8 from "../../public/bg/8.jpg";
 import bg9 from "../../public/bg/9.jpg";
 import { useRouter } from "next/router";
 import styled from "styled-components";
+import shuffle from "lodash-es/shuffle";
 
 const bgArray = [
   bg1.src,
@@ -49,38 +50,24 @@ const UL = styled.ul`
     opacity: 0;
     z-index: 0;
     backface-visibility: hidden;
-    animation: imageAnimation 54s linear infinite 0s;
+    animation: imageAnimation ${bgArray.length * 6}s linear infinite 0s;
   }
   & li:nth-child(1) span {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${bg1.src});
+      url(${bgArray[0]});
   }
   & li:nth-child(2) span {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${bg2.src});
+      url(${bgArray[1]});
     animation-delay: 6s;
   }
-  & li:nth-child(3) span {
-    animation-delay: 12s;
-  }
-  & li:nth-child(4) span {
-    animation-delay: 18s;
-  }
-  & li:nth-child(5) span {
-    animation-delay: 24s;
-  }
-  & li:nth-child(6) span {
-    animation-delay: 30s;
-  }
-  & li:nth-child(7) span {
-    animation-delay: 36s;
-  }
-  & li:nth-child(8) span {
-    animation-delay: 42s;
-  }
-  & li:nth-child(9) span {
-    animation-delay: 48s;
-  }
+  ${bgArray.slice(2).map(
+    (src, i) => `
+& li:nth-child(${i + 3}) span {
+  animation-delay: ${(i + 2) * 6}s;
+}
+`
+  )}
   @keyframes imageAnimation {
     0% {
       opacity: 0;
@@ -88,31 +75,15 @@ const UL = styled.ul`
     1% {
       opacity: 1;
     }
-    11% {
+    ${Math.round(100 * (6 / (6 * bgArray.length)))}% {
       opacity: 1;
     }
-    12% {
+    ${Math.round(100 * (6 / (6 * bgArray.length))) + 1}% {
       opacity: 0;
     }
     100% {
       opacity: 0;
     }
-  }
-`;
-
-const Div = styled.div`
-  & img {
-    max-width: 100%;
-    max-height: 100%;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    overflow: auto;
-    position: fixed;
-    right: 0;
-    top: 0;
-    -o-object-fit: contain;
-    object-fit: contain;
   }
 `;
 
@@ -149,44 +120,14 @@ export default function Layout({ children }) {
       <Head>
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <Div id="scroll-image" className="hidden">
-        <img src={bg1.src} className="test" />
-        <img className="test" />
-        <img className="test" />
-        <img className="test" />
-        <img className="test" />
-        <img className="test" />
-      </Div>
       {router.asPath == "/" ? (
         <>
           <UL className="pozadia">
-            <li>
-              <span />
-            </li>
-            <li>
-              <span />
-            </li>
-            <li>
-              <span />
-            </li>
-            <li>
-              <span />
-            </li>
-            <li>
-              <span />
-            </li>
-            <li>
-              <span />
-            </li>
-            <li>
-              <span />
-            </li>
-            <li>
-              <span />
-            </li>
-            <li>
-              <span />
-            </li>
+            {bgArray.map((src, i) => (
+              <li key={src}>
+                <span />
+              </li>
+            ))}
           </UL>
         </>
       ) : null}

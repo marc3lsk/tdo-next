@@ -9,17 +9,18 @@ export default function HomePage() {
       <Head>
         <title>Tour de Orava</title>
       </Head>
-      <div className="space-y-5 lg:space-y-16">
-        {Rocniky.map((rocnik) => (
-          <div key={rocnik} className="text-center">
-            <h2 className="hidden text-6xl">{rocnik}</h2>
-            <img
-              src={`/index/header${rocnik}.jpg`}
-              alt={`Ročník ${rocnik}`}
-              className="w-full"
-            ></img>
-          </div>
-        ))}
+      <div className="flex flex-wrap pb-16 pt-5">
+        {false &&
+          Rocniky.map((rocnik) => (
+            <div key={rocnik} className="mx-auto w-[500px] text-center">
+              <h2 className="hidden text-6xl">{rocnik}</h2>
+              <img
+                src={`/index/header${rocnik}.jpg`}
+                alt={`Ročník ${rocnik}`}
+                className="w-full"
+              ></img>
+            </div>
+          ))}
       </div>
     </>
   );

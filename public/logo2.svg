@@ -8,7 +8,7 @@
    height="189.024"
    version="1.1"
    id="svg65"
-   sodipodi:docname="logo.svg"
+   sodipodi:docname="logo2.svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -21,11 +21,11 @@
      borderopacity="1.0"
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
+     inkscape:pagecheckerboard="true"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="3.048777"
-     inkscape:cx="6.068007"
+     inkscape:cx="5.9040068"
      inkscape:cy="122.18014"
      inkscape:window-width="1920"
      inkscape:window-height="1018"
@@ -51,7 +51,7 @@
        fill-rule="evenodd"
        fill="rgb(254,254,254)"
        id="path14"
-       style="fill:#000000" />
+       style="fill:none" />
     <path
        d=" M 142.845 102.6 C 145.966 104.586 149.655 106.005 153.912 106.288 C 158.168 106.572 162.425 106.288 166.398 105.153 C 170.37 103.734 173.775 101.464 176.329 98.91 C 178.883 96.073 180.302 92.667 180.585 88.694 C 180.87 85.289 180.585 81.6 179.167 77.911 C 178.032 74.222 176.329 71.101 173.775 68.263 C 171.221 65.709 168.667 64.006 165.83 63.155 C 161.006 61.737 156.182 62.02 151.074 63.439 C 146.533 64.858 143.128 66.845 140.574 69.399 C 138.021 72.804 136.034 76.209 135.183 79.614 C 134.332 83.303 134.615 87.843 136.034 92.667 C 137.169 96.924 139.44 100.045 142.845 102.6 Z "
        fill-rule="evenodd"

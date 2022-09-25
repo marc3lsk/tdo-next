@@ -3,16 +3,18 @@ import { Collapse, IconButton } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Fragment, useEffect, useState } from "react";
-import Logo from "../../public/logo.svg";
+import Logo from "../../public/logo2.svg";
 import useResponsiveBreakpoints from "../hooks/useResponsiveBreakpoints";
 
-const Rocniky = [2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012];
+const Rocniky = [
+  2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012,
+];
 
 function HeaderLink({ url, text }) {
   return (
     <div className="block lg:inline-block">
       <Link href={url}>
-        <a className="whitespace-nowrap text-xl">{text}</a>
+        <a className="whitespace-nowrap text-xl uppercase">{text}</a>
       </Link>
     </div>
   );
@@ -20,21 +22,16 @@ function HeaderLink({ url, text }) {
 
 function MenuItems() {
   return (
-    <div className="mb-5">
-      <nav className="flex-wrap justify-center space-y-3 bg-white px-5 pt-4 pb-0 lg:flex lg:space-y-0 lg:space-x-5 lg:px-0">
-        <HeaderLink url="/o-tour" text="Čo je Tour de Orava" />
-        <span className="hidden text-slate-300 lg:block">•</span>
+    <div className="">
+      <nav className="flex-wrap justify-center space-y-3  px-5 pt-4 pb-0 lg:flex lg:space-y-0 lg:space-x-8 lg:px-0">
+        <HeaderLink url="/o-tour" text="TDO" />
         <HeaderLink url="/jazdci" text="Jazdci" />
-        <span className="hidden text-slate-300 lg:block">•</span>
         <HeaderLink url="/galeria" text="Galéria" />
       </nav>
-      <nav className="flex-wrap justify-center bg-white pt-4 pb-0 lg:flex lg:space-x-5">
+      <nav className="flex-wrap justify-center pt-4 pb-0 lg:flex lg:space-x-8">
         {Rocniky.map((rocnik, i) => (
           <Fragment key={rocnik}>
             <HeaderLink url="/galeria" text={rocnik} />
-            {i < Rocniky.length - 1 ? (
-              <span className="hidden text-slate-300 lg:block">•</span>
-            ) : null}
           </Fragment>
         ))}
       </nav>
@@ -53,12 +50,14 @@ export default function Header() {
 
   return (
     <>
-      <header className="mx-auto block text-center">
-        <Link href="/">
-          <a>
-            <Logo className="mx-auto h-[246px]" />
-          </a>
-        </Link>
+      <header className="relative mx-auto block pb-8 text-center text-white">
+        <div className="flex content-center">
+          <Link href="/">
+            <a className="mx-auto flex self-center">
+              <Logo />
+            </a>
+          </Link>
+        </div>
         {responsiveBreakPoints.isLg ? (
           <MenuItems />
         ) : (

@@ -2,11 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  min-height: 100%;
+}
+
 body {
   font-size: 18px;
 }
 
-header {
-  background-image: url("../../public/IMG_20220703_111424.jpg");
+bodyxxx {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../public/bg/1.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 200ms linear;
+}
+
+mainxxx {
+  background-image: url("../../public/bg3.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

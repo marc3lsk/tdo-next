@@ -61,38 +61,24 @@ const UL = styled.ul`
     animation-delay: 6s;
   }
   & li:nth-child(3) span {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${bg3.src});
     animation-delay: 12s;
   }
   & li:nth-child(4) span {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${bg4.src});
     animation-delay: 18s;
   }
   & li:nth-child(5) span {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${bg5.src});
     animation-delay: 24s;
   }
   & li:nth-child(6) span {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${bg6.src});
     animation-delay: 30s;
   }
   & li:nth-child(7) span {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${bg7.src});
     animation-delay: 36s;
   }
   & li:nth-child(8) span {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${bg8.src});
     animation-delay: 42s;
   }
   & li:nth-child(9) span {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${bg9.src});
     animation-delay: 48s;
   }
   @keyframes imageAnimation {
@@ -134,58 +120,29 @@ export default function Layout({ children }) {
   const router = useRouter();
 
   useEffect(() => {
-    startImageTransition();
+    if (router.asPath != "/") return;
+    let indexPozadia = 2;
+    let timeout = null as any;
 
-    function startImageTransition() {
-      var images = document.getElementsByClassName("test") as any as any[];
+    timeout = setTimeout(nastavitPozadie, 6000);
 
-      for (var i = 0; i < images.length; ++i) {
-        images[i].style.opacity = 1;
-      }
-
-      var top = 1;
-
-      var cur = images.length - 1;
-
-      setInterval(changeImage, 3000);
-
-      async function changeImage() {
-        var nextImage = (1 + cur) % images.length;
-
-        images[cur].style.zIndex = top + 1;
-        //images[nextImage].src = images[nextImage].src || bgArray[nextImage];
-        images[nextImage].style.zIndex = top;
-
-        await transition();
-
-        images[cur].style.zIndex = top;
-
-        images[nextImage].style.zIndex = top + 1;
-
-        top = top + 1;
-
-        images[cur].style.opacity = 1;
-
-        cur = nextImage;
-      }
-
-      function transition() {
-        return new Promise<void>(function (resolve, reject) {
-          var del = 0.01;
-
-          var id = setInterval(changeOpacity, 10);
-
-          function changeOpacity() {
-            images[cur].style.opacity -= del;
-            if (images[cur].style.opacity <= 0) {
-              clearInterval(id);
-              resolve();
-            }
-          }
-        });
+    function nastavitPozadie() {
+      const pozadia = document.querySelectorAll(
+        ".pozadia li span"
+      ) as any as any[];
+      pozadia[
+        indexPozadia
+      ].style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${
+        bgArray[indexPozadia++]
+      })`;
+      if (indexPozadia < bgArray.length) {
+        timeout = setTimeout(nastavitPozadie, 6000);
       }
     }
-  }, []);
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [router.asPath]);
 
   return (
     <>
@@ -202,7 +159,7 @@ export default function Layout({ children }) {
       </Div>
       {router.asPath == "/" ? (
         <>
-          <UL>
+          <UL className="pozadia">
             <li>
               <span />
             </li>

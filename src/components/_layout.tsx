@@ -8,7 +8,7 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <Header />
-      <main className=" pt-5">{children}</main>
+      <main className="pt-5">{children}</main>
     </>
   );
 }

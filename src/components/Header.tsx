@@ -50,7 +50,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="relative mx-auto block pb-8 text-center text-white">
+      <header className="relative mx-auto block text-center text-white">
         <div className="flex content-center">
           <Link href="/">
             <a className="mx-auto flex self-center">

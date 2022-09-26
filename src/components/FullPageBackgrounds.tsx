@@ -126,12 +126,16 @@ export default function FullPageBackgrounds() {
   }, [randomizedBgArray]);
 
   return (
-    <UL className="pozadia">
-      {bgArray.map((src, i) => (
-        <li key={src}>
-          <span />
-        </li>
-      ))}
-    </UL>
+    <>
+      {Array.isArray(randomizedBgArray) ? (
+        <UL className="pozadia">
+          {bgArray.map((src, i) => (
+            <li key={src}>
+              <span />
+            </li>
+          ))}
+        </UL>
+      ) : null}
+    </>
   );
 }

@@ -2,26 +2,126 @@ import { zip } from "lodash-es";
 import { useEffect, useMemo } from "react";
 import styled from "styled-components";
 import useSWR from "swr";
-import bg1 from "../../public/bg/1.jpg";
-import bg2 from "../../public/bg/2.jpg";
-import bg3 from "../../public/bg/3.jpg";
-import bg4 from "../../public/bg/4.jpg";
-import bg5 from "../../public/bg/5.jpg";
-import bg6 from "../../public/bg/6.jpg";
-import bg7 from "../../public/bg/7.jpg";
-import bg8 from "../../public/bg/8.jpg";
-import bg9 from "../../public/bg/9.jpg";
+import _20160705_081154 from "../../public/bg/20160705_081154.jpg";
+import _20160706_090754 from "../../public/bg/20160706_090754.jpg";
+import _20160706_095521 from "../../public/bg/20160706_095521.jpg";
+import _20160706_095542 from "../../public/bg/20160706_095542.jpg";
+import _20160706_155230 from "../../public/bg/20160706_155230.jpg";
+import _20160707_115335_1 from "../../public/bg/20160707_115335-1.jpg";
+import _20160707_115619 from "../../public/bg/20160707_115619.jpg";
+import _20160707_201624 from "../../public/bg/20160707_201624.jpg";
+import _20170702_215435 from "../../public/bg/20170702_215435.jpg";
+import _20170703_130626 from "../../public/bg/20170703_130626.jpg";
+import _20170704_170849 from "../../public/bg/20170704_170849.jpg";
+import _20180707_101853 from "../../public/bg/20180707_101853.jpg";
+import _20190706_113530 from "../../public/bg/20190706_113530.jpg";
+import _IMG_0268 from "../../public/bg/IMG_0268.jpg";
+import _IMG_0271 from "../../public/bg/IMG_0271.jpg";
+import _IMG_0280 from "../../public/bg/IMG_0280.jpg";
+import _IMG_0370 from "../../public/bg/IMG_0370.jpg";
+import _IMG_0374 from "../../public/bg/IMG_0374.jpg";
+import _IMG_0785 from "../../public/bg/IMG_0785.jpg";
+import _IMG_0797 from "../../public/bg/IMG_0797.jpg";
+import _IMG_0824 from "../../public/bg/IMG_0824.jpg";
+import _IMG_0845 from "../../public/bg/IMG_0845.jpg";
+import _IMG_0856 from "../../public/bg/IMG_0856.jpg";
+import _IMG_0925 from "../../public/bg/IMG_0925.jpg";
+import _IMG_0970 from "../../public/bg/IMG_0970.jpg";
+import _IMG_1153 from "../../public/bg/IMG_1153.jpg";
+import _IMG_1386 from "../../public/bg/IMG_1386.jpg";
+import _IMG_1397 from "../../public/bg/IMG_1397.jpg";
+import _IMG_1405 from "../../public/bg/IMG_1405.jpg";
+import _IMG_1472 from "../../public/bg/IMG_1472.jpg";
+import _IMG_20180706_115204 from "../../public/bg/IMG_20180706_115204.jpg";
+import _IMG_20180706_120404 from "../../public/bg/IMG_20180706_120404.jpg";
+import _IMG_20190705_191232 from "../../public/bg/IMG_20190705_191232.jpg";
+import _IMG_20190706_135802 from "../../public/bg/IMG_20190706_135802.jpg";
+import _IMG_20200710_125610 from "../../public/bg/IMG_20200710_125610.jpg";
+import _IMG_20200710_131105 from "../../public/bg/IMG_20200710_131105.jpg";
+import _IMG_20200710_135433 from "../../public/bg/IMG_20200710_135433.jpg";
+import _IMG_20210702_114530 from "../../public/bg/IMG_20210702_114530.jpg";
+import _IMG_20210703_103033 from "../../public/bg/IMG_20210703_103033.jpg";
+import _IMG_20210703_111010 from "../../public/bg/IMG_20210703_111010.jpg";
+import _IMG_20210703_124737 from "../../public/bg/IMG_20210703_124737.jpg";
+import _IMG_20210704_103717 from "../../public/bg/IMG_20210704_103717.jpg";
+import _IMG_20210704_144401 from "../../public/bg/IMG_20210704_144401.jpg";
+import _IMG_20210704_144459 from "../../public/bg/IMG_20210704_144459.jpg";
+import _IMG_20210705_153714 from "../../public/bg/IMG_20210705_153714.jpg";
+import _IMG_20210705_211023 from "../../public/bg/IMG_20210705_211023.jpg";
+import _IMG_20220701_164052 from "../../public/bg/IMG_20220701_164052.jpg";
+import _IMG_20220703_101307 from "../../public/bg/IMG_20220703_101307.jpg";
+import _IMG_20220703_110621 from "../../public/bg/IMG_20220703_110621.jpg";
+import _IMG_20220703_112541 from "../../public/bg/IMG_20220703_112541.jpg";
+import _IMG_20220704_154434 from "../../public/bg/IMG_20220704_154434.jpg";
+import _IMG_20220704_165500 from "../../public/bg/IMG_20220704_165500.jpg";
+import _IMG_3287 from "../../public/bg/IMG_3287.jpg";
+import _IMG_3394 from "../../public/bg/IMG_3394.jpg";
+import _IMG_3397 from "../../public/bg/IMG_3397.jpg";
+import _IMG_3405 from "../../public/bg/IMG_3405.jpg";
+import _IMG_3436 from "../../public/bg/IMG_3436.jpg";
+import _IMG_3438 from "../../public/bg/IMG_3438.jpg";
+import _IMG_5622_2 from "../../public/bg/IMG_5622_2.jpg";
 
 const bgArray = [
-  bg1.src,
-  bg2.src,
-  bg3.src,
-  bg4.src,
-  bg5.src,
-  bg6.src,
-  bg7.src,
-  bg8.src,
-  bg9.src,
+  _20160705_081154.src,
+  _20160706_090754.src,
+  _20160706_095521.src,
+  _20160706_095542.src,
+  _20160706_155230.src,
+  _20160707_115335_1.src,
+  _20160707_115619.src,
+  _20160707_201624.src,
+  _20170702_215435.src,
+  _20170703_130626.src,
+  _20170704_170849.src,
+  _20180707_101853.src,
+  _20190706_113530.src,
+  _IMG_0268.src,
+  _IMG_0271.src,
+  _IMG_0280.src,
+  _IMG_0370.src,
+  _IMG_0374.src,
+  _IMG_0785.src,
+  _IMG_0797.src,
+  _IMG_0824.src,
+  _IMG_0845.src,
+  _IMG_0856.src,
+  _IMG_0925.src,
+  _IMG_0970.src,
+  _IMG_1153.src,
+  _IMG_1386.src,
+  _IMG_1397.src,
+  _IMG_1405.src,
+  _IMG_1472.src,
+  _IMG_20180706_115204.src,
+  _IMG_20180706_120404.src,
+  _IMG_20190705_191232.src,
+  _IMG_20190706_135802.src,
+  _IMG_20200710_125610.src,
+  _IMG_20200710_131105.src,
+  _IMG_20200710_135433.src,
+  _IMG_20210702_114530.src,
+  _IMG_20210703_103033.src,
+  _IMG_20210703_111010.src,
+  _IMG_20210703_124737.src,
+  _IMG_20210704_103717.src,
+  _IMG_20210704_144401.src,
+  _IMG_20210704_144459.src,
+  _IMG_20210705_153714.src,
+  _IMG_20210705_211023.src,
+  _IMG_20220701_164052.src,
+  _IMG_20220703_101307.src,
+  _IMG_20220703_110621.src,
+  _IMG_20220703_112541.src,
+  _IMG_20220704_154434.src,
+  _IMG_20220704_165500.src,
+  _IMG_3287.src,
+  _IMG_3394.src,
+  _IMG_3397.src,
+  _IMG_3405.src,
+  _IMG_3436.src,
+  _IMG_3438.src,
+  _IMG_5622_2.src,
 ];
 
 const url = `https://www.randomnumberapi.com/api/v1.0/random?min=0&max=${
@@ -52,13 +152,13 @@ const UL = styled.ul`
     opacity: 0;
     z-index: 0;
     backface-visibility: hidden;
-    animation: imageAnimation ${bgArray.length * 6}s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s;
   }
   & li:nth-child(2) span {
     animation-delay: 6s;
   }
-  ${bgArray.slice(2).map(
-    (src, i) => `
+  ${new Array(4).fill(0).map(
+    (_, i) => `
 & li:nth-child(${i + 3}) span {
 animation-delay: ${(i + 2) * 6}s;
 }
@@ -71,10 +171,10 @@ animation-delay: ${(i + 2) * 6}s;
     1% {
       opacity: 1;
     }
-    ${Math.round(100 * (6 / (6 * bgArray.length)))}% {
+    17% {
       opacity: 1;
     }
-    ${Math.round(100 * (6 / (6 * bgArray.length))) + 1}% {
+    18% {
       opacity: 0;
     }
     100% {
@@ -100,25 +200,30 @@ export default function FullPageBackgrounds() {
 
   useEffect(() => {
     if (!Array.isArray(randomizedBgArray)) return;
-    let indexPozadia = 0;
+    let spanIndex = 0;
+    let bgIndex = 0;
     let timeout = null as any;
 
-    const nastavitPozadie = () => {
+    const nastavitPozadie = (init) => {
       const pozadia = document.querySelectorAll(
         ".pozadia li span"
       ) as any as any[];
       pozadia[
-        indexPozadia
+        spanIndex++
       ].style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${
-        randomizedBgArray[indexPozadia++]
+        randomizedBgArray[bgIndex++]
       })`;
-      if (indexPozadia > 1 && indexPozadia < bgArray.length) {
-        timeout = setTimeout(nastavitPozadie, 6000);
-      }
+      if (init) return;
+
+      if (spanIndex == 6) spanIndex = 0;
+
+      if (bgIndex == bgArray.length) bgIndex = 0;
+
+      timeout = setTimeout(nastavitPozadie, 6000);
     };
 
-    nastavitPozadie();
-    nastavitPozadie();
+    nastavitPozadie(true);
+    nastavitPozadie(false);
 
     return () => {
       clearTimeout(timeout);
@@ -129,8 +234,8 @@ export default function FullPageBackgrounds() {
     <>
       {Array.isArray(randomizedBgArray) ? (
         <UL className="pozadia">
-          {bgArray.map((src, i) => (
-            <li key={src}>
+          {new Array(6).fill(0).map((_, i) => (
+            <li key={i}>
               <span />
             </li>
           ))}

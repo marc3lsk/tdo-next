@@ -1,5 +1,14 @@
 import Head from "next/head";
 import Article from "../components/Article";
+import ZltyDres from "../../public/dresy/zlty.jpg";
+import ZelenyDres from "../../public/dresy/zeleny.jpg";
+import BodkovanyDres from "../../public/dresy/bodkovany.jpg";
+import BielyDres from "../../public/dresy/biely.jpg";
+import TechnickePoruchy from "../../public/index/technicke poruchy.jpg";
+import ZltyDresSmall from "../../public/dresy/zlty_small.jpg";
+import ZelenyDresSmall from "../../public/dresy/zeleny_small.jpg";
+import BodkovanyDresSmall from "../../public/dresy/bodkovany_small.jpg";
+import BielyDresSmall from "../../public/dresy/biely_small.jpg";
 
 export default function Page() {
   return (
@@ -27,7 +36,7 @@ export default function Page() {
           nosiť počas jazdy príslušné tričko.
         </p>
         <div className="mt-5 flex space-x-5">
-          <img src="/dresy/zlty.jpg" alt="Žltý dres" className="h-full w-28" />
+          <img src={ZltyDres.src} alt="Žltý dres" className="h-full w-28" />
           <p>
             <strong>Žlté tričko</strong> nosí vedúci jazdec celých pretekov a
             cení sa zo všetkých najviac. Po skončení pretekov je vedúci jazdec
@@ -35,11 +44,7 @@ export default function Page() {
           </p>
         </div>
         <div className="mt-5 flex space-x-5">
-          <img
-            src="/dresy/zeleny.jpg"
-            alt="Zelený dres"
-            className="h-full w-28"
-          />
+          <img src={ZelenyDres.src} alt="Zelený dres" className="h-full w-28" />
           <p>
             <strong>Zelené tričko</strong> je udeľované za šprintérske body. Na
             konci každej etapy sa tieto body udelia jazdcom, ktorí skončia prví,
@@ -49,7 +54,7 @@ export default function Page() {
         </div>
         <div className="mt-5 flex space-x-5">
           <img
-            src="/dresy/bodkovany.jpg"
+            src={BodkovanyDres.src}
             alt="Bodkovaný dres"
             className="h-full w-28"
           />
@@ -59,11 +64,7 @@ export default function Page() {
           </p>
         </div>
         <div className="mt-5 flex space-x-5">
-          <img
-            src="/dresy/biely.jpg"
-            alt="Biely dres"
-            className="h-full w-28"
-          />
+          <img src={BielyDres.src} alt="Biely dres" className="h-full w-28" />
           <p>
             <strong>Biele tričko</strong> je obdobou žltého trička, je však
             určené jazdcom, ktorí na pretekoch štartujú po prvý krát.
@@ -106,7 +107,7 @@ export default function Page() {
           však nezabránilo v celkovom víťazstve.
         </p>
         <img
-          src="/index/technicke poruchy.jpg"
+          src={TechnickePoruchy.src}
           alt="Technické poruchy"
           className="mt-3"
         />
@@ -119,57 +120,57 @@ export default function Page() {
         <strong className="mt-5 block">Víťazi</strong>
         <strong className="mt-5 block">2016</strong>
         <div className="mt-5 flex space-x-5">
-          <img src="/dresy/zlty_small.jpg" alt="2016 Žltý dres Marcel B." />
+          <img src={ZltyDresSmall.src} alt="2016 Žltý dres Marcel B." />
           <p>Marcel B.</p>
         </div>
         <strong className="mt-5 block">2015</strong>
         <div className="mt-5 flex space-x-5">
-          <img src="/dresy/zlty_small.jpg" alt="2015 Žltý dres Peter Č." />
+          <img src={ZltyDresSmall.src} alt="2015 Žltý dres Peter Č." />
           <p>Peter Č.</p>
         </div>
         <strong className="mt-5 block">2014</strong>
         <div className="mt-5 flex space-x-5">
-          <img src="/dresy/zlty_small.jpg" alt="2014 Žltý dres Pavol L." />
+          <img src={ZltyDresSmall.src} alt="2014 Žltý dres Pavol L." />
           <p>Pavol L.</p>
         </div>
         <div className="mt-5 flex space-x-5">
-          <img src="/dresy/zeleny_small.jpg" alt="2014 Zelený dres Michal S." />
+          <img src={ZelenyDresSmall.src} alt="2014 Zelený dres Michal S." />
           <p>Michal S.</p>
         </div>
         <div className="mt-5 flex space-x-5">
           <img
-            src="/dresy/bodkovany_small.jpg"
+            src={BodkovanyDresSmall.src}
             alt="2014 Bodkovaný dres Peter Č."
           />
           <p>Peter Č.</p>
         </div>
         <div className="mt-5 flex space-x-5">
-          <img src="/dresy/biely_small.jpg" alt="2014 Biely dres Marcel B." />
+          <img src={BielyDresSmall.src} alt="2014 Biely dres Marcel B." />
           <p>Marcel B.</p>
         </div>
         <strong className="mt-5 block">2013</strong>
         <div className="mt-5 flex space-x-5">
-          <img src="/dresy/zlty_small.jpg" alt="2013 Žltý dres Pavol L." />
+          <img src={ZltyDresSmall.src} alt="2013 Žltý dres Pavol L." />
           <p>Pavol L.</p>
         </div>
         <div className="mt-5 flex space-x-5">
-          <img src="/dresy/zeleny_small.jpg" alt="2013 Zelený dres Michal S." />
+          <img src={ZelenyDresSmall.src} alt="2013 Zelený dres Michal S." />
           <p>Michal S.</p>
         </div>
         <div className="mt-5 flex space-x-5">
           <img
-            src="/dresy/bodkovany_small.jpg"
+            src={BodkovanyDresSmall.src}
             alt="2013 Bodkovaný dres Peter Č."
           />
           <p>Peter Č.</p>
         </div>
         <div className="mt-5 flex space-x-5">
-          <img src="/dresy/biely_small.jpg" alt="2013 Biely dres Juraj B." />
+          <img src={BielyDresSmall.src} alt="2013 Biely dres Juraj B." />
           <p>Juraj B.</p>
         </div>
         <strong className="mt-5 block">2012</strong>
         <div className="mt-5 flex space-x-5">
-          <img src="/dresy/zlty_small.jpg" alt="2012 Žltý dres Ľuboš B." />
+          <img src={ZltyDresSmall.src} alt="2012 Žltý dres Ľuboš B." />
           <p>Ľuboš B.</p>
         </div>
       </Article>

@@ -152,15 +152,15 @@ const UL = styled.ul`
     opacity: 0;
     z-index: 0;
     backface-visibility: hidden;
-    animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 60s linear infinite 0s;
   }
   & li:nth-child(2) span {
-    animation-delay: 6s;
+    animation-delay: 10s;
   }
   ${new Array(4).fill(0).map(
     (_, i) => `
 & li:nth-child(${i + 3}) span {
-animation-delay: ${(i + 2) * 6}s;
+animation-delay: ${(i + 2) * 10}s;
 }
 `
   )}
@@ -219,7 +219,7 @@ export default function FullPageBackgrounds() {
 
       if (bgIndex == bgArray.length) bgIndex = 0;
 
-      timeout = setTimeout(nastavitPozadie, 6000);
+      timeout = setTimeout(nastavitPozadie, 10000);
     };
 
     nastavitPozadie(true);

@@ -39,15 +39,15 @@ class GrafHmotnost extends Component<{ vaha }, { series: any; options: any }> {
             show: false,
           },
         },
+        stroke: {
+          curve: "straight",
+        },
         tooltip: {
           enabled: false,
         },
         colors: ["#545454"],
         dataLabels: {
           enabled: true,
-        },
-        stroke: {
-          curve: "smooth",
         },
         grid: {
           borderColor: "#e7e7e7",
@@ -62,10 +62,7 @@ class GrafHmotnost extends Component<{ vaha }, { series: any; options: any }> {
         xaxis: {
           categories: props.vaha.map((x) => x.rok),
         },
-        yaxis: {
-          min: 50,
-          max: 120,
-        },
+        yaxis: {},
         legend: {
           show: false,
         },

@@ -8,7 +8,7 @@ import useResponsiveBreakpoints from "../hooks/useResponsiveBreakpoints";
 
 const Rocniky = [
   2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012,
-];
+].reverse();
 
 function HeaderLink({ url, text }) {
   return (
@@ -31,7 +31,7 @@ function MenuItems() {
       <nav className="flex-wrap justify-center pt-4 pb-0 lg:flex lg:space-x-8">
         {Rocniky.map((rocnik, i) => (
           <Fragment key={rocnik}>
-            <HeaderLink url="/galeria" text={rocnik} />
+            <HeaderLink url={`/rocnik/${rocnik}`} text={rocnik} />
           </Fragment>
         ))}
       </nav>

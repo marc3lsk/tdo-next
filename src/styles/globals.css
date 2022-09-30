@@ -6,19 +6,3 @@ html,
 body {
   min-height: 100%;
 }
-
-body {
-  font-size: 18px;
-}
-
-bodyxxx {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  transition: opacity 200ms linear;
-}
-
-mainxxx {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}

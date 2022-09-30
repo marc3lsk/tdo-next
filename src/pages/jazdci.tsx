@@ -136,7 +136,7 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>Jazdci</title>
+        <title>Jazdci - Tour de Orava</title>
       </Head>
       <Article>
         <h1 className="mb-5 text-center text-3xl font-bold">

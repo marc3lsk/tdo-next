@@ -2,6 +2,10 @@ import Head from "next/head";
 import Article from "../../components/Article";
 import ImgHeader from "../../../public/rocnik/header2012.jpg";
 import ImgDen2 from "../../../public/rocnik/2012/2.den2012.jpg";
+import Nadpis from "../../components/Rocnik/Nadpis";
+import Galeria from "../../components/Rocnik/Galeria";
+import ObrazokGalerie from "../../components/Rocnik/ObrazokGalerie";
+import Odsek from "../../components/Rocnik/Odsek";
 
 export default function Page() {
   return (
@@ -9,11 +13,15 @@ export default function Page() {
       <Head>
         <title>2012 - Tour de Orava</title>
       </Head>
-      <img src={ImgHeader.src} alt="2012" className="w-full" />
+      <Galeria>
+        <ObrazokGalerie {...ImgHeader} alt="Ročník 2012" className="w-full" />
+      </Galeria>
       <Article>
-        <p>Od nášho spoluautora Ing. Ľuboša Brišša.</p>
-        <strong className="mt-5 block">1. deň - Prológ</strong>
-        <p className="mt-1">
+        <em className="-mb-3 block">
+          Od nášho spoluautora Ing. Ľuboša Brišša.
+        </em>
+        <Nadpis>1. deň - Prológ</Nadpis>
+        <Odsek>
           Organizátori (Ľuboša B. - pozn. autora) na začiatok pripravili asi 30
           km dlhý prológ, ktorý mal značne netradičný profil, keďže trasa ihneď
           po štarte zaviedla pretekárov do približne kilometer dlhého ostrého
@@ -30,14 +38,16 @@ export default function Page() {
           diváckej atraktivite, pretože ukázal, že jeden z TOP favoritov, Ľuboš
           K., prišiel na preteky v slabej forme, spôsobenej pravdepodobne
           zdravotnými problémami.
-        </p>
-        <strong className="mt-5 block">2. deň - Kráľovská etapa</strong>
-        <img
-          src={ImgDen2.src}
-          alt="2. deň - Kráľovská etapa"
-          className="mt-1 w-full"
-        />
-        <p className="mt-3">
+        </Odsek>
+        <Nadpis>2. deň - Kráľovská etapa</Nadpis>
+        <Galeria>
+          <ObrazokGalerie
+            {...ImgDen2}
+            alt="2. deň - Kráľovská etapa"
+            className="mt-3 mb-8 w-full"
+          />
+        </Galeria>
+        <Odsek>
           Vyše 80 km dlhá etapa, trasa Oravská Lesná – Nová Bystrica – Terchová
           – Zázrivá – Oravská Lesná. Po úvodných rovinatých kilometroch prišla
           prvá horská prémia, stúpanie na ceste Orava – Kysuce. Na čelo pelotónu
@@ -62,9 +72,9 @@ export default function Page() {
           náročnosti etapy boli zrušené všetky rýchlostné prémie pod heslom „kto
           zmení tempo, berie v krčme kolo“. (Ľuboš B. ich zrušil vždy okamžite
           ako na nich prehral. Aj to heslo vymyslel ze behu. - pozn. autora)
-        </p>
-        <strong className="mt-5 block">3. deň - Sanitárny deň</strong>
-        <p className="mt-3">
+        </Odsek>
+        <Nadpis>3. deň - Sanitárny deň</Nadpis>
+        <Odsek>
           Po kráľovskej etapa nasledoval sanitárny deň, ktorý jazdci využili na
           wellness v Terchovej. Vo wellnesse začal aj najväčší škandál ročníka
           2012, tzv. Kauza uterák. V rámci menšej turistiky navštívili pretekári
@@ -72,7 +82,7 @@ export default function Page() {
           záverečná etapa k partizánskej nemocnici, ale kvôli nepriazni počasia
           sa organizátori vzhľadom na bezpečnosť pretekárov rozhodli etapu
           radšej zrušiť.
-        </p>
+        </Odsek>
       </Article>
     </>
   );

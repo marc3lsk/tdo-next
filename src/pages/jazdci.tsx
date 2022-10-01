@@ -14,6 +14,8 @@ import MarcelB from "../../public/jazdci/marcelb2.jpg";
 import LubosB from "../../public/jazdci/lubosb.jpg";
 import BorisK from "../../public/jazdci/boris.jpg";
 import MiroJ from "../../public/jazdci/miroj2.jpg";
+import Galeria from "../components/Rocnik/Galeria";
+import ObrazokGalerie from "../components/Rocnik/ObrazokGalerie";
 
 class GrafHmotnost extends Component<{ vaha }, { series: any; options: any }> {
   constructor(props) {
@@ -99,7 +101,13 @@ const Jazdec = ({
     </p>
     <p className="mt-3">{popis}</p>
     <div className="mt-5 lg:flex lg:space-x-5">
-      <img src={foto} alt={meno} className="h-full max-w-sm lg:w-1/2" />
+      <Galeria>
+        <ObrazokGalerie
+          {...foto}
+          alt={meno}
+          className="h-full w-full max-w-sm lg:w-1/2"
+        />
+      </Galeria>
       <div className="mt-5 lg:mt-0 lg:w-1/2">
         <p className="mt-0">
           <span className="font-bold">Výška: </span>
@@ -143,7 +151,7 @@ export default function Page() {
           Chlastana Pro Team
         </h1>
         <Jazdec
-          foto={MichalS.src}
+          foto={MichalS}
           meno="Michal S."
           popis="Víťaz špurtérskej sútaže v roku 2013 a 2014. Celkové víťazstvá mu ušli len o chlp. Pre svoj agresívny štýl jazdy prezývaný aj Fitipálda."
           vyska={177}
@@ -163,7 +171,7 @@ export default function Page() {
           film="The Intouchables"
         />
         <Jazdec
-          foto={PeterC.src}
+          foto={PeterC}
           meno="Peter Č."
           popis="Víťaz vrchárskej súťaže za rok 2013 a 2014 a celový víťaz za rok 2015."
           vyska={173}
@@ -182,7 +190,7 @@ export default function Page() {
           film="Shawshank Redemption"
         />
         <Jazdec
-          foto={JurajB.src}
+          foto={JurajB}
           meno="Juraj B."
           popis="Silový tip jazdca, typologicky stavaný skôr pre jarné klasiky. Prezývaný aj gentleman na bicykli."
           vyska={188}
@@ -206,7 +214,7 @@ export default function Page() {
           Team Koniferum Cannondale
         </h1>
         <Jazdec
-          foto={PavolL.src}
+          foto={PavolL}
           meno="Pavol L."
           popis="Celkový víťaz za rok 2013 a 2014."
           vyska={191}
@@ -227,7 +235,7 @@ export default function Page() {
           film="Jurský park, Krstný otec"
         />
         <Jazdec
-          foto={LubosK.src}
+          foto={LubosK}
           meno="Ľuboš L."
           popis="Jeden z najlepších domestikov súčasnosti."
           vyska={195}
@@ -245,7 +253,7 @@ export default function Page() {
           film="Bratstvo neohrozených"
         />
         <Jazdec
-          foto={MarcelB.src}
+          foto={MarcelB}
           meno="Marcel B."
           popis="Ako nováčik pretekov v roku 2014 všetkých prekvapil a zvíťazil v horskej prémii."
           vyska={184}
@@ -269,7 +277,7 @@ export default function Page() {
           Team Bušo-Hansgrohe
         </h1>
         <Jazdec
-          foto={LubosB.src}
+          foto={LubosB}
           meno="Ľuboš B."
           popis="V prvom ročníku sa ako jediný nenechal zaskočiť náročnosťou Oravských kopcov a suverénne zvíťazil. Odvtedy však na ďalší výraznejší úspech stále len čaká. Pre svoju bojovnosť a pôvod prezývaný aj Oravský Vinokurov."
           vyska={175}
@@ -290,7 +298,7 @@ export default function Page() {
           film="Home alone, považujem ho za vrchol svojej hereckej kariéry"
         />
         <Jazdec
-          foto={BorisK.src}
+          foto={BorisK}
           meno="Boris K."
           popis="Ako nováčik pretekov v roku 2016 všetkých prekvapil a ani raz nezosadol."
           vyska={189}
@@ -305,7 +313,7 @@ export default function Page() {
           film="Terminátor 2"
         />
         <Jazdec
-          foto={MiroJ.src}
+          foto={MiroJ}
           meno="Miro J."
           popis="Ako nováčik pretekov v roku 2020 všetkých prekvapil, že prišiel na TdO v pokročilom cyklistickom veku."
           vyska={176}

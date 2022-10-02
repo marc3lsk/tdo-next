@@ -9,10 +9,10 @@ import ImgZltyDresSmall from "../../public/dresy/zlty_small.jpg";
 import ImgZelenyDresSmall from "../../public/dresy/zeleny_small.jpg";
 import ImgBodkovanyDresSmall from "../../public/dresy/bodkovany_small.jpg";
 import ImgBielyDresSmall from "../../public/dresy/biely_small.jpg";
-import Nadpis from "../components/Rocnik/Nadpis";
-import Odsek from "../components/Rocnik/Odsek";
-import Galeria from "../components/Rocnik/Galeria";
-import ObrazokGalerie from "../components/Rocnik/ObrazokGalerie";
+import Nadpis from "../components/Nadpis";
+import Odsek from "../components/Odsek";
+import Galeria from "../components/Galeria";
+import ObrazokGalerie from "../components/ObrazokGalerie";
 
 export default function Page() {
   return (

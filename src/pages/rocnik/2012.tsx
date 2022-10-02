@@ -2,10 +2,10 @@ import Head from "next/head";
 import Article from "../../components/Article";
 import ImgHeader from "../../../public/rocnik/header2012.jpg";
 import ImgDen2 from "../../../public/rocnik/2012/2.den2012.jpg";
-import Nadpis from "../../components/Rocnik/Nadpis";
-import Galeria from "../../components/Rocnik/Galeria";
-import ObrazokGalerie from "../../components/Rocnik/ObrazokGalerie";
-import Odsek from "../../components/Rocnik/Odsek";
+import Nadpis from "../../components/Nadpis";
+import Galeria from "../../components/Galeria";
+import ObrazokGalerie from "../../components/ObrazokGalerie";
+import Odsek from "../../components/Odsek";
 
 export default function Page() {
   return (

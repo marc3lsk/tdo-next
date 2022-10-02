@@ -14,13 +14,13 @@ import ImgDen5 from "../../../public/rocnik/2013/5den2013_small.jpg";
 import CelkovePoradie, {
   CelkovePoradieProps,
 } from "../../components/Rocnik/CelkovePoradie";
-import Nadpis from "../../components/Rocnik/Nadpis";
+import Nadpis from "../../components/Nadpis";
 import BodovanieEtapy, {
   BodovanieEtapyProps,
 } from "../../components/Rocnik/BodovanieEtapy";
-import Galeria from "../../components/Rocnik/Galeria";
-import ObrazokGalerie from "../../components/Rocnik/ObrazokGalerie";
-import Odsek from "../../components/Rocnik/Odsek";
+import Galeria from "../../components/Galeria";
+import ObrazokGalerie from "../../components/ObrazokGalerie";
+import Odsek from "../../components/Odsek";
 
 const CelkovePoradieData: CelkovePoradieProps = {
   rocnik: 2013,

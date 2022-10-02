@@ -12,10 +12,10 @@ import ImgDen5Vyska from "../../../public/rocnik/2014/5den-vyska.jpg";
 import CelkovePoradie, {
   CelkovePoradieProps,
 } from "../../components/Rocnik/CelkovePoradie";
-import Galeria from "../../components/Rocnik/Galeria";
-import ObrazokGalerie from "../../components/Rocnik/ObrazokGalerie";
-import Nadpis from "../../components/Rocnik/Nadpis";
-import Odsek from "../../components/Rocnik/Odsek";
+import Galeria from "../../components/Galeria";
+import ObrazokGalerie from "../../components/ObrazokGalerie";
+import Nadpis from "../../components/Nadpis";
+import Odsek from "../../components/Odsek";
 import BodovanieEtapy, {
   BodovanieEtapyProps,
 } from "../../components/Rocnik/BodovanieEtapy";

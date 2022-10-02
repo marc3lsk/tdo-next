@@ -14,8 +14,8 @@ import MarcelB from "../../public/jazdci/marcelb2.jpg";
 import LubosB from "../../public/jazdci/lubosb.jpg";
 import BorisK from "../../public/jazdci/boris.jpg";
 import MiroJ from "../../public/jazdci/miroj2.jpg";
-import Galeria from "../components/Rocnik/Galeria";
-import ObrazokGalerie from "../components/Rocnik/ObrazokGalerie";
+import Galeria from "../components/Galeria";
+import ObrazokGalerie from "../components/ObrazokGalerie";
 
 class GrafHmotnost extends Component<{ vaha }, { series: any; options: any }> {
   constructor(props) {

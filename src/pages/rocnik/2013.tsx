@@ -324,8 +324,8 @@ export default function Page() {
           nevyhral. V závere sa zrodilo tesné víťazstvo Petra Č. pred Pavlom L.
           Táto etapa sa však ešte ani zdaleka neskončila. Po príchode do Novej
           Bystrice dostal Ľuboš K. výborný nápad vrátiť sa do Oravskej Lesnej
-          &quot;skratkou&quot; ktorá mala nakoniec 30km. Uprostred cesty na 53km
-          sa strhla búrka a bolo z toho poriadne dobrodrúžstvo.
+          „skratkou“ ktorá mala nakoniec 30km. Uprostred cesty na 53km sa strhla
+          búrka a bolo z toho poriadne dobrodrúžstvo.
         </Odsek>
         <BodovanieEtapy {...BodovanieEtapyDen3Data} />
         <Galeria>

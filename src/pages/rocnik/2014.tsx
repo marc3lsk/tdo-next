@@ -21,7 +21,7 @@ import BodovanieEtapy, {
 } from "../../components/Rocnik/BodovanieEtapy";
 
 const CelkovePoradieData: CelkovePoradieProps = {
-  rocnik: 2013,
+  rocnik: 2014,
   tabulka: [
     {
       meno: "Pavol L.",

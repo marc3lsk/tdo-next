@@ -44,7 +44,7 @@ export default function Page() {
           <ObrazokGalerie
             {...ImgDen2}
             alt="2. deň - Kráľovská etapa"
-            className="mt-3 mb-8 w-full"
+            className="mt-3 mb-5 w-full"
           />
         </Galeria>
         <Odsek>

@@ -325,7 +325,7 @@ export default function Page() {
           <ObrazokGalerie
             {...ImgDen2Vyska}
             alt="2. deň - Kráľovská etapa - výškový profil"
-            className="mt-3 mb-8 w-full"
+            className="mt-3 mb-5 w-full"
           />
         </Galeria>
         <Odsek>
@@ -363,7 +363,7 @@ export default function Page() {
           <ObrazokGalerie
             {...ImgDen4Vyska}
             alt="4. deň - Horská prémia - výškový profil"
-            className="mt-3 mb-8 w-full"
+            className="mt-3 mb-5 w-full"
           />
         </Galeria>
         <Odsek>
@@ -395,7 +395,7 @@ export default function Page() {
           <ObrazokGalerie
             {...ImgDen5Vyska}
             alt="5. deň - rozlúčka - výškový profil"
-            className="mt-1 mb-8 w-full"
+            className="mt-1 mb-5 w-full"
           />
         </Galeria>
         <Odsek>

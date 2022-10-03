@@ -3,6 +3,7 @@ import { Item } from "react-photoswipe-gallery";
 
 export type ObrazokGalerieProps = {
   src: string;
+  srcThumb?: string;
   width: number;
   height: number;
 } & Partial<ImgHTMLAttributes<HTMLImageElement>>;
@@ -24,19 +25,19 @@ function MinSize({ width, height }) {
 }
 
 export default function ObrazokGalerie(obrazok: ObrazokGalerieProps) {
-  const { src, width, height, alt, ...obrazokAttrs } = obrazok;
+  const { src, srcThumb, width, height, alt, ...obrazokAttrs } = obrazok;
 
   return (
     <Item
       original={src}
-      thumbnail={src}
+      thumbnail={srcThumb ?? src}
       alt={alt}
       {...MinSize({ width, height })}
     >
       {({ ref, open }) => (
         <img
           style={{ ...imgStyle, ...obrazok.style }}
-          src={src}
+          src={srcThumb ?? src}
           alt={alt}
           ref={ref as React.MutableRefObject<HTMLImageElement>}
           onClick={open}

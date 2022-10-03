@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Article from "../../components/Article";
+import Clanok from "../../components/Clanok";
 import ImgHeader from "../../../public/rocnik/header2019.jpg";
 import ImgDen0 from "../../../public/rocnik/2019/0den.jpg";
 import ImgDen2 from "../../../public/rocnik/2019/2den.jpg";
@@ -18,7 +18,7 @@ export default function Page() {
       <Galeria>
         <ObrazokGalerie img={ImgHeader} alt="Ročník 2019" className="w-full" />
       </Galeria>
-      <Article>
+      <Clanok>
         <Nadpis prvy>0-tá etapa - 98 km</Nadpis>
         <Odsek>
           Aj tento rok začala Tour de Orava nultou etapou, ktorá sa už stala jej
@@ -85,7 +85,7 @@ export default function Page() {
           Smoleniciach vystriedal Paľo a Mišo prevzal čierneho Petra –
           doprovodné vozidlo.
         </Odsek>
-      </Article>
+      </Clanok>
     </>
   );
 }

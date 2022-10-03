@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Article from "../../components/Article";
+import Clanok from "../../components/Clanok";
 import ImgHeader from "../../../public/rocnik/header2020.jpg";
 import ImgDen1 from "../../../public/rocnik/2020/1den.jpg";
 import Nadpis from "../../components/Nadpis";
@@ -16,7 +16,7 @@ export default function Page() {
       <Galeria>
         <ObrazokGalerie img={ImgHeader} alt="Ročník 2020" className="w-full" />
       </Galeria>
-      <Article>
+      <Clanok>
         <Nadpis prvy>0-tá etapa – 129 km</Nadpis>
         <Odsek>
           9-tý ročník TdO nemohol začať inak, ako 0-tou etapou. Z Nitry vyrazila
@@ -108,7 +108,7 @@ export default function Page() {
           však aj napriek pandémii podarilo udržať tradíciu a tak sa v roku 2021
           môžeme tešiť na jubilejný 10-ty ročník.
         </Odsek>
-      </Article>
+      </Clanok>
     </>
   );
 }

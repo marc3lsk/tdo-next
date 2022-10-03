@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Article from "../../components/Article";
+import Clanok from "../../components/Clanok";
 import ImgHeader from "../../../public/rocnik/header2018.jpg";
 import ImgDen1 from "../../../public/rocnik/2018/1den.jpg";
 import ImgDen3 from "../../../public/rocnik/2018/3den.jpg";
@@ -17,7 +17,7 @@ export default function Page() {
       <Galeria>
         <ObrazokGalerie img={ImgHeader} alt="Ročník 2018" className="w-full" />
       </Galeria>
-      <Article>
+      <Clanok>
         <Nadpis prvy>0-tá etapa - 138 km</Nadpis>
         <Odsek>
           Tour de Orava už po štvrtý krát začala 0-tou etapou, ktorá tento krát
@@ -74,7 +74,7 @@ export default function Page() {
           nimi zviezol aj Peťo, ktorý sa po chvíľke odpojil a išiel na vlak do
           Vrútok.
         </Odsek>
-      </Article>
+      </Clanok>
     </>
   );
 }

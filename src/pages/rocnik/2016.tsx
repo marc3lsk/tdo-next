@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Article from "../../components/Article";
+import Clanok from "../../components/Clanok";
 import ImgHeader from "../../../public/rocnik/header2016.jpg";
 import ImgDen0_1 from "../../../public/rocnik/2016/0den-1.jpg";
 import ImgDen0_2 from "../../../public/rocnik/2016/0den-2.jpg";
@@ -18,7 +18,7 @@ export default function Page() {
       <Galeria>
         <ObrazokGalerie img={ImgHeader} alt="Ročník 2016" className="w-full" />
       </Galeria>
-      <Article>
+      <Clanok>
         <Nadpis prvy>0-tá etapa – 1. časť – 110 km</Nadpis>
         <Galeria>
           <ObrazokGalerie
@@ -120,7 +120,7 @@ export default function Page() {
           rekreáciu. Na TdO 2017 však Ľuboš B. sľubuje, že konečne pripraví ten
           kopec, z ktorého sa niekto pogrcá.
         </Odsek>
-      </Article>
+      </Clanok>
     </>
   );
 }

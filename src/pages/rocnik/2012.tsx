@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Article from "../../components/Article";
+import Clanok from "../../components/Clanok";
 import ImgHeader from "../../../public/rocnik/header2012.jpg";
 import ImgDen2 from "../../../public/rocnik/2012/2.den2012.jpg";
 import Nadpis from "../../components/Nadpis";
@@ -16,7 +16,7 @@ export default function Page() {
       <Galeria>
         <ObrazokGalerie img={ImgHeader} alt="Ročník 2012" className="w-full" />
       </Galeria>
-      <Article>
+      <Clanok>
         <em className="-mb-3 block">
           Od nášho spoluautora Ing. Ľuboša Brišša.
         </em>
@@ -83,7 +83,7 @@ export default function Page() {
           sa organizátori vzhľadom na bezpečnosť pretekárov rozhodli etapu
           radšej zrušiť.
         </Odsek>
-      </Article>
+      </Clanok>
     </>
   );
 }

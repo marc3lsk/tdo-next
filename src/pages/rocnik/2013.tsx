@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Article from "../../components/Article";
+import Clanok from "../../components/Clanok";
 import ImgHeader from "../../../public/rocnik/header2013.jpg";
 import ImgDen1 from "../../../public/rocnik/2013/1.den.jpg";
 import ImgDen1Vyska from "../../../public/rocnik/2013/1.den-vyska.jpg";
@@ -242,7 +242,7 @@ export default function Page() {
       <Galeria>
         <ObrazokGalerie img={ImgHeader} alt="Ročník 2013" className="w-full" />
       </Galeria>
-      <Article>
+      <Clanok>
         <CelkovePoradie {...CelkovePoradieData} />
         <Nadpis>Výsledky tímov:</Nadpis>
         <p>
@@ -373,7 +373,7 @@ export default function Page() {
             className="mt-3 w-full"
           />
         </Galeria>
-      </Article>
+      </Clanok>
     </>
   );
 }

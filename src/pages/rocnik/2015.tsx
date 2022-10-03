@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Article from "../../components/Article";
+import Clanok from "../../components/Clanok";
 import ImgHeader from "../../../public/rocnik/header2015.jpg";
 import ImgDen0 from "../../../public/rocnik/2015/0den.jpg";
 import ImgDen1 from "../../../public/rocnik/2015/1den.jpg";
@@ -64,7 +64,7 @@ export default function Page() {
       <Galeria>
         <ObrazokGalerie img={ImgHeader} alt="Ročník 2015" className="w-full" />
       </Galeria>
-      <Article>
+      <Clanok>
         <CelkovePoradie {...CelkovePoradieData} />
         <Nadpis>0. deň - 158km</Nadpis>
         <Galeria>
@@ -153,7 +153,7 @@ export default function Page() {
           moc rovín nenašli a preto bola šprintérska súťaž zrušená, vrchárska
           tým pádom splynula so súťažou o celkové víťazstvo.
         </Odsek>
-      </Article>
+      </Clanok>
     </>
   );
 }

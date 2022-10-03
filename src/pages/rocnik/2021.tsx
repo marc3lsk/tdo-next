@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Article from "../../components/Article";
+import Clanok from "../../components/Clanok";
 import ImgHeader from "../../../public/rocnik/header2021.jpg";
 import ImgDen0 from "../../../public/rocnik/2021/0den.jpg";
 import ImgDen1 from "../../../public/rocnik/2021/1den.jpg";
@@ -20,7 +20,7 @@ export default function Page() {
       <Galeria>
         <ObrazokGalerie img={ImgHeader} alt="Ročník 2021" className="w-full" />
       </Galeria>
-      <Article>
+      <Clanok>
         <Nadpis prvy>0-tá etapa – 115 km</Nadpis>
         <Galeria>
           <ObrazokGalerie
@@ -131,7 +131,7 @@ export default function Page() {
           dlhšia, ale o to horšia cesta. Ku kávičke v Žarnovici sa im tento krát
           ušiel aj zákusok a od Tlmáč to bolo až po Nitru len hore a dole.
         </Odsek>
-      </Article>
+      </Clanok>
     </>
   );
 }

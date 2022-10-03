@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Article from "../components/Article";
+import Clanok from "../components/Clanok";
 import ImgZltyDres from "../../public/dresy/zlty.jpg";
 import ImgZelenyDres from "../../public/dresy/zeleny.jpg";
 import ImgBodkovanyDres from "../../public/dresy/bodkovany.jpg";
@@ -20,7 +20,7 @@ export default function Page() {
       <Head>
         <title>Čo je Tour de Orava</title>
       </Head>
-      <Article>
+      <Clanok>
         <p>
           <strong>Tour de Orava</strong> (doslova: Okružná jazda po Orave) sú
           etapové preteky nedopujúcich cyklistov, trvajúce asi päť dní v lete.
@@ -190,7 +190,7 @@ export default function Page() {
           <img src={ImgZltyDresSmall.src} alt="2012 Žltý dres Ľuboš B." />
           <p>Ľuboš B.</p>
         </div>
-      </Article>
+      </Clanok>
     </>
   );
 }

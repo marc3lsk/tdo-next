@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Article from "../../components/Article";
+import Clanok from "../../components/Clanok";
 import ImgHeader from "../../../public/rocnik/header2014.jpg";
 import ImgDen1 from "../../../public/rocnik/2014/1den.jpg";
 import ImgDen2 from "../../../public/rocnik/2014/2den.jpg";
@@ -280,7 +280,7 @@ export default function Page() {
       <Galeria>
         <ObrazokGalerie img={ImgHeader} alt="Ročník 2014" className="w-full" />
       </Galeria>
-      <Article>
+      <Clanok>
         <CelkovePoradie {...CelkovePoradieData} />
         <Nadpis>Výsledky tímov:</Nadpis>
         <p>
@@ -403,7 +403,7 @@ export default function Page() {
           s fanúšikmi. Juraj B. a Pavol L. kvôli zdravotným problémom
           nenastúpili.
         </Odsek>
-      </Article>
+      </Clanok>
     </>
   );
 }

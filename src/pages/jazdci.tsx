@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 const ReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
-import Article from "../components/Article";
+import Clanok from "../components/Clanok";
 import MichalS from "../../public/jazdci/michals.jpg";
 import PeterC from "../../public/jazdci/peterc.jpg";
 import JurajB from "../../public/jazdci/jurajb.jpg";
@@ -146,7 +146,7 @@ export default function Page() {
       <Head>
         <title>Jazdci - Tour de Orava</title>
       </Head>
-      <Article>
+      <Clanok>
         <h1 className="mb-5 text-center text-3xl font-bold">
           Chlastana Pro Team
         </h1>
@@ -326,7 +326,7 @@ export default function Page() {
           etapa="Sólo etapa z chaty Cementár do Púchova"
           film="Leon"
         />
-      </Article>
+      </Clanok>
     </>
   );
 }

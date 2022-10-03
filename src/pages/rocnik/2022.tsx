@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Article from "../../components/Article";
+import Clanok from "../../components/Clanok";
 import ImgHeader from "../../../public/rocnik/header2022.jpg";
 import Nadpis from "../../components/Nadpis";
 import Galeria from "../../components/Galeria";
@@ -15,7 +15,7 @@ export default function Page() {
       <Galeria>
         <ObrazokGalerie img={ImgHeader} alt="Ročník 2022" className="w-full" />
       </Galeria>
-      <Article>
+      <Clanok>
         <Nadpis prvy>0-tá etapa – 89 km (24 km)</Nadpis>
         <Odsek>
           Ľuboš B. a Marcel zahájili TdO už tradične 0-tou etapou. Z Nitry sa
@@ -97,7 +97,7 @@ export default function Page() {
             <li>2 – Miro</li>
           </ul>
         </Odsek>
-      </Article>
+      </Clanok>
     </>
   );
 }

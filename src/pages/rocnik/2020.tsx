@@ -14,7 +14,7 @@ export default function Page() {
         <title>2020 - Tour de Orava</title>
       </Head>
       <Galeria>
-        <ObrazokGalerie {...ImgHeader} alt="Ročník 2020" className="w-full" />
+        <ObrazokGalerie img={ImgHeader} alt="Ročník 2020" className="w-full" />
       </Galeria>
       <Article>
         <Nadpis prvy>0-tá etapa – 129 km</Nadpis>
@@ -37,7 +37,7 @@ export default function Page() {
         <Nadpis>1 – etapa – 59 km</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen1}
+            img={ImgDen1}
             alt="1 – etapa - mapa a výškový profil"
             className="mt-3 mb-5 w-full"
           />

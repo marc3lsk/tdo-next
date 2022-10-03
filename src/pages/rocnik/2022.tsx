@@ -13,7 +13,7 @@ export default function Page() {
         <title>2022 - Tour de Orava</title>
       </Head>
       <Galeria>
-        <ObrazokGalerie {...ImgHeader} alt="Ročník 2022" className="w-full" />
+        <ObrazokGalerie img={ImgHeader} alt="Ročník 2022" className="w-full" />
       </Galeria>
       <Article>
         <Nadpis prvy>0-tá etapa – 89 km (24 km)</Nadpis>

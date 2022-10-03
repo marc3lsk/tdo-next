@@ -278,7 +278,7 @@ export default function Page() {
         <title>2014 - Tour de Orava</title>
       </Head>
       <Galeria>
-        <ObrazokGalerie {...ImgHeader} alt="Ročník 2014" className="w-full" />
+        <ObrazokGalerie img={ImgHeader} alt="Ročník 2014" className="w-full" />
       </Galeria>
       <Article>
         <CelkovePoradie {...CelkovePoradieData} />
@@ -294,7 +294,7 @@ export default function Page() {
         <Nadpis>1. deň - Prológ - 39km</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen1}
+            img={ImgDen1}
             alt="1. deň - Prológ"
             className="mt-3 mb-5 w-full"
           />
@@ -318,12 +318,12 @@ export default function Page() {
         <Nadpis>2. deň - Kráľovská etapa</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen2}
+            img={ImgDen2}
             alt="2. deň - Kráľovská etapa"
             className="mt-3 w-full"
           />
           <ObrazokGalerie
-            {...ImgDen2Vyska}
+            img={ImgDen2Vyska}
             alt="2. deň - Kráľovská etapa - výškový profil"
             className="mt-3 mb-5 w-full"
           />
@@ -356,12 +356,12 @@ export default function Page() {
         <Nadpis>4. deň - Horská prémia</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen4}
+            img={ImgDen4}
             alt="4. deň - Horská prémia - mapa"
             className="mt-3 w-full"
           />
           <ObrazokGalerie
-            {...ImgDen4Vyska}
+            img={ImgDen4Vyska}
             alt="4. deň - Horská prémia - výškový profil"
             className="mt-3 mb-5 w-full"
           />
@@ -380,7 +380,7 @@ export default function Page() {
         </Odsek>
         <Galeria>
           <ObrazokGalerie
-            {...ImgBriss}
+            img={ImgBriss}
             alt="Bušo v Mýte pod Ďumbierom"
             className="mt-3 max-w-xs"
           />
@@ -388,12 +388,12 @@ export default function Page() {
         <Nadpis>5. deň - rozlúčka</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen5}
+            img={ImgDen5}
             alt="5. deň - rozlúčka - mapa"
             className="mt-3 w-full"
           />
           <ObrazokGalerie
-            {...ImgDen5Vyska}
+            img={ImgDen5Vyska}
             alt="5. deň - rozlúčka - výškový profil"
             className="mt-1 mb-5 w-full"
           />

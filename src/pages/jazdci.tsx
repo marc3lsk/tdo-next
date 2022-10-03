@@ -103,7 +103,7 @@ const Jazdec = ({
     <div className="mt-5 lg:flex lg:space-x-5">
       <Galeria>
         <ObrazokGalerie
-          {...foto}
+          img={foto}
           alt={meno}
           className="h-full w-full max-w-sm lg:w-1/2"
         />

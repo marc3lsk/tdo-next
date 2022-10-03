@@ -15,7 +15,7 @@ export default function Page() {
         <title>2018 - Tour de Orava</title>
       </Head>
       <Galeria>
-        <ObrazokGalerie {...ImgHeader} alt="Ročník 2018" className="w-full" />
+        <ObrazokGalerie img={ImgHeader} alt="Ročník 2018" className="w-full" />
       </Galeria>
       <Article>
         <Nadpis prvy>0-tá etapa - 138 km</Nadpis>
@@ -32,7 +32,7 @@ export default function Page() {
         <Nadpis>1 etapa – 90 km</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen1}
+            img={ImgDen1}
             alt="1 etapa - mapa a výškový profil"
             className="mt-3 mb-5 w-full"
           />
@@ -57,7 +57,7 @@ export default function Page() {
         <Nadpis>2 etapa – 89 km</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen3}
+            img={ImgDen3}
             alt="2 etapa - mapa a výškový profil"
             className="mt-3 mb-5 w-full"
           />

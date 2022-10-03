@@ -14,7 +14,7 @@ export default function Page() {
         <title>2012 - Tour de Orava</title>
       </Head>
       <Galeria>
-        <ObrazokGalerie {...ImgHeader} alt="Ročník 2012" className="w-full" />
+        <ObrazokGalerie img={ImgHeader} alt="Ročník 2012" className="w-full" />
       </Galeria>
       <Article>
         <em className="-mb-3 block">
@@ -42,7 +42,7 @@ export default function Page() {
         <Nadpis>2. deň - Kráľovská etapa</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen2}
+            img={ImgDen2}
             alt="2. deň - Kráľovská etapa"
             className="mt-3 mb-5 w-full"
           />

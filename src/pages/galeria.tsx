@@ -51,8 +51,8 @@ const Obrazok = ({
   alt: string;
 }) => (
   <ObrazokGalerie
-    {...img}
-    srcThumb={thumb.src}
+    img={img}
+    thumb={thumb}
     alt={alt}
     className="inline-block !w-auto object-contain p-2 sm:h-96"
   />

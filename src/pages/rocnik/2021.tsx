@@ -18,13 +18,13 @@ export default function Page() {
         <title>2021 - Tour de Orava</title>
       </Head>
       <Galeria>
-        <ObrazokGalerie {...ImgHeader} alt="Ročník 2021" className="w-full" />
+        <ObrazokGalerie img={ImgHeader} alt="Ročník 2021" className="w-full" />
       </Galeria>
       <Article>
         <Nadpis prvy>0-tá etapa – 115 km</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen0}
+            img={ImgDen0}
             alt="0-tá etapa - mapa a výškový profil"
             className="mt-3 mb-5 w-full"
           />
@@ -47,7 +47,7 @@ export default function Page() {
         <Nadpis>1 – etapa – 34 km</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen1}
+            img={ImgDen1}
             alt="1 – etapa - mapa a výškový profil"
             className="mt-3 mb-5 w-full"
           />
@@ -73,7 +73,7 @@ export default function Page() {
         </Odsek>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen1Anus}
+            img={ImgDen1Anus}
             alt="1 – etapa - anus"
             className="mt-3 mb-5 w-full"
           />
@@ -81,7 +81,7 @@ export default function Page() {
         <Nadpis>Kráľovská etapa - 71km</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen2}
+            img={ImgDen2}
             alt="Kráľovská etapa - mapa a výškový profil"
             className="mt-3 mb-5 w-full"
           />
@@ -119,7 +119,7 @@ export default function Page() {
         <Nadpis>Epilóg – 118 km</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen3}
+            img={ImgDen3}
             alt="Epilóg - mapa a výškový profil"
             className="mt-3 mb-5 w-full"
           />

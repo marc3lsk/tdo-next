@@ -18,13 +18,13 @@ export default function Page() {
         <title>2017 - Tour de Orava</title>
       </Head>
       <Galeria>
-        <ObrazokGalerie {...ImgHeader} alt="Ročník 2017" className="w-full" />
+        <ObrazokGalerie img={ImgHeader} alt="Ročník 2017" className="w-full" />
       </Galeria>
       <Article>
         <Nadpis prvy>0-tá etapa – 1. časť – 125 km</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen0_1}
+            img={ImgDen0_1}
             alt="0-tá etapa – 1. časť - mapa"
             className="mt-3 mb-5 w-full"
           />
@@ -42,7 +42,7 @@ export default function Page() {
         <Nadpis>0-tá etapa – 2. časť – 125 kmm</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen0_2}
+            img={ImgDen0_2}
             alt="0-tá etapa – 2. časť - mapa"
             className="mt-3 mb-5 w-full"
           />
@@ -61,7 +61,7 @@ export default function Page() {
         <Nadpis>Športový deň</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgFutbal}
+            img={ImgFutbal}
             alt="Futbal"
             className="mt-3 mb-5 w-full"
           />
@@ -83,7 +83,7 @@ export default function Page() {
         <Nadpis>1. etapa (kráľovská) – 87 km</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen2}
+            img={ImgDen2}
             alt="1. etapa (kráľovská) - mapa"
             className="mt-3 mb-5 w-full"
           />
@@ -105,7 +105,7 @@ export default function Page() {
         <Nadpis>Sanitárny deň</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgAnus}
+            img={ImgAnus}
             alt="Anus"
             className="mt-3 mb-5 w-full"
           />

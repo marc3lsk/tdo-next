@@ -240,7 +240,7 @@ export default function Page() {
         <title>2013 - Tour de Orava</title>
       </Head>
       <Galeria>
-        <ObrazokGalerie {...ImgHeader} alt="Ročník 2013" className="w-full" />
+        <ObrazokGalerie img={ImgHeader} alt="Ročník 2013" className="w-full" />
       </Galeria>
       <Article>
         <CelkovePoradie {...CelkovePoradieData} />
@@ -256,12 +256,12 @@ export default function Page() {
         <Nadpis>1. deň - Prológ</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen1}
+            img={ImgDen1}
             alt="1. deň - Prológ - mapa"
             className="mt-3 w-full"
           />
           <ObrazokGalerie
-            {...ImgDen1Vyska}
+            img={ImgDen1Vyska}
             alt="1. deň - Prológ - výškový profil"
             className="mb-5 w-full"
           />
@@ -277,12 +277,12 @@ export default function Page() {
         <Nadpis>2. deň - Kráľovská etapa</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen2}
+            img={ImgDen2}
             alt="2. deň - Kráľovská etapa"
             className="mt-3 w-full"
           />
           <ObrazokGalerie
-            {...ImgDen2Vyska}
+            img={ImgDen2Vyska}
             alt="2. deň - Kráľovská etapa - výškový profil"
             className="mt-2 mb-5 w-full"
           />
@@ -307,12 +307,12 @@ export default function Page() {
         <Nadpis>3. deň - Nečakaná kráľovská etapa</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen3}
+            img={ImgDen3}
             alt="3. deň - Nečakaná kráľovská etapa"
             className="mt-3 w-full"
           />
           <ObrazokGalerie
-            {...ImgDen3Vyska}
+            img={ImgDen3Vyska}
             alt="3. deň - Nečakaná kráľovská etapa - výškový profil"
             className="mt-2 mb-5 w-full"
           />
@@ -330,17 +330,17 @@ export default function Page() {
         <BodovanieEtapy {...BodovanieEtapyDen3Data} />
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen3_1}
+            img={ImgDen3_1}
             alt="3. deň, fotka 1"
             className="mt-5 w-full"
           />
           <ObrazokGalerie
-            {...ImgDen3_2}
+            img={ImgDen3_2}
             alt="3. deň, fotka 2"
             className="mt-5 w-full"
           />
           <ObrazokGalerie
-            {...ImgDen3_3}
+            img={ImgDen3_3}
             alt="3. deň, fotka 3"
             className="mt-5 max-w-xs"
           />
@@ -368,7 +368,7 @@ export default function Page() {
         </Odsek>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen5}
+            img={ImgDen5}
             alt="5. deň - Záverečná etapa"
             className="mt-3 w-full"
           />

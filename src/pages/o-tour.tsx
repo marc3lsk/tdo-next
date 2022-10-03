@@ -123,7 +123,7 @@ export default function Page() {
         </Odsek>
         <Galeria>
           <ObrazokGalerie
-            {...ImgTechnickePoruchy}
+            img={ImgTechnickePoruchy}
             alt="Technické poruchy"
             className="mt-3"
           />

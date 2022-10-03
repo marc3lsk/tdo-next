@@ -62,14 +62,14 @@ export default function Page() {
         <title>2015 - Tour de Orava</title>
       </Head>
       <Galeria>
-        <ObrazokGalerie {...ImgHeader} alt="Ročník 2015" className="w-full" />
+        <ObrazokGalerie img={ImgHeader} alt="Ročník 2015" className="w-full" />
       </Galeria>
       <Article>
         <CelkovePoradie {...CelkovePoradieData} />
         <Nadpis>0. deň - 158km</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen0}
+            img={ImgDen0}
             alt="0. deň - 158km - mapa"
             className="mt-3 mb-5 w-full"
           />
@@ -84,7 +84,7 @@ export default function Page() {
         <Nadpis>1. deň - Prológ</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen1}
+            img={ImgDen1}
             alt="1. deň - Prológ - mapa"
             className="mt-3 mb-5 w-full"
           />
@@ -105,12 +105,12 @@ export default function Page() {
         <Nadpis>3. deň</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen3}
+            img={ImgDen3}
             alt="3. deň - mapa"
             className="mt-3 w-full"
           />
           <ObrazokGalerie
-            {...ImgDen3Vyska}
+            img={ImgDen3Vyska}
             alt="3. deň - výškový profil"
             className="mt-3 w-full"
           />
@@ -136,7 +136,7 @@ export default function Page() {
         <Nadpis>4. deň</Nadpis>
         <Galeria>
           <ObrazokGalerie
-            {...ImgDen4}
+            img={ImgDen4}
             alt="4. deň - mapa"
             className="mt-3 mb-5 w-full"
           />

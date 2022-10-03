@@ -1,0 +1,1222 @@
+﻿<html>
+	<head>
+		<title>Tour de Orava</title>
+
+		<meta http-equiv="content-type" content="text/html; charset=utf8">
+		
+		<meta name="author" content="Paolo">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<link rel="stylesheet" href="css/lightbox.css" media="screen"/>
+		
+        <script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/lightbox-2.6.min.js"></script>
+		<script type='text/javascript' src='js/countdown.js'></script>
+
+		<script>
+		$(document).ready(function() {
+			$("#content").find("[id^='tab']").hide(); // Hide all content
+			$("#tabs li:first").attr("id","current"); // Activate the first tab
+			$("#content #tab1").fadeIn(); // Show first tab's content
+			
+			$('#tabs a').click(function(e) {
+				e.preventDefault();
+				if ($(this).closest("li").attr("id") == "current"){ //detection for current tab
+				 return;       
+				}
+				else{             
+				  $("#content").find("[id^='tab']").hide(); // Hide all content
+				  $("#tabs li").attr("id",""); //Reset id's
+				  $(this).parent().attr("id","current"); // Activate this
+				  $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+				}
+			});
+		});
+		</script>
+		
+		<script>
+		<!-- Begin rotateImage
+		var interval = 5; // delay between rotating images (in seconds)
+		var random_display = 0; // 0 = no, 1 = yes
+		interval *= 1000;
+
+		var image_index = 0;
+		image_list = new Array();
+		image_list[image_index++] = new imageItem("foto/header2012.jpg");
+		image_list[image_index++] = new imageItem("foto/header2013.jpg");
+		image_list[image_index++] = new imageItem("foto/header2014.jpg");
+		image_list[image_index++] = new imageItem("foto/header2015.jpg");
+		image_list[image_index++] = new imageItem("foto/header2016.jpg");
+		image_list[image_index++] = new imageItem("foto/header2017.jpg");
+		var number_of_image = image_list.length;
+		function imageItem(image_location) {
+			this.image_item = new Image();
+			this.image_item.src = image_location;
+		}
+		function get_ImageItemLocation(imageObj) {
+			return(imageObj.image_item.src)
+		}
+		function generate(x, y) {
+			var range = y - x + 1;
+			return Math.floor(Math.random() * range) + x;
+		}
+		function getNextImage() {
+			if (random_display) {
+				image_index = generate(0, number_of_image-1);
+			} else {
+				image_index = (image_index+1) % number_of_image;
+			}
+			var new_image = get_ImageItemLocation(image_list[image_index]);
+			return(new_image);
+		}
+		function rotateImage(place) {
+			var new_image = getNextImage();
+			document[place].src = new_image;
+			var recur_call = "rotateImage('"+place+"')";
+			setTimeout(recur_call, interval);
+		}
+		//  End rotateImage -->
+		</script>
+		
+		<style type="text/css">		
+		div *
+		{
+			font-family: Tahoma,Arial,sans-serif;
+			font-size: 0.9em;
+		}
+		
+		#tabs {
+		  overflow: hidden;
+		  width: 100%;
+		  margin: 0;
+		  padding: 0;
+		  list-style: none;
+		}
+
+		#tabs li {
+		  float: left;
+		  margin: 0 .5em 0 0;
+		}
+
+		#tabs a {
+		  position: relative;
+		  background: #ddd;
+		  background-image: linear-gradient(to bottom, #fff, #ddd);  
+		  padding: .5em 1.8em;
+		  float: left;
+		  text-decoration: none;
+		  color: #444;
+		  text-shadow: 0 1px 0 rgba(255,255,255,.8);
+		  border-radius: 5px 0 0 0;
+		  box-shadow: 0 2px 2px rgba(0,0,0,.4);
+		}
+
+		#tabs a:hover,
+		#tabs a:hover::after,
+		#tabs a:focus,
+		#tabs a:focus::after {
+		  background: #fff;
+		}
+
+		#tabs a:focus {
+		  outline: 0;
+		}
+
+		#tabs a::after {
+		  content:'';
+		  position:absolute;
+		  z-index: 1;
+		  top: 0;
+		  right: -.5em;  
+		  bottom: 0;
+		  width: 1em;
+		  background: #ddd;
+		  background-image: linear-gradient(to bottom, #fff, #ddd);  
+		  box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+		  transform: skew(10deg);
+		  border-radius: 0 5px 0 0;  
+		}
+
+		#tabs #current a,
+		#tabs #current a::after {
+		  background: #fff;
+		  z-index: 3;
+		}
+
+		#content {
+			background: #fff;
+			padding: 2em;
+			height: auto;
+			position: relative;
+			z-index: 2;	
+			border-radius: 0 5px 5px 5px;
+			box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+		}
+		
+		/* moje */
+		
+		img.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		</style>
+
+	</head>
+	<body OnLoad="rotateImage('rImage')" style="background-color:white; background-image:URL('foto/bg_page_global.png'); background-repeat:repeat"  >
+		<table  align="center" width="1010px" height="100%" cellpadding="0" cellspacing="0">
+			<tr><td colspan="2"><img name="rImage" src="foto/header2014.jpg"></td></tr>
+			<tr style="background-color:white" valign="top"><td colspan="2">
+			
+			<ul id="tabs">
+				<li><a href="#" name="tab1">Tour de Orava</a></li>
+				<li><a href="#" name="tab7">2012</a></li>
+				<li><a href="#" name="tab3">2013</a></li>
+				<li><a href="#" name="tab8">2014</a></li>
+				<li><a href="#" name="tab9">2015</a></li>
+				<li><a href="#" name="tab5">2016</a></li>
+				<li><a href="#" name="tab2">2017</a></li>
+				<li><a href="#" name="tab4">Jazdci</a></li>
+				<li><a href="#" name="tab6">Galéria</a></li>
+			</ul>
+
+			<div id="content"> 
+				<div id="tab1">						
+					<b>Tour de Orava</b> (doslova: Okružná jazda po Orave) sú etapové preteky nedopujúcich cyklistov, trvajúce asi päť dní v lete. 
+					História vzniku siaha do roku 2009, kedy koncom augusta štvorica neskorších zakladateľov TdO absolvovala po prvý krát jednodňovú cykloklasiku v okolí Nitry. 
+					Z klasiky sa stala tradícia, ktorú organizovali minimálne raz do roka, až sa napokon rozhodli usporiadať etapové preteky.
+					A tak sa v roku 2012 po prvý krát uskutočnila Tour de Orava, ktorej základným pilierom je jednota. 
+					Myšlienka Tour de Orava sa rýchlo rozšírila a dodnes sa pelotón TdO stihol zdvojnásobiť. 
+					Dnes je toto podujatie jednou z najdôležitejších športových udalostí roka.
+					
+					<br/><br/>
+					<b>Tričká</b>
+					<br/>
+					Preteky sú spojené s niekoľkými súťažami, ku ktorým je obyčajne pridružené farebné tričko.
+					Aktuálny držiteľ ocenenia je oprávnený nosiť počas jazdy príslušné tričko.<br/>
+					<br/>
+					<img src="foto/dresy/image010.jpg" width="100px"><br/>
+					<b>Žlté tričko</b> nosí vedúci jazdec celých pretekov a cení sa zo všetkých najviac. Po skončení pretekov je vedúci jazdec vyhlásený za celkového víťaza.
+					<br/>
+					<img src="foto/dresy/image008.jpg" width="100px"><br/>
+					<b>Zelené tričko</b> je udeľované za šprintérske body. Na konci každej etapy sa tieto body udelia jazdcom, ktorí skončia prví, druhí atď.V priebehu etapy možno získať nejaké body aj za najrýchlejší prejazd určitými kontrolnými miestami.
+					<br/>
+					<img src="foto/dresy/image006.jpg" width="100px"><br/>
+					<b>Bodkované tričko</b>  je určené pre kráľa hôr. Na vrchole každého výjazdu sú najrýchlejším jazdcom rozdeľované body.
+					<br/>
+					<img src="foto/dresy/image016.jpg" width="100px"><br/>
+					<b>Biele tričko</b> je obdobou žltého trička, je však určené jazdcom, ktorí na pretekoch štartujú po prvý krát.
+					<br/><br/>
+					Poslednou súťažou je súťaž družstiev. Mužstvo ktoré skončí ako posledné musí v posledný večer zabezpečiť občerstvenie na afterparty a
+					v posledný deň upratovať chatu.
+					<br/><br/>
+					
+					Pravidlá:<br/><br/>
+					
+					Bodové ohodnotenie prémii závisí od počtu aktívnych pretekárov na danej prémii. Posledný na prémii je bez bodu a každý pred ním má o bod viac, 
+					pričom maximum možných získaných bodov je päť.
+					Pri rovnosti bodov o víťazovi rozhodujú vyššie umiestnenia v danej kategórii.
+					Každý jazdec môže získať len jeden dres. Ak by vyhral viac získava len ten cennejší a ostatné prechádzajú na ďalšieho jazdca v poradí.					
+					Po každej horskej prémii sa všetci jazdci čakajú, ako aj po každom zjazde.					
+					Každá etapa má maximálne dve prémie. Jednu horskú (spravidla vrch najvyššieho kopca) a jednu rýchlostnú (spravidla v domovskej dedine).
+					<br/><br/>
+					
+					<b>História</b>					
+					<br/><br/>
+					Najviac celkových víťazstiev – 2x Pavol L. (2013, 2014)<br/>
+					Najviac získaných prémii – Michal S. (8)<br/>
+					
+					<br/>
+					<b>Škandály na TdO</b><br/>
+					Škandálov v ročníku 2013 bolo mnoho a boli výlučne v réžii Ľuboša B. ktorý často prehrával za záhadných okolností, keď sa mu zasekla kapsa do kolesa, padla mu retiazka, pošmykol sa mu pedál, neuhol sa mu strom, nedal mu prednosť kamión alebo pár metrov pred cieľom stretol strýka a musel zosadnúť.
+					<br/><br/>
+					<b>Technické poruchy na TdO</b><br/>
+					V ročníku 2013 sa pár kilometrov pred koncom aktuálne vedúcemu jazdcovi Pavlovi L. prihodil defekt. Ostatní členovia jeho tímu sa rozhodli pokračovať ďalej bez neho. Ostal s ním len Juraj B. za čo by si určite zaslúžil cenu fair play keby sa taká udeľuje. Ani toto mu však nezabránilo v celkovom víťazstve.
+					<br/><br/>
+					<a href="foto/historia/technicke poruchy.JPG" data-lightbox="technicke poruchy"><img src="foto/historia/technicke poruchy_small.jpg" ></a>
+					<br/><br/>
+					<b>Zranenia na TdO</b><br/>
+					V ročníku 2015 spadol Peter Č. potom, čo mu chcel Paľo L. zablahoželať k víťazstvu na horskej prémii. Peťo však zabudol, 
+					že má obuté tretry a blahoželanie neustál. Z pádu si našťastie odniesol len ponaučenie.
+					<br/><br/>					
+					<b>Víťazi:</b><br/>
+					<br/>
+					<b>2016</b><br/>
+					<img src="foto/dresy/image011.jpg" width="30px"> Marcel B.<br/>
+					<b>2015</b><br/>
+					<img src="foto/dresy/image011.jpg" width="30px"> Peter Č.<br/>
+					<b>2014</b><br/>
+					<img src="foto/dresy/image011.jpg" width="30px"> Pavol L.<br/>
+					<img src="foto/dresy/image009.jpg" width="30px"> Michal S.<br/>
+					<img src="foto/dresy/image007.jpg" width="30px"> Peter Č.<br/>
+					<img src="foto/dresy/image016.jpg" width="30px"> Marcel B.<br/>
+					<br/>
+					<b>2013</b><br/>
+					<img src="foto/dresy/image011.jpg" width="30px"> Pavol L.<br/>
+					<img src="foto/dresy/image009.jpg" width="30px"> Michal S.<br/>
+					<img src="foto/dresy/image007.jpg" width="30px"> Peter Č.<br/>
+					<img src="foto/dresy/image016.jpg" width="30px"> Juraj B.<br/>
+					<br/>
+					<b>2012</b><br/>
+					<img src="foto/dresy/image011.jpg" width="30px"> Ľuboš B.<br/>
+				</div>
+				
+				<div id="tab7">
+				Od nášho spoluautora Ing. Ľuboša Brišša.<br/><br/>
+				
+				<b>1. deň - Prológ</b><br/><br/>
+				Organizátori (Ľuboša B. - pozn. autora) na začiatok pripravili asi 30 km dlhý prológ, ktorý mal značne netradičný profil, 
+				keďže trasa ihneď po štarte zaviedla pretekárov do približne kilometer dlhého ostrého stúpania, typického skôr pre záver tých najnáročnejších etáp.
+				S touto nástrahou (výplodom pojašenej hlavy - pozn. autora) sa dokázal vysporiadať iba Ľuboš B., ktorý jediný nemusel zosadnúť zo sedla a prémiu s prehľadom vyhral. 
+				(Všetci ostatní mali štipku zdravého rozumu - pozn. autora) Na kopci sa pelotón počkal a pokračoval v pokojnom tempe po prekrásnom okolí Oravskej Lesnej, 
+				kde sa pristavil pri rôznych turistických atrakciách, ako sú napr. starý kostol nad obcou, Historická lesná úvraťová železnica či lyžiarske stredisko Orava Snow. 
+				V lyžiarskom stredisku si vychutnali aj zjazd tunajšími vychýrenými zjazdovkami, samozrejme na bicykloch.  Prológ ubral ročníku 2012 na diváckej atraktivite, 
+				pretože ukázal, že jeden z TOP favoritov, Ľuboš K., prišiel na preteky v slabej forme, spôsobenej pravdepodobne zdravotnými problémami.<br/><br/>
+				
+				<b>2. deň - Kráľovská etapa</b><br/><br/>
+				<img src="foto/2012/2.den2012.jpg" class="center"><br/>
+				Vyše 80 km dlhá etapa, trasa Oravská Lesná – Nová Bystrica – Terchová – Zázrivá – Oravská Lesná. 
+				Po úvodných rovinatých kilometroch prišla prvá horská prémia, stúpanie na ceste Orava – Kysuce. Na čelo pelotónu išiel pracovať Ľuboš B., 
+				ktorý bol okrem najväčšieho favorita na celkové víťazstvo aj hlavným domestikom do kopcov. Na čele odpracoval celé stúpanie, očakával preto, že o prémiu (B) sa bojovať nebude. 
+				Preto ho veľmi prekvapil nástup Michala S. asi sto metrov pred prémiou, na ktorý už nestihol zareagovať. Nasledoval 7 km rýchly zjazd, 
+				v ktorom pelotón dokonca predbiehal niekoľkých krajinkárov v automobiloch. V nasledujúcom krátkom a miernom stúpaní (C) k Múzeu kysuckej dediny po skvelom taktickom výkone triumfoval Michal S. 
+				pred Ľubošom B.  V ostatných horských prémiách (D, E, F) už Ľuboš B. nenechal nič na náhodu a víťazstvo si postrážil. Zo všetkých  treba spomenúť dve: stúpanie z Terchovej smerom na Zázrivú a 
+				najmä najdôležitejšie a najťažšie stúpanie ročníka 2012, stúpanie zo Zázrivej do Oravskej Lesnej. Najmä v tejto etape ukázal Pavol L. veľmi slabú vrchársku formu.
+				Keďže sa etapa uskutočnila ešte v dobe temna, o umiestení ostatných jazdcov na konkrétnych prémiách sa nezachovali žiadne informácie. 
+				S najväčšou pravdepodobnosťou obsahovala etapa ešte ďalšie menšie horské prémie, o ktorých sa však taktiež nezachovali žiadne zdroje, 
+				isté je len, že na nich zvíťazil Ľuboš B. Kvôli náročnosti etapy boli zrušené všetky rýchlostné prémie pod heslom „kto zmení tempo, berie v krčme kolo“. 
+				(Ľuboš B. ich zrušil vždy okamžite ako na nich prehral. Aj to heslo vymyslel ze behu. - pozn. autora)<br/><br/>
+				
+				<b>3. deň - Sanitárny deň</b><br/><br/>
+				Po kráľovskej etapa nasledoval sanitárny deň, ktorý jazdci využili na wellness v Terchovej. Vo wellnesse začal aj najväčší škandál ročníka 2012, tzv. Kauza uterák. 
+				V rámci menšej turistiky navštívili pretekári sochu Jánošíka nad obcou. Po zaslúženom oddychu mala nasledovať záverečná etapa k partizánskej nemocnici, ale kvôli nepriazni počasia sa organizátori
+				vzhľadom na bezpečnosť pretekárov rozhodli etapu radšej zrušiť.				
+				
+				</div>
+				
+				<div id="tab3">
+					<b>Celkové poradie</b><br/>
+					<table style="text-align:center;" border="1">
+						<tr>
+						  <td width="100">&nbsp;</td>
+						  <td width="100"><img src="foto/dresy/image007.jpg" width="30px"></td>
+						  <td width="100"><img src="foto/dresy/image009.jpg" width="30px"></td>
+						  <td width="100"><img src="foto/dresy/image011.jpg" width="30px"></td>
+						  <td width="100">&nbsp;</td>
+						</tr>
+						<tr>
+						  <td>Pavol L.</td>
+						  <td>4 4 4</td>
+						  <td>4 5</td>
+						  <td>21</td>
+						  <td>1. miesto</td>
+						</tr>
+						<tr>
+						  <td>Michal S.</td>
+						  <td>5 2 2</td>
+						  <td>5 4 3</td>
+						  <td>21</td>
+						  <td>2. miesto</td>
+						</tr>
+						<tr>
+						  <td>Peter Č.</td>
+						  <td>3 5 5</td>
+						  <td>3 2 2</td>
+						  <td>20</td>
+						  <td>3. miesto</td>
+						</tr>
+						<tr>
+						  <td>Ľuboš B.</td>
+						  <td>2 3 3</td>
+						  <td>2 2 1</td>
+						  <td>13</td>
+						  <td>4. miesto</td>
+						</tr>
+						<tr>
+						  <td>Ľuboš K.</td>
+						  <td>1 1 1</td>
+						  <td>1 1</td>
+						  <td>5</td>
+						  <td>5. miesto</td>
+						</tr>
+						<tr>
+						  <td>Juraj B.</td>
+						  <td>1</td>
+						  <td>&nbsp;</td>
+						  <td>1</td>
+						  <td>6. miesto</td>
+						</tr>
+					</table>
+					</br>
+					<img src="foto/dresy/image010.jpg" width="100px">Pavol L. - Celkový víťaz<br/>
+					<br/>
+					<img src="foto/dresy/image008.jpg" width="100px">Michal S. - Najlepší špurtér<br/>
+					<br/>
+					<img src="foto/dresy/image006.jpg" width="100px">Peter Č. - Najlepší vrchár<br/>
+					<br/>
+					<img src="foto/dresy/image016.jpg" width="100px">Juraj B. - Najlepší nováčik<br/>
+					<br/><br/>
+					
+					<b>Výsledky tímov:</b><br/>
+					1.miesto - Team Koniferum Cannondale (Pavol L., Michal S., Ľuboš K.): 47 bodov<br/>
+					2.miesto - Ľudovítová Pro Team (Peter Č., Ľuboš B., Juraj B.): 34 bodov
+					
+					<br/><br/>
+					
+					<b>1. deň - Prológ</b><br/><br/>
+					<a href="foto/2013/1.den.jpg" data-lightbox="1"><img src="foto/2013/1.den.jpg" width="800px" class="center"></a><br/>
+					<a href="foto/2013/1.den-vyska.jpg" data-lightbox="1"><img src="foto/2013/1.den-vyska.jpg" width="800px" class="center"></a><br/>					
+					Od úvodu prvej etapy bol na čele Juraj B. ktorý potiahol svoj tým pod kopec, kde však sa na neho jeho tímový kolegovia vykašlali a Ľuboš B. s Petrom Č. sa pustili do sólo 
+					uniku. Ten sa im však nevyplatil a jasne prehrali. Hneď nastali rozpory v týme Ľudovitová Pro Team, kde sa zdalo ze taktika na troch lídrov nie je najšťastnejšia.
+					<br/><br/>
+					<b>Horská prémia</b><br/>
+					<table style="text-align:center;" border="1">
+						<tr>
+						  <td width="100">5b</td>
+						  <td width="100">Michal S.</td>
+						</tr>
+						<tr>
+						  <td>4b</td>
+						  <td>Pavol L.</td>
+						</tr>
+						<tr>
+						  <td>3b</td>
+						  <td>Peter Č.</td>
+						</tr>
+						<tr>
+						  <td>2b</td>
+						  <td>Ľuboš B.</td>
+						</tr>
+						<tr>
+						  <td>1b</td>
+						  <td>Ľuboš K.</td>
+						</tr>
+					</table>
+
+					<br/><br/>
+					<b>2. deň - Kráľovská etapa</b><br/><br/>
+					<a href="foto/2013/2.den.jpg" data-lightbox="1"><img src="foto/2013/2.den.jpg" width="800px" class="center"></a><br/>
+					<a href="foto/2013/2.den-vyska.png" data-lightbox="1"><img src="foto/2013/2.den-vyska.png" width="800px" class="center"></a><br/>
+					
+					Druhá etapa mala trasu k Oravskej priehrade. Po krátkom rovinatom úseku mala špurtérsku prémiu v obci Zakamenné. Postupne sa tempo poriadne zvýšilo a z balíka odpadávali jazdci.
+					Najskôr Juraj B., a po tom čo Ľuboš K. rozbehol špurt pre svojich tímových kolegov tak aj on. Šprint si najlepšie načasovali jazdci
+					teamu Koniferum Cannondale a prišlo sa v rovnakom poradí ako v prvý deň. Ľuboš B. avizoval technické problémy s kapsou v kolese.<br/>
+
+					Pár kilometrov pred cieľom sa jazdcovi Pavlovi L. prihodil defekt a bol nútený pretek nedokončiť. Ostal s ním len Juraj B. a zvyšní jazdci sa pobili o poslednú
+					špurtérsku prémiu. Ako prvý zaútočil Ľuboš B. avšak predbehli ho Peter Č. aj Michal S. Na ďalší útok sa už nezmohol. Údajne stretol stryka a musel sa pri ňom zastaviť.
+					Táto prémia sa napokon po tesnom finiši opäť stala korisťou Michala S.
+					<br/><br/>
+					<div style="float:left;">
+						<b>1. špurtérska prémia</b><br/>
+						<table style="text-align:center;" border="1">
+							<tr>
+							  <td width="100">5b</td>
+							  <td width="100">Michal S.</td>
+							</tr>
+							<tr>
+							  <td>4b</td>
+							  <td>Pavol L.</td>
+							</tr>
+							<tr>
+							  <td>3b</td>
+							  <td>Peter Č.</td>
+							</tr>
+							<tr>
+							  <td>2b</td>
+							  <td>Ľuboš B.</td>
+							</tr>
+							<tr>
+							  <td>1b</td>
+							  <td>Ľuboš K.</td>
+							</tr>
+						</table>
+					</div>
+					<div style="float:left; padding-left: 20px;">
+						<b>Horská prémia</b><br/>
+						<table style="text-align:center;" border="1">
+							<tr>
+							  <td width="100">5b</td>
+							  <td width="100">Peter Č.</td>
+							</tr>
+							<tr>
+							  <td>4b</td>
+							  <td>Pavol L.</td>
+							</tr>
+							<tr>
+							  <td>3b</td>
+							  <td>Ľuboš B</td>
+							</tr>
+							<tr>
+							  <td>2b</td>
+							  <td>Michal S.</td>
+							</tr>
+							<tr>
+							  <td>1b</td>
+							  <td>Ľuboš K.</td>
+							</tr>
+						</table>
+					</div>
+					<div style="float:left; padding-left: 20px;">
+						<b>2. špurtérska prémia</b><br/>
+						<table style="text-align:center;" border="1">
+							<tr>
+							  <td width="100">5b</td>
+							  <td width="100">Pavol L.</td>
+							</tr>
+							<tr>
+							  <td>4b</td>
+							  <td>Michal S.</td>
+							</tr>
+							<tr>
+							  <td>3b</td>
+							  <td>Ľuboš B.</td>
+							</tr>
+							<tr>
+							  <td>2b</td>
+							  <td>Peter Č.</td>
+							</tr>
+							<tr>
+							  <td>1b</td>
+							  <td>Ľuboš K.</td>
+							</tr>
+						</table>
+					</div>
+					<div style="float:left; padding-left: 20px;">
+						<b>3. špurtérska prémia</b><br/>
+						<table style="text-align:center;" border="1">
+							<tr>
+							  <td width="100">3b</td>
+							  <td width="100">Michal S.</td>
+							</tr>
+							<tr>
+							  <td>2b</td>
+							  <td>Peter Č.</td>
+							</tr>
+							<tr>
+							  <td>1b</td>
+							  <td>Ľuboš B.</td>
+							</tr>
+						</table>
+					</div>
+					
+					<br/><br/><br/><br/><br/><br/><br/><br/>
+					
+					<b>3. deň - Nečakaná kráľovská etapa</b><br/><br/>
+					<a href="foto/2013/3.den.jpg" data-lightbox="1"><img src="foto/2013/3.den.jpg" width="800px" class="center"></a><br/>
+					<a href="foto/2013/3.den-vyska.jpg" data-lightbox="1"><img src="foto/2013/3.den-vyska.jpg" width="800px" class="center"></a><br/>
+					Na tento deň bola naplánovaná najťažšia horská premia s cieľom pri partizánskej nemocnici vo výške 1153 m.n.m.. 
+					Postupne z balíka odpadli Juraj B., Ľuboš K. a Michal S. Ľubošovi B. údajne spadla reťaz a preto nevyhral.
+					V závere sa zrodilo tesné víťazstvo Petra Č. pred Pavlom L. Táto etapa sa však ešte ani zdaleka neskončila. Po príchode do Novej Bystrice dostal Ľuboš K. výborný nápad
+					vrátiť sa do Oravskej Lesnej "skratkou" ktorá mala nakoniec 30km. Uprostred cesty na 53km sa strhla búrka a bolo z toho poriadne dobrodrúžstvo.
+					<br/><br/>
+					<b>Horská prémia</b><br/>
+					<table style="text-align:center;" border="1">
+						<tr>
+						  <td width="100">5b</td>
+						  <td width="100">Peter Č.</td>
+						</tr>
+						<tr>
+						  <td>4b</td>
+						  <td>Pavol L.</td>
+						</tr>
+						<tr>
+						  <td>3b</td>
+						  <td>Ľuboš B.</td>
+						</tr>
+						<tr>
+						  <td>2b</td>
+						  <td>Michal S.</td>
+						</tr>
+						<tr>
+						  <td>1b</td>
+						  <td>Juraj B.</td>
+						</tr>
+					</table><br/>
+					<a href="foto/2013/3den2013_1.JPG" data-lightbox="3den2013"><img src="foto/2013/3den2013_1_small.jpg" height="180px" ></a>
+					<a href="foto/2013/3den2013_2.JPG" data-lightbox="3den2013"><img src="foto/2013/3den2013_2_small.jpg" height="180px" ></a>
+					<a href="foto/2013/3den2013_3.JPG" data-lightbox="3den2013"><img src="foto/2013/3den2013_3.JPG" height="180px"></a>
+					<br/><br/>
+					<b>4. deň - Sanitárny deň</b><br/><br/>
+					Po náročnom programe si jazdci TdO doprali deň bez bicykla. Najskôr sa boli pozrieť na Jánošíkové diery v Terchovej a neskôr zrelaxovali aj anus vo wellness hoteli Rozsutec.
+					<br/><br/>
+					<b>5. deň - Záverečná etapa</b><br/><br/>
+					Po sanitárnom dni Juraj B. a Pavol L. opustili dejisko pretekov hneď ráno. Vyskytli sa nepodložené klebety, že Pavol L. sa chcel proste vyhnúť prípadnej antidopingovej kontrole. 
+					Tieto reči sa samozrejme nezakladajú na pravde a Pavol L. zostáva symbolom novej, čistej cyklistiky. Ľuboš K. zostal strážiť chatu a Michal S., Ľuboš B. a Peter Č. sa pripojili k už 
+					tradičnej lesnianskej cyklotúre organizovanej akýmsi cyklistickým spolkom. Trasa, ktorá mala byť určená pre rodiny s deťmi, viedla napr. takým náročným stúpaním, ako je stúpanie na Paráč. 
+					Naši pretekári si z nepochopiteľných dôvodov nevychutnávali jazdu v pelotóne, ale držali sa značne pred ním. Aj preto došli do cieľa so značným náskokom aj pred občerstvením, 
+					ktorého sa im teda nedostalo.<br/><br/>
+					<a href="foto/2013/5den2013.JPG" data-lightbox="5den2013"><img src="foto/2013/5den2013_small.jpg" height="180px" ></a>
+				</div>
+				
+				<div id="tab8">
+					<b>Celkové poradie</b><br/>
+					<table style="text-align:center;" border="1">
+						<tr>
+						  <td width="100">&nbsp;</td>
+						  <td width="100"><img src="foto/dresy/image007.jpg" width="30px"></td>
+						  <td width="100"><img src="foto/dresy/image009.jpg" width="30px"></td>
+						  <td width="100"><img src="foto/dresy/image011.jpg" width="30px"></td>
+						  <td width="100">&nbsp;</td>
+						</tr>
+						<tr>
+						  <td>Pavol L.</td>
+						  <td>5 1 4</td>
+						  <td>5 5 3 4</td>
+						  <td>27</td>
+						  <td>1. miesto</td>
+						</tr>
+						<tr>
+						  <td>Michal S.</td>
+						  <td>4 4 5</td>
+						  <td>2 1 5 5</td>
+						  <td>26</td>
+						  <td>2. miesto</td>
+						</tr>
+						<tr>
+						  <td>Peter Č.</td>
+						  <td>3 2 3</td>
+						  <td>4 4 1</td>
+						  <td>17</td>
+						  <td>3. miesto</td>
+						</tr>
+						<tr>
+						  <td>Marcel B.</td>
+						  <td>1 5 2</td>
+						  <td>3 2 3</td>
+						  <td>16</td>
+						  <td>4. miesto</td>
+						</tr>
+						<tr>
+						  <td>Ľuboš B.</td>
+						  <td>2 3 1</td>
+						  <td>4 3 1 2</td>
+						  <td>16</td>
+						  <td>5. miesto</td>
+						</tr>
+						<tr>
+						  <td>Ľuboš K.</td>
+						  <td>&nbsp;</td>
+						  <td>1 2</td>
+						  <td>3</td>
+						  <td>6. miesto</td>
+						</tr>
+						<tr>
+						  <td>Juraj B.</td>
+						  <td>&nbsp;</td>
+						  <td>&nbsp;</td>
+						  <td>&nbsp;</td>
+						  <td>7. miesto</td>
+						</tr>
+					</table>
+					</br>
+					<img src="foto/dresy/image010.jpg" width="100px">Pavol L. - Celkový víťaz<br/>
+					<br/>
+					<img src="foto/dresy/image008.jpg" width="100px">Michal S. - Najlepší špurtér<br/>
+					<br/>
+					<img src="foto/dresy/image006.jpg" width="100px">Peter Č. - Najlepší vrchár<br/>
+					<br/>
+					<img src="foto/dresy/image016.jpg" width="100px">Marcel B. - Najlepší nováčik<br/>
+					<br/><br/>
+					
+					<b>Výsledky tímov:</b><br/>
+					1.miesto - Team Koniferum Cannondale (Pavol L., Ľuboš B., Ľuboš K.): 46 bodov<br/>
+					2.miesto - Chlastana Pro Team (Michal S., Peter Č., Juraj B.): 43 bodov
+					
+					<br/><br/>
+					
+					<b>1. deň - Prológ - 39km</b><br/><br/>
+					<img src="foto/2014/1den.jpg" class="center"><br/>
+					<br/><br/>
+					
+					Pelotón sa držal po kope po ôsmy kilometer. Potom sa mierne odpútal Marcel ku ktorému sa pridali Luboš B. a Pavol L. 
+					Skupinka si vybojovala náskok a stratila sa z dohľadu prenasledovateľov. Jednalo sa o historicky prvý únik v histórii Tdo. 
+					Michal S. a Juraj B. sa pokúsili zlikvidovať náskok ale po pár minútach to vzdali.
+					Zo skupinky na 15km odpadol Marcel a do víťazného konca únik doviedol Pavol L. Marcel si prišiel po 3. miesto. V špurte o 4. miesto porazil Michal Ľuboša K.
+					
+					Na 27km v krátkom ale ostrom stúpaní sa snažil odpútať Peter Č., ktory nasadil vysoké tempo, ktorému nestíhali Michal S., Ľuboš K. a Juraj B.
+					V predu vytvoril skupinku s Pavlom L., Ľubošom B. a Marcelom. 
+					Táto skupinka si to rozdala o víťazstvo v druhej špurtérskej prémii. Víťazstvo sa opäť podarilo ukoristitiť Pavlovi L. tesne pred Petrom Č.					
+					
+					<br/><br/>
+					
+					<div style="float:left;">
+						<b>1. špurtérska prémia</b><br/>
+						<table style="text-align:center;" border="1">
+							<tr>
+							  <td width="100">5b</td>
+							  <td width="100">Pavol L.</td>
+							</tr>
+							<tr>
+							  <td>4b</td>
+							  <td>Ľuboš B.</td>
+							</tr>
+							<tr>
+							  <td>3b</td>
+							  <td>Marcel B.</td>
+							</tr>
+							<tr>
+							  <td>2b</td>
+							  <td>Michal S.</td>
+							</tr>
+							<tr>
+							  <td>1b</td>
+							  <td>Ľuboš K.</td>
+							</tr>
+						</table>
+					</div>
+					<div style="float:left; padding-left: 20px;">
+						<b>2. špurtérska prémia</b><br/>
+						<table style="text-align:center;" border="1">
+							<tr>
+							  <td width="100">5b</td>
+							  <td width="100">Pavol L.</td>
+							</tr>
+							<tr>
+							  <td>4b</td>
+							  <td>Peter Č.</td>
+							</tr>
+							<tr>
+							  <td>3b</td>
+							  <td>Ľuboš B.</td>
+							</tr>
+							<tr>
+							  <td>2b</td>
+							  <td>Marcel B.</td>
+							</tr>
+							<tr>
+							  <td>1b</td>
+							  <td>Michal S.</td>
+							</tr>
+						</table>
+					</div>
+					
+					<br/><br/><br/><br/><br/><br/><br/><br/>
+					<a href="foto/2014/1den2014.jpg" data-lightbox="1den2014"><img src="foto/2014/1den2014.jpg" height="180px" ></a>
+					
+					<br/><br/><br/>
+					<b>2. deň - Kráľovská etapa</b><br/><br/>
+					
+					<a href="foto/2014/2den.jpg" data-lightbox="1"><img src="foto/2014/2den.jpg" class="center"></a><br/>
+					<a href="foto/2014/2den-vyska.jpg" data-lightbox="1"><img src="foto/2014/2den-vyska.jpg" width="800px" class="center"></a><br/>
+					
+					<br/><br/>
+					
+					Po prvom dni sa mohlo zdať, že boj o celkové víťazstvo je rozhodnutý, avšak to nechceli jazdci tímu Chlastana Pro Team pripustiť.
+					Kilometer pred prvou špurtérskou prémiou sa odpútali Michal S. a Peter Č. a jazdci tímu Koniferum Cannondale nestihli zareagovať.
+					Po víťazstvo si prišiel Michal S.
+					Na začiatku druhej horskej prémie za Zubercom začal pracovať v čele balíka super domestik Ľuboš B. s úmyslom roztrhať balík.
+					To sa mu aj podarilo ale prekvapujuco začali strácat dvaja supervrchári Pavol L. a Peter Č. 
+					Nováčik Marcel B. sa bez problemov držal a aj Michal S. Táto trojica sa spolu držala takmer celé stúpanie.
+					Asi pol kilometra pred vrcholom začal Michal strácať na Marcela. Pre Brišša Marcel nebol zaujimavý tak nereagoval.
+					V čase keď mal Marcel už dostatocný náskok využil Michal svoje enormné zrýchlenie a nastúpil Briššovi. 
+					Brišš nemal svoje nohy a nezareagoval a Michal si prišiel po druhé miesto. Po prvé etapové víťazstvo si prišiel nováčik Marcel.
+					Michal S. zavŕšil skvelý deň víťazstvom na poslednej špurtérskej prémii a poriadne zdramatizoval boj o celkové víťazstvo.
+					
+					<br/><br/>
+					<div style="float:left;">
+						<b>1. špurtérska prémia</b><br/>
+						<table style="text-align:center;" border="1">
+							<tr>
+							  <td width="100">5b</td>
+							  <td width="100">Michal S.</td>
+							</tr>
+							<tr>
+							  <td>4b</td>
+							  <td>Peter Č.</td>
+							</tr>
+							<tr>
+							  <td>3b</td>
+							  <td>Pavol L.</td>
+							</tr>
+							<tr>
+							  <td>2b</td>
+							  <td>Ľuboš K.</td>
+							</tr>
+							<tr>
+							  <td>1b</td>
+							  <td>Ľuboš B.</td>
+							</tr>
+						</table>
+					</div>
+					<div style="float:left; padding-left: 20px;">
+						<b>1. horská prémia</b><br/>
+						<table style="text-align:center;" border="1">
+							<tr>
+							  <td width="100">5b</td>
+							  <td width="100">Pavol L.</td>
+							</tr>
+							<tr>
+							  <td>4b</td>
+							  <td>Michal S.</td>
+							</tr>
+							<tr>
+							  <td>3b</td>
+							  <td>Peter Č.</td>
+							</tr>
+							<tr>
+							  <td>2b</td>
+							  <td>Ľuboš B.</td>
+							</tr>
+							<tr>
+							  <td>1b</td>
+							  <td>Marcel B.</td>
+							</tr>
+						</table>
+					</div>
+					<div style="float:left; padding-left: 20px;">
+						<b>2. horská prémia</b><br/>
+						<table style="text-align:center;" border="1">
+							<tr>
+							  <td width="100">5b</td>
+							  <td width="100">Marcel B.</td>
+							</tr>
+							<tr>
+							  <td>4b</td>
+							  <td>Michal S.</td>
+							</tr>
+							<tr>
+							  <td>3b</td>
+							  <td>Ľuboš B.</td>
+							</tr>
+							<tr>
+							  <td>2b</td>
+							  <td>Peter Č.</td>
+							</tr>
+							<tr>
+							  <td>1b</td>
+							  <td>Pavol L.</td>
+							</tr>
+						</table>
+					</div>
+					<div style="float:left; padding-left: 20px;">
+						<b>2. špurtérska prémia</b><br/>
+						<table style="text-align:center;" border="1">
+							<tr>
+							  <td width="100">5b</td>
+							  <td width="100">Michal S.</td>
+							</tr>
+							<tr>
+							  <td>4b</td>
+							  <td>Pavol L.</td>
+							</tr>
+							<tr>
+							  <td>3b</td>
+							  <td>Marcel B.</td>
+							</tr>
+							<tr>
+							  <td>2b</td>
+							  <td>Ľuboš B.</td>
+							</tr>
+							<tr>
+							  <td>1b</td>
+							  <td>Peter Č.</td>
+							</tr>
+						</table>
+					</div>
+					
+					<br/><br/><br/><br/><br/><br/><br/><br/>
+					<a href="foto/2014/2den2014.jpg" data-lightbox="2den2014"><img src="foto/2014/2den2014.jpg" height="180px" ></a>
+					
+					<br/><br/><br/>
+					
+					<b>3. deň - Sanitárny deň</b><br/><br/>
+					Po náročnom programe si jazdci TdO doprali deň bez bicykla. Najskôr sa boli pozrieť v Kvačianskej doline a potom zregenerovali aj anus v kúpeloch Lúčky.
+					<br/><br/><br/>
+					
+					<b>4. deň - Horská prémia</b><br/><br/>
+					<a href="foto/2014/4den.jpg" data-lightbox="1"><img src="foto/2014/4den.jpg" class="center"></a><br/>
+					<a href="foto/2014/4den-vyska.jpg" data-lightbox="1"><img src="foto/2014/4den-vyska.jpg" width="800px" class="center"></a><br/>
+					<br/><br/>
+					
+					Ľuboš B. avizoval pred pretekmi, že v kopcoch rozpúta peklo. Po tomto kopci bolo jasné, že jediné peklo tento rok rozpútal na chate na záchode.
+					<br/><br/>
+					
+					<div style="float:left; padding-left: 20px;">
+						<b>horská prémia</b><br/>
+						<table style="text-align:center;" border="1">
+							<tr>
+							  <td width="100">5b</td>
+							  <td width="100">Michal S.</td>
+							</tr>
+							<tr>
+							  <td>4b</td>
+							  <td>Pavol L.</td>
+							</tr>
+							<tr>
+							  <td>3b</td>
+							  <td>Peter Č.</td>
+							</tr>
+							<tr>
+							  <td>2b</td>
+							  <td>Marcel B.</td>
+							</tr>
+							<tr>
+							  <td>1b</td>
+							  <td>Ľuboš B.</td>
+							</tr>
+						</table>						
+					</div>
+					
+					<br/><br/><br/><br/><br/><br/><br/><br/>
+					<a href="foto/2014/4den2014.jpg" data-lightbox="4den2014"><img src="foto/2014/4den2014.jpg" height="180px" ></a>
+					
+					<br/><br/><br/>
+					Po tejto etape Luboš B. uzavrel stávku, že pojde do Mýta pod Ďumbierom, tam si spraví selfie a vráti sa na chatu. Ako to dopadlo môžete vidieť vo
+					fotodokumentácii. Trošku zle odbočil. Napriek tomu v tento deň najazdil úctihodných 130 km.
+					<br/><br/>
+					<img src="foto/2014/briss.jpg" height="250px" ><br/><br/>
+					
+					<b>5. deň - rozlúčka</b><br/><br/>
+					<a href="foto/2014/5den.jpg" data-lightbox="1"><img src="foto/2014/5den.jpg" class="center"></a><br/>
+					<a href="foto/2014/5den-vyska.jpg" data-lightbox="1"><img src="foto/2014/5den-vyska.jpg" width="800px" class="center"></a><br/>
+					<br/><br/>
+					
+					Posledný deň ročníka 2014 sa už tradične nesútažilo a jazdci sa lúčili s fanúšikmi. Juraj B. a Pavol L. kvôli zdravotným problémom nenastúpili.
+					<br/><br/>
+				</div>
+				
+				<div id="tab9">
+					</br>
+					<img src="foto/dresy/image010.jpg" width="100px">Peter Čopjan - Celkový víťaz<br/>
+					<br/><br/>
+					
+					<b>0. deň - 158km</b><br/><br/>
+					<img src="foto/2015/0den.jpg" class="center" width="900px"><br/>
+					<br/><br/>
+					
+					Trojica cyklistov (Ľuboš B., Peťo a Marcel), ktorá nemá na benzín, vyrazila na TdO 2015 o deň skôr, z Nitry smer Nová Lesná. 
+					Prvý deň sa dostali až do Nemeckej, Peťo vytvoril nový rekord TdO, keď absolvoval v priebehu dňa 158 km. Podotýkame, že na horskom bicykli. 
+					Večer borci doplnili v bare vypotené mineráli.
+					<br/><br/>
+					
+					<b>1. deň - Prológ</b><br/><br/>
+					<img src="foto/2015/1den.jpg" class="center" ><br/>
+					<br/><br/>
+					
+					V stúpaní na Čertovicu, ktorá ich čakala na raňajky, Peťo jasne demonštroval, kto bude tento rok v kopcoch dominovať.
+					Paľo, Juro a Ľuboš K. po dorazení do Novej Lesnej nezaháľali, rýchlo vyložili bicykle a vyrazili borcom naproti. 
+					K stretnutiu došlo v Tatranskej Štrbe, odkiaľ  sa už takmer kompletný pelotón presunul do cieľa. 				
+					
+					<br/><br/>
+					
+					<br/><br/><br/>
+					<b>2. deň - Sanitárny deň</b><br/><br/>
+					Borci absolvovali vrámci sanitárneho dňa peší výstup k Zamkovského chate a zregenerovali anus v Aquacity Poprad. Večer sa k nim pripojil aj Michalides.
+					<br/><br/>
+					
+					<br/><br/><br/>
+					<b>3. deň</b><br/><br/>
+					
+					<a href="foto/2015/3den.jpg" data-lightbox="1"><img src="foto/2015/3den.jpg" class="center"></a><br/>
+					<a href="foto/2015/3den-vyska.jpg" data-lightbox="1"><img src="foto/2015/3den-vyska.jpg" width="800px" class="center"></a><br/>
+					
+					<br/><br/>
+					
+					Borci si zmerali sily v stúpaní do Štrbského Plesa. Od Podbanského pelotón nasadil priam vražedné tempo, keď muziku tvrdil najmä Peter Čopjan. 
+					Toto tempo dlho nedokázal udržať Juro a z vláčiku si vystúpil.
+					Zvyšok pelotónu sa držal pokope až do posledného stúpania 5km od Štrbského plesa. Tu najskôr odpadol Ľuboš K. a potom Ľuboš B.
+					Ako prvý zaútočil Michal S., avšak Peter Čopjan poľahky jeho útok zlikvidoval a prišiel si po víťazstvo. 
+					V tesnom závese prišli Michal, Palo a Marcel. Po výdatnom obede v reštaurácii Furkotka 
+					sa niektorí pobrali priamo na byt, ostatní si to ešte vystúpali k Popradskému plesu.
+					
+					<br/><br/>
+					<div style="float:left;">
+						<b>Kráľovská prémia - Štrbské pleso</b><br/>
+						<table style="text-align:center;" border="1">
+							<tr>
+							  <td width="100">5b</td>
+							  <td width="100">Peter Č.</td>
+							</tr>
+							<tr>
+							  <td>4b</td>
+							  <td>Michal S.</td>
+							</tr>
+							<tr>
+							  <td>3b</td>
+							  <td>Pavol L.</td>
+							</tr>
+							<tr>
+							  <td>2b</td>
+							  <td>Marcel B.</td>
+							</tr>
+							<tr>
+							  <td>1b</td>
+							  <td>Ľuboš B.</td>
+							</tr>
+						</table>
+					</div>
+					
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					
+					<b>4. deň</b><br/><br/>
+					<a href="foto/2015/4den.jpg" data-lightbox="1"><img src="foto/2015/4den.jpg" class="center"></a><br/>
+					<br/><br/>
+					
+					Predchádzajúca etapa si vybrala svoju daň a na druhú kráľovskú etapu nenastúpil Paľo, Juro s Ľuboš K. kvôli vyčerpaniu.
+					Juro s Ľuboš K. ako alternatívu zvolili jazdu k Belianskej jaskyni. Peťo, Marcel, Mišo a Ľuboš B. absolvovali druhú kráľovskú etapu. 
+					Pelotón TdO po prvý krát v histórii opustil územie Slovenskej republiky, keď borci navštívili hrad Niedzica v Poľsku. 
+					Cestou späť si to skrátili cez „živý skanzen“ – obec Osturňa. Bolo to síce ďalej, ale o to horšia cesta. 
+					Celkovo chalani absolvovali v tejto etape 5 náročných stúpaní. 
+					V Tatrách sme moc rovín nenašli a preto bola šprintérska súťaž zrušená, 
+					vrchárska tým pádom splynula so súťažou o celkové víťazstvo. 
+					
+					<br/><br/>
+				</div>
+				
+				<div id="tab5">					
+					<b>0-tá etapa – 1. časť – 110 km</b><br/><br/>
+					<img src="foto/2016/0den.jpg" class="center" ><br/>
+					<br/><br/>
+					Tour de Orava 2016 začala tak ako tá predchádzajúca nultou etapou, na ktorú ale okrem Peťa, Marcela a Ľuboša B. nastúpili aj Paľo a Mišo, ktorý chceli dokázať, že tiež nie sú bábovky. 
+					Cieľovou destináciou bolo Krpáčovo, čo je len približne o 15 km ďalej ako Nemecká, kde končila 0-tá etapa vlani. Borci však usúdili, 
+					že by chceli stíhať nasávať krásy Slovenska a preto trasu rozdelili na dva dni. Štvorica cyklistov vyrazila z Nitry o ôsmej ráno a disciplinovane striedala až do Veľkého Cetína, 
+					kde sa k balíku pridal Paľo a nakoľko jazdci TdO vo väčšom počte ako 4 už nevedie disciplinovane striedať, pokračovalo sa ďalej systémom hala-bala, ktorý ďalej využívali po zvyšok TdO. 
+					Na dva dni jazdi je Krpáčovo blízko, tak chalani zvolili obkluku cez Banskú Štiavnicu a aby preverili vrchársku formu, aj do Banskej Štiavnice išli obklukou  – cez Počúvadlo. 
+					Tu prišlo obrovské zlyhanie Ľuboša B., ktorý to nedomyslel s obedom a tak sa ho chalani dočkali takmer až po 100 km, na Počúvadle. V kopci  všetci borci okrem Ľuboša B. okúsili pravý cyklistický hlaďák. 
+					Nieže by bol Ľuboš B. nejaký lepší, či odolnejší jazdec, proste má na bruchu uložené obrovské energetické zásoby. Po zaslúženom, ale nie dobrom obede sa už len spustili do Banskej Štiavnice.
+					<br/><br/>
+					
+					<b>0-tá etapa – 2. časť – 100 km</b><br/><br/>
+					<img src="foto/2016/1den.jpg" class="center" ><br/>
+					<br/><br/>
+					Ľuboš B. s Paľom si porovnali pripravené trasy zo Štiavnice do Krpáčova. Paľova bola o 40 km dlhšia, Ľubošova zase viedla hlavným cestným ťahom zo Štiavnice na Zvolen. 
+					Chalani spravili kompromis a vybrali sa cez Močiar. Keďže sa jedná o obec, borci nezapadli, ale z jej názvu je jasné, že sa celú cestu obávali, v akom stave bude cesta (ak vôbec). 
+					Do Močiara sa dostali bez problémov cez zvlnené cesty v nádhernom prostredí Štiavnických vrchov. Za Močiarom sa spevnená cesta zmenila na šotolinu a po chvíli opäť na spevnenú, 
+					aby sa mohla opäť zmeniť na šotolinu, a to v rýchlom zjazde priamo v zákrute. Chalani toto prekvapenie našťastie ustáli a dostali sa do obce Trnavá Hora, odkiaľ pokračovali takmer rovnakou trasou ako vlani. 
+					V záverečnom stúpaní do Krpáčová usúdili, že chata je na poriadnom kopci.
+					<br/><br/>
+					
+					<b>1. etapa – 90 km</b><br/><br/>
+					Na prvú etapu sa pridali aj Ľuboš K. a nováčik Boris, prekvapujúco však nenastúpil Paľo, ktorý si chcel dopriať deň pre seba. Borci najprv vystúpali na úplný vrchol Krpáčova, 
+					aby sa následne spustili cez Tále do Podbrezovej. Odtiaľ smer Osrblie, kde si v Národnom Biatlonovom Centre dali jeden okruh na bicykloch. Z Osrblia sa borci vrátili do Hronca, 
+					odkiaľ sa po obede vydali do Čierneho Balogu, kde navštívili miestne pozoruhodnosti – Lesnícky skanzen a Čiernohronskú železnicu.
+					<br/><br/>
+					
+					<b>Sanitárny deň</b><br/><br/>
+					Jubilejná piata TdO pripravila zatiaľ najnáročnejší sanitárny deň – peší výstup na Chopok. Po túre nasledovala Michalidesová oslava narodením spojená s narodeninovým gulášom a tak sa po prvý krát stalo, 
+					že v rámci sanitárneho dňa neboli borci zregenerovať anus vo wellnesse.
+					<br/><br/>
+					
+					<b>2. etapa – 55 km</b><br/><br/>
+					<img src="foto/2016/4den.jpg" class="center" ><br/>
+					<br/><br/>
+					Na druhú etapu nastúpil aj Jurček, ktorý sa kvôli pracovnej zaneprázdnenosti pridal k TdO až v priebehu sanitárneho dňa a do pelotónu sa vrátil Paľo. Celkovo bolo teda v balíku 8 jazdcov, rekord TdO. 
+					Etapa bola pojatá veľmi rekreačne, do Brezna a späť. Štvorica Marcel, Peťo, Ľuboš B. a Mišo si dala menšiu obkluku cez Tále a Mišov výkon dal jasne najavo, 
+					že pokiaľ je TdO nesúťažná, nedokáže sa prinútiť k poctivému tréningu ani sa dostatočne hecnúť. Zaujímavé veci sa diali na druhej strane kopca vo štvorici Paľo, Jurček, Ľuboš K. a Boris,
+					kde síce Paľo v oklieštenej vrchárskej konkurencii nedopustil prekvapenie, ale po druhé miesto si prišiel prekvapujúco Jurček. Obdivuhodné vrchárske zlepšenie.
+					<br/><br/>
+					
+					<b>Epilóg – 75 km</b><br/><br/>
+					Trojica Marcel, Peťo a Ľuboš B. sa z logistických dôvodov dopravila späť do Nitry kombinovanou dopravou bicykel+vlak. Celkovo teda odjazdili o 1 deň viac ako pred rokom, najazdili však o 50 km menej. 
+					Nebolo to však spôsobené klesajúcou formou borcov, ale celkovým poňatím jubilejnej piatej Tour de Orava, kde tento rok išlo najmä o rekreáciu.
+					Na TdO 2017 však Ľuboš B. sľubuje, že konečne pripraví ten kopec, z ktorého sa niekto pogrcá.
+
+				</div>
+				
+				<div id="tab2">
+					
+					<b>0-tá etapa – 1. časť – 125 km</b><br/><br/>
+					<img src="foto/2017/0den.jpg" class="center" width="500px"><br/>
+					<br/><br/>
+					Tour de Orava už po tretí krát štartovala nultou etapou, borci však tento krát neštartovali tradične z Nitry, ale z Bratislavy. Peťo, Mišo a Ľuboš B. prešli cez Karpaty do Stupavy,
+					kde už na nich čakal Paľo. Jazdci s vetrom v chrbte pokračovali popri Malým Karpatom a keď sa do toho poriadne opreli, Ľuboš zacítil 90 kilometrový presun z Nitry z predchádzajúceho
+					dňa a musel bojovať, aby nestratil kontakt. Za Brezovou pod Bradlom chalani okúsili krásu kopaníc, ale najmä náročnosť tunajších kopcov.
+					<br/><br/>
+
+					<b>0-tá etapa – 2. časť – 125 km</b><br/><br/>
+					<img src="foto/2017/1den.jpg" class="center" ><br/>
+					<br/><br/>
+					V druhej časti 0-tej etapy sa Paľo obetoval a prenechal priestor v pelotóne Marcelovi, zobral teda Čierneho Petra a zasadol za volant. Obmenený pelotón si to zamieril 
+					do Trenčianskych Stankoviec pozrieť Jurčeka do jeho nového bytu, kde sa im ušla kávička a pol decko. Odtiaľ už chalani smerovali priamo na chatu do doliniek, 
+					kde to po prečkaní lejaku za Púchovom na tretí krát aj našli. Kilometer pred chatou čakala na borcov 300 metrová stena, kde Ľuboš po prvý krát v histórii TdO zosadol a tlačil 
+					bicykel. Bez zosadnutia zvládol túto stenu ako jediný Peťo.
+					<br/><br/>
+
+					<b>Športový deň</b><br/><br/>
+					<img src="foto/2017/futbal 2017.jpg" class="center" width="500px" ><br/>
+					<br/><br/>
+					Pre nepriaznivé počasie nenasledovala po 0-tej etape 1. etapa, ale športový deň. Paľo nenašiel premožiteľa ani v pingpongovom, ani biliardovom turnaji a oba turnaje vyhral. 
+					Nasledoval futbalový zápas a Paľo opäť ukázal svoju veľkosť, keď si ako kapitán do týmu nevybral bývalého vynikajúceho reprezentanta Výčap-Opatoviec Jurčeka, ani všestranne 
+					veľmi nadaného športovca Peťa, ale stavil na srdciarov Ľuboša a Marcela, čo sa ukázalo ako kľúčové. Mišov tím (Mišo, Jurček, Peťo) sa rýchlo ujal vedenia 4:0, 
+					ale Paľov tým (Paľo, Ľuboš, Marcel) sa nenechal rozhádzať a rýchlo vyrovnal. Mišovmu tímu sa podarilo ešte raz vypracovať 4-gólové vedenie, ale Paľov tím opäť vyrovnal
+					a zápas napokon dospel do predĺženia. V ňom si Paľov tím rýchlo vypracoval rozhodujúci náskok a zápas vyhral.
+					<br/><br/>
+
+					<b>1. etapa (kráľovská) – 87 km</b><br/><br/>
+					<img src="foto/2017/2den.jpg" class="center" ><br/>
+					<br/><br/>
+					Peťo, Paľo a Ľubo mali v úvode etapy obrovské problémy v zjazde mokrou stenou, keď im to nebrzdilo tak, ako by očakávali, ale našťastie to ustáli a kráľovská etapa mohla pokračovať.
+					V rámci etapy pelotón TdO po druhý krát opustil Slovenskú republiku, borci tento krát navštívili Českú republiku, kde si dali kolečko okolo Vodnej nádrže Šance. 
+					Cestou späť dostal Mišo defekt, a po jeho rýchlej oprave sa pokračovalo ďalej. Etapa mala značne zvlnený profil, obsahovala veľký počet strmých stúpaní a možno ju označiť za 
+					jednu z najnáročnejších etáp v histórii Tour de Orava, ak nie za vôbec najnáročnejšiu. Po etape Mišo grcal, či však grcal z kopcov a tým pádom Ľuboš konečne splnil sľub, 
+					že pripraví také kopce, z ktorých sa ostatní pogrcajú, alebo grcal z jedla, sa nedozvieme.
+					<br/><br/>
+
+					<b>Sanitárny deň</b><br/><br/>
+					<img src="foto/2017/anus 2017.jpg" class="center" width="500px"><br/>
+					<br/><br/>
+					Počas sanitárneho dňa jazdci TdO vystúpili na Rozhľadňu na kopci Zarúbaná Kýčera (884 m n. m.) neďaleko chaty a zregenerovali anus v Sudoparku v Klokočove
+					<br/><br/>
+					
+					<b>Epilóg</b><br/><br/>
+					Trojica Mišo, Peťo a Ľuboš sa z logistických dôvodov dopravila domov kombinovanou dopravou bicykel+vlak. Najskôr ich čakalo 30 km do Žiliny, potom Ľuboša takmer 50 km z Trnavy 
+					do Nitry a Peťa s Mišom cca 6 km po Bratislave. Ľuboš teda v rámci TdO 2017 navštívil 5 krajských miest.
+
+					<!--
+					<div style="text-align:center;">
+						<div style="color:darkgray; font-family: verdana; font-size:15px;">Do štartu Tour de Orava 2017 ostáva:</div>
+						<div id='odpocitavani' style="font-size:40px; font-weight:bold;" ></div>
+						<br/><br/><br/><br/>						
+					
+						<script type='text/javascript'>
+							countdown('2017/07/04 12:00:00','odpocitavani', 'Odštartované!!!');
+						</script>
+					
+						<div style="color:darkgray; font-family: verdana; font-size:15px;">Tour de Orava 2017 sa uskutoční v termíne od 4.7.2017 do 9.7.2017</div>					
+						<br/><br/>	
+						<div style="color:darkgray; font-family: verdana; font-size:15px;">Tour de Orava 2017 sa uskutoční tentokrát v rázovitom regióne Horehronie, štart je v obci Čierny Balog.</div>	
+						<br/><br/>
+						<img src="foto/2017/cierny_balog.jpg" class="center">
+						<br/><br/>
+					</div>
+					-->
+					
+				</div>
+				
+				<div id="tab4">
+					<p style="font-size:20Pt; text-align:center;"><b>Chlastana Pro Team</b></p>
+					
+					<img src="foto/jazdci/michals.jpg" style="float: left;"><br/>
+					<b>Michal S.</b> – Víťaz špurtérskej sútaže v roku 2013 a 2014. Celkové víťazstvá mu ušli len o chlp. Pre svoj agresívny štýl jazdy prezývaný aj Fitipálda.<br/><br/>
+					<b>Výška: </b>177 cm<br/>
+					<b>Hmotnosť 2014: </b>72 kg<br/>
+					<b>Hmotnosť 2015: </b>70 kg<br/>
+					<b>Hmotnosť 2016: </b>70 kg<br/>
+					<b>Hmotnosť 2017: </b>70 kg<br/><br/>
+					<b>Obľúbené jedlo ktoré najradšej pripravuješ: </b>Hamburgery na grile<br/>
+					<b>Obľúbený jazdec v pelotóne TdO: </b>Ing. Juraj Bernát (netreba za ním šlapať)<br/>
+					<b>Obľúbená etapa: </b>Každá víťazná. Ale s radosťou spomínam na horskú etapu Čierny Váh. To bol pekný kopček.<br/>
+					<b>Obľubený film: </b>The Intouchables<br/>
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>						
+						
+					<img src="foto/jazdci/peterc.jpg" style="float: left;"><br/>
+					<b>Peter Č.</b> - Víťaz vrchárskej súťaže za rok 2013 a 2014 a celový víťaz za rok 2015.<br/><br/> 
+					<b>Výška: </b>173 cm<br/>
+					<b>Hmotnosť 2014: </b>70 kg<br/>
+					<b>Hmotnosť 2015: </b>72 kg<br/>
+					<b>Hmotnosť 2016: </b>73 kg<br/>
+					<b>Hmotnosť 2017: </b>74 kg<br/><br/>
+					<b>Obľúbené jedlo ktoré najradšej pripravuješ: </b>Rizoto<br/>
+					<b>Obľúbený jazdec v pelotóne TdO: </b>Larry<br/>
+					<b>Obľúbená etapa: </b>rok 2013, 3. deň - Nečakaná kráľovská etapa<br/>
+					<b>Obľubený film: </b>Shawshank Redemption<br/>
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					
+					<img src="foto/jazdci/jurajb.jpg" style="float: left;"><br/>
+					<b>Juraj B.</b> - Silový tip jazdca, typologicky stavaný skôr pre jarné klasiky. Prezývaný aj gentleman na bicykli.<br/><br/>
+					<b>Výška: </b>188 cm<br/>
+					<b>Hmotnosť 2014: </b>92 kg<br/>
+					<b>Hmotnosť 2015: </b>93 kg<br/>
+					<b>Hmotnosť 2016: </b>85 kg<br/>
+					<b>Hmotnosť 2017: </b>92 kg<br/><br/>
+					<b>Obľúbené jedlo ktoré najradšej pripravuješ: </b>Sushi<br/>
+					<b>Obľúbený jazdec v pelotóne TdO: </b>Pavol Lobb<br/>
+					<b>Obľúbená etapa: </b>Vodná nádrž Čierny Váh TdO 2014<br/>
+					<b>Obľubený film: </b>Titanic<br/>
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				
+					<p style="font-size:20Pt; text-align:center;"><b>Team Koniferum Cannondale</b></p>
+					
+					<img src="foto/jazdci/pavoll.jpg" style="float: left;"><br/>
+					<b>Pavol L. -</b> Celkový víťaz za rok 2013 a 2014. <br/><br/>
+					<b>Výška: </b>191cm<br/>
+					<b>Hmotnosť 2014: </b>83 kg<br/>
+					<b>Hmotnosť 2015: </b>82 kg<br/>
+					<b>Hmotnosť 2016: </b>83 kg<br/>
+					<b>Hmotnosť 2017: </b>83 kg<br/><br/>
+					<b>Obľúbené jedlo ktoré najradšej pripravuješ: </b>Kurací perkelt<br/>
+					<b>Obľúbený jazdec v pelotóne TdO: </b>Juraj Bernát - jednoznačne najlepší zjazdár<br/>
+					<b>Obľúbená etapa: </b>Vodná nádrž Čierny Váh TdO 2014<br/>
+					<b>Obľubený film: </b>Jurský park, Krstný otec<br/>
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>					
+				
+					<img src="foto/jazdci/lubosb.jpg" style="float: left;"><br/>
+					<b>Ľuboš B.</b> - V prvom ročníku sa ako jediný nenechal zaskočiť náročnosťou Oravských kopcov a suverénne zvíťazil. Odvtedy však na ďalší výraznejší úspech stále len čaká. 
+										Pre svoju bojovnosť a pôvod prezývaný aj Oravský Vinokurov.<br/><br/>
+					<b>Výška: </b>175 cm<br/>
+					<b>Hmotnosť 2014: </b>80 kg<br/>
+					<b>Hmotnosť 2015: </b>81 kg<br/>
+					<b>Hmotnosť 2016: </b>78 kg<br/>
+					<b>Hmotnosť 2017: </b>76 kg<br/><br/>
+					<b>Obľúbené jedlo ktoré najradšej pripravuješ: </b>Nemám<br/>
+					<b>Obľúbený jazdec v pelotóne TdO: </b>Zbožňujem rovnako všetkých<br/>
+					<b>Obľúbená etapa: </b>Okolo vodnej nadrze Nova Bystrica v ramci TdO 2013<br/>
+					<b>Obľubený film: </b>Home alone, považujem ho za vrchol svojej hereckej kariéry<br/>
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					
+					<img src="foto/jazdci/lubosk.jpg" style="float: left;"><br/>
+					<b>Ľuboš K.</b> - Jeden z najlepších domestikov súčasnosti.<br/><br/>
+					<b>Výška: </b>185 cm<br/>
+					<b>Hmotnosť 2014: </b>76 kg<br/>
+					<b>Hmotnosť 2015: </b>76 kg<br/>
+					<b>Hmotnosť 2016: </b>76 kg<br/><br/>
+					<b>Obľúbené jedlo ktoré najradšej pripravuješ: </b>Špagety<br/>
+					<b>Obľúbený jazdec v pelotóne TdO: </b>Baláži s jeho bosými nohami<br/>
+					<b>Obľúbená etapa: </b>Samozrejme moja skratka (Okolo vodnej nadrze Nova Bystrica, TdO 2013 - pozn. autora)<br/>
+					<b>Obľubený film: </b>Bratstvo neohrozených<br/>
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					
+					<img src="foto/jazdci/marcelb.jpg" style="float: left;"><br/>
+					<b>Marcel B.</b> - Ako nováčik pretekov v roku 2014 všetkých prekvapil a zvíťazil v horskej prémii.<br/><br/>
+					<b>Výška: </b>183 cm<br/>
+					<b>Hmotnosť 2014: </b>74 kg<br/>
+					<b>Hmotnosť 2015: </b>70 kg<br/>
+					<b>Hmotnosť 2016: </b>75 kg<br/>
+					<b>Hmotnosť 2017: </b>73 kg<br/><br/>
+					<b>Obľúbené jedlo ktoré najradšej pripravuješ: </b>Zapekané zemiaky so syrom a zeleninou<br/>
+					<b>Obľúbený jazdec v pelotóne TdO: </b>Marcel Baláž<br/>
+					<b>Obľúbená etapa: </b>Vodná nádrž Čierny Váh TdO 2014<br/>
+					<b>Obľubený film: </b>Forrest Gump<br/>
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					
+					<img src="foto/jazdci/boris.jpg" style="float: left;"><br/>
+					<b>Boris K.</b> - Ako nováčik pretekov v roku 2016 všetkých prekvapil a ani raz nezosadol.<br/><br/>
+					<b>Výška: </b>189 cm<br/>
+					<b>Hmotnosť 2016: </b>108 kg<br/><br/>
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					
+				</div>
+				
+				<div id="tab6">
+					<p style="font-size:15Pt;"><b>2017</b></p>
+					<a href="foto/galeria2017/1.jpg" data-lightbox="set2017"><img src="foto/galeria2017/1small.jpg" height="172px"></a>
+					<a href="foto/galeria2017/2.JPG" data-lightbox="set2017"><img src="foto/galeria2017/2small.JPG" height="172px"></a>
+					<br/>
+					<p style="font-size:15Pt;"><b>2016</b></p>
+					<a href="foto/galeria2016/1.jpg" data-lightbox="set2016"><img src="foto/galeria2016/1small.jpg" height="172px"></a>
+					<a href="foto/galeria2016/2.JPG" data-lightbox="set2016"><img src="foto/galeria2016/2small.JPG" height="172px"></a>
+					<br/>
+					<p style="font-size:15Pt;"><b>2015</b></p>
+					<a href="foto/galeria2015/1.jpg" data-lightbox="set2015"><img src="foto/galeria2015/1small.jpg" height="172px"></a>
+					<a href="foto/galeria2015/2.jpg" data-lightbox="set2015"><img src="foto/galeria2015/2small.jpg" height="172px"></a>
+					<br/>
+					<p style="font-size:15Pt;"><b>2014</b></p>
+					<a href="foto/galeria2014/1.JPG" data-lightbox="set2014"><img src="foto/galeria2014/1small.JPG" height="130px"></a>
+					<a href="foto/galeria2014/2.JPG" data-lightbox="set2014"><img src="foto/galeria2014/2small.JPG" height="130px"></a>
+					<br/>
+					<p style="font-size:15Pt;"><b>2013</b></p>
+					<a href="foto/galeria2013/1.jpg" data-lightbox="set2013"><img src="foto/galeria2013/1small.jpg" height="130px"></a>
+					<a href="foto/galeria2013/2.JPG" data-lightbox="set2013"><img src="foto/galeria2013/2small.jpg" height="130px"></a>
+					<br/>
+					<p style="font-size:15Pt;"><b>2012</b></p>
+					<a href="foto/galeria2012/1.JPG" data-lightbox="set2012"><img src="foto/galeria2012/1small.jpg" height="130px"></a>
+					<a href="foto/galeria2012/2.JPG" data-lightbox="set2012"><img src="foto/galeria2012/2small.jpg" height="130px"></a>
+					<br/><br/><br/><br/><br/><br/>
+				</div>
+			</div>		
+
+			</td>
+			</tr>
+		</table>
+	</body>
+</html>

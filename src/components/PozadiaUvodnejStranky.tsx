@@ -183,7 +183,7 @@ animation-delay: ${(i + 2) * 10}s;
   }
 `;
 
-export default function FullPageBackgrounds() {
+export default function PozadiaUvodnejStranky() {
   const { data: randomArray, error } = useSWR(url, () =>
     fetch(url).then((res) => res.json())
   );

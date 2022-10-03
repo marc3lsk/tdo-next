@@ -1,5 +1,5 @@
 import Head from "next/head";
-import FullPageBackgrounds from "../components/FullPageBackgrounds";
+import PozadiaUvodnejStranky from "../components/PozadiaUvodnejStranky";
 
 const Rocniky = [2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012];
 
@@ -9,7 +9,7 @@ export default function HomePage() {
       <Head>
         <title>Tour de Orava</title>
       </Head>
-      <FullPageBackgrounds />
+      <PozadiaUvodnejStranky />
       <div className="flex flex-wrap pb-16 pt-5">
         {false &&
           Rocniky.map((rocnik) => (

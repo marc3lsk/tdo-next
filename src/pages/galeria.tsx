@@ -25,13 +25,21 @@ import Img2016_1_small from "../../public/galeria/2016/1small.jpg";
 import Img2016_1 from "../../public/galeria/2016/1.jpg";
 import Img2016_2_small from "../../public/galeria/2016/2small.jpg";
 import Img2016_2 from "../../public/galeria/2016/2.jpg";
+import Img2015_1 from "../../public/galeria/2015/1.jpg";
 import Img2015_1_small from "../../public/galeria/2015/1small.jpg";
+import Img2015_2 from "../../public/galeria/2015/2.jpg";
 import Img2015_2_small from "../../public/galeria/2015/2small.jpg";
+import Img2014_1 from "../../public/galeria/2014/1.jpg";
 import Img2014_1_small from "../../public/galeria/2014/1small.jpg";
+import Img2014_2 from "../../public/galeria/2014/2.jpg";
 import Img2014_2_small from "../../public/galeria/2014/2small.jpg";
+import Img2013_1 from "../../public/galeria/2013/1.jpg";
 import Img2013_1_small from "../../public/galeria/2013/1small.jpg";
+import Img2013_2 from "../../public/galeria/2013/2.jpg";
 import Img2013_2_small from "../../public/galeria/2013/2small.jpg";
+import Img2012_1 from "../../public/galeria/2012/1.jpg";
 import Img2012_1_small from "../../public/galeria/2012/1small.jpg";
+import Img2012_2 from "../../public/galeria/2012/2.jpg";
 import Img2012_2_small from "../../public/galeria/2012/2small.jpg";
 import Galeria from "../components/Galeria";
 import ObrazokGalerie from "../components/ObrazokGalerie";
@@ -101,55 +109,23 @@ export default function Page() {
         </Galeria>
         <NadpisRocnik>2015</NadpisRocnik>
         <Galeria>
-          <Obrazok
-            img={Img2015_1_small}
-            thumb={Img2015_1_small}
-            alt="2015 - 1"
-          />
-          <Obrazok
-            img={Img2015_2_small}
-            thumb={Img2015_2_small}
-            alt="2015 -2"
-          />
+          <Obrazok img={Img2015_1} thumb={Img2015_1_small} alt="2015 - 1" />
+          <Obrazok img={Img2015_2} thumb={Img2015_2_small} alt="2015 -2" />
         </Galeria>
         <NadpisRocnik>2014</NadpisRocnik>
         <Galeria>
-          <Obrazok
-            img={Img2014_1_small}
-            thumb={Img2014_1_small}
-            alt="2014 - 1"
-          />
-          <Obrazok
-            img={Img2014_2_small}
-            thumb={Img2014_2_small}
-            alt="2014 -2"
-          />
+          <Obrazok img={Img2014_1} thumb={Img2014_1_small} alt="2014 - 1" />
+          <Obrazok img={Img2014_2} thumb={Img2014_2_small} alt="2014 -2" />
         </Galeria>
         <NadpisRocnik>2013</NadpisRocnik>
         <Galeria>
-          <Obrazok
-            img={Img2013_1_small}
-            thumb={Img2013_1_small}
-            alt="2013 - 1"
-          />
-          <Obrazok
-            img={Img2013_2_small}
-            thumb={Img2013_2_small}
-            alt="2013 -2"
-          />
+          <Obrazok img={Img2013_1} thumb={Img2013_1_small} alt="2013 - 1" />
+          <Obrazok img={Img2013_2} thumb={Img2013_2_small} alt="2013 -2" />
         </Galeria>
         <NadpisRocnik>2012</NadpisRocnik>
         <Galeria>
-          <Obrazok
-            img={Img2012_1_small}
-            thumb={Img2012_1_small}
-            alt="2012 - 1"
-          />
-          <Obrazok
-            img={Img2012_2_small}
-            thumb={Img2012_2_small}
-            alt="2012 -2"
-          />
+          <Obrazok img={Img2012_1} thumb={Img2012_1_small} alt="2012 - 1" />
+          <Obrazok img={Img2012_2} thumb={Img2012_2_small} alt="2012 -2" />
         </Galeria>
       </div>
     </>

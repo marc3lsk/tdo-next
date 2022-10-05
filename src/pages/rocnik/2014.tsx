@@ -2,10 +2,13 @@ import Head from "next/head";
 import Clanok from "../../components/Clanok";
 import ImgHeader from "../../../public/rocnik/header2014.jpg";
 import ImgDen1 from "../../../public/rocnik/2014/1den.jpg";
+import ImgDen1_1 from "../../../public/rocnik/2014/1den2014.jpg";
 import ImgDen2 from "../../../public/rocnik/2014/2den.jpg";
 import ImgDen2Vyska from "../../../public/rocnik/2014/2den-vyska.jpg";
+import ImgDen2_1 from "../../../public/rocnik/2014/2den2014.jpg";
 import ImgDen4 from "../../../public/rocnik/2014/4den.jpg";
 import ImgDen4Vyska from "../../../public/rocnik/2014/4den-vyska.jpg";
+import ImgDen4_1 from "../../../public/rocnik/2014/4den2014.jpg";
 import ImgBriss from "../../../public/rocnik/2014/briss.jpg";
 import ImgDen5 from "../../../public/rocnik/2014/5den.jpg";
 import ImgDen5Vyska from "../../../public/rocnik/2014/5den-vyska.jpg";
@@ -315,6 +318,13 @@ export default function Page() {
           Petrom Č.
         </Odsek>
         <BodovanieEtapy {...BodovanieEtapyDen1Data} />
+        <Galeria>
+          <ObrazokGalerie
+            img={ImgDen1_1}
+            alt="1. deň"
+            className="mt-3 mb-5 w-full"
+          />
+        </Galeria>
         <Nadpis>2. deň - Kráľovská etapa</Nadpis>
         <Galeria>
           <ObrazokGalerie
@@ -347,6 +357,13 @@ export default function Page() {
           špurtérskej prémii a poriadne zdramatizoval boj o celkové víťazstvo.
         </Odsek>
         <BodovanieEtapy {...BodovanieEtapyDen2Data} />
+        <Galeria>
+          <ObrazokGalerie
+            img={ImgDen2_1}
+            alt="2. deň"
+            className="mt-3 mb-5 w-full"
+          />
+        </Galeria>
         <Nadpis>3. deň - Sanitárny deň</Nadpis>
         <Odsek>
           Po náročnom programe si jazdci TdO doprali deň bez bicykla. Najskôr sa
@@ -372,6 +389,13 @@ export default function Page() {
           záchode.
         </Odsek>
         <BodovanieEtapy {...BodovanieEtapyDen4Data} />
+        <Galeria>
+          <ObrazokGalerie
+            img={ImgDen4_1}
+            alt="4. deň"
+            className="mt-3 mb-5 w-full"
+          />
+        </Galeria>
         <Odsek>
           Po tejto etape Luboš B. uzavrel stávku, že pojde do Mýta pod
           Ďumbierom, tam si spraví selfie a vráti sa na chatu. Ako to dopadlo

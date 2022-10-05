@@ -3,6 +3,8 @@ import Img2022_1_small from "../../public/galeria/2022/1small.jpg";
 import Img2022_1 from "../../public/galeria/2022/1.jpg";
 import Img2022_2_small from "../../public/galeria/2022/2small.jpg";
 import Img2022_2 from "../../public/galeria/2022/2.jpg";
+import Img2022_3_small from "../../public/galeria/2022/3small.jpg";
+import Img2022_3 from "../../public/galeria/2022/3.jpg";
 import Img2021_1_small from "../../public/galeria/2021/1small.jpg";
 import Img2021_1 from "../../public/galeria/2021/1.jpg";
 import Img2021_2_small from "../../public/galeria/2021/2small.jpg";
@@ -13,6 +15,8 @@ import Img2020_2_small from "../../public/galeria/2020/2small.jpg";
 import Img2020_2 from "../../public/galeria/2020/2.jpg";
 import Img2019_1_small from "../../public/galeria/2019/1small.jpg";
 import Img2019_1 from "../../public/galeria/2019/1.jpg";
+import Img2019_2_small from "../../public/galeria/2019/2small.jpg";
+import Img2019_2 from "../../public/galeria/2019/2.jpg";
 import Img2018_1_small from "../../public/galeria/2018/1small.jpg";
 import Img2018_1 from "../../public/galeria/2018/1.jpg";
 import Img2018_2_small from "../../public/galeria/2018/2small.jpg";
@@ -75,6 +79,7 @@ export default function Page() {
       <div className="mb-16 text-center">
         <NadpisRocnik>2022</NadpisRocnik>
         <Galeria>
+          <Obrazok img={Img2022_3} thumb={Img2022_3_small} alt="2022 - 3" />
           <Obrazok img={Img2022_1} thumb={Img2022_1_small} alt="2022 - 1" />
           <Obrazok img={Img2022_2} thumb={Img2022_2_small} alt="2022 - 2" />
         </Galeria>
@@ -91,6 +96,7 @@ export default function Page() {
         <NadpisRocnik>2019</NadpisRocnik>
         <Galeria>
           <Obrazok img={Img2019_1} thumb={Img2019_1_small} alt="2019 - 1" />
+          <Obrazok img={Img2019_2} thumb={Img2019_2_small} alt="2019 - 2" />
         </Galeria>
         <NadpisRocnik>2018</NadpisRocnik>
         <Galeria>

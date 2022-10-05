@@ -7,10 +7,10 @@ import ImgDen2 from "../../../public/rocnik/2013/2.den.jpg";
 import ImgDen2Vyska from "../../../public/rocnik/2013/2.den-vyska.png";
 import ImgDen3 from "../../../public/rocnik/2013/3.den.jpg";
 import ImgDen3Vyska from "../../../public/rocnik/2013/3.den-vyska.jpg";
-import ImgDen3_1 from "../../../public/rocnik/2013/3den2013_1_small.jpg";
-import ImgDen3_2 from "../../../public/rocnik/2013/3den2013_2_small.jpg";
+import ImgDen3_1 from "../../../public/rocnik/2013/3den2013_1.jpg";
+import ImgDen3_2 from "../../../public/rocnik/2013/3den2013_2.jpg";
 import ImgDen3_3 from "../../../public/rocnik/2013/3den2013_3.jpg";
-import ImgDen5 from "../../../public/rocnik/2013/5den2013_small.jpg";
+import ImgDen5 from "../../../public/rocnik/2013/5den2013.jpg";
 import CelkovePoradie, {
   CelkovePoradieProps,
 } from "../../components/Rocnik/CelkovePoradie";

@@ -2,6 +2,12 @@ import { zip } from "lodash-es";
 import { useEffect, useMemo } from "react";
 import styled from "styled-components";
 import useSWR from "swr";
+import _3den2013_1 from "../../public/pozadia/2013/3den2013_1.jpg";
+import _3den2013_2 from "../../public/pozadia/2013/3den2013_2.jpg";
+import _5den2013 from "../../public/pozadia/2013/5den2013.jpg";
+import _1den2014 from "../../public/pozadia/2014/1den2014.jpg";
+import _2den2014 from "../../public/pozadia/2014/2den2014.jpg";
+import _4den2014 from "../../public/pozadia/2014/4den2014.jpg";
 import _20160705_081154 from "../../public/pozadia/20160705_081154.jpg";
 import _20160706_090754 from "../../public/pozadia/20160706_090754.jpg";
 import _20160706_095521 from "../../public/pozadia/20160706_095521.jpg";
@@ -63,6 +69,12 @@ import _IMG_3438 from "../../public/pozadia/IMG_3438.jpg";
 import _IMG_5622_2 from "../../public/pozadia/IMG_5622_2.jpg";
 
 const bgArray = [
+  _3den2013_1.src,
+  _3den2013_2.src,
+  _5den2013.src,
+  _1den2014.src,
+  _2den2014.src,
+  _4den2014.src,
   _20160705_081154.src,
   _20160706_090754.src,
   _20160706_095521.src,
@@ -124,9 +136,7 @@ const bgArray = [
   _IMG_5622_2.src,
 ];
 
-const url = `https://www.randomnumberapi.com/api/v1.0/random?min=0&max=${
-  bgArray.length - 1
-}&count=${bgArray.length}`;
+const url = `https://randommer.io/Number/Sequence`;
 
 const UL = styled.ul`
   &,
@@ -185,7 +195,13 @@ animation-delay: ${(i + 2) * 10}s;
 
 export default function PozadiaUvodnejStranky() {
   const { data: randomArray, error } = useSWR(url, () =>
-    fetch(url).then((res) => res.json())
+    fetch(url, {
+      method: "POST",
+      body: [
+        { key: "Min", value: 1 },
+        { key: "Max", value: bgArray.length },
+      ].reduce((fd, p) => (fd.append(p.key, `${p.value}`), fd), new FormData()),
+    }).then((res) => res.json())
   );
 
   const randomizedBgArray = useMemo(

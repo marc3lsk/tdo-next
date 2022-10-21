@@ -1,5 +1,5 @@
 import { zip } from "lodash-es";
-import { useEffect, useMemo, useRef } from "react";
+import { useCallback, useEffect, useMemo, useRef } from "react";
 import useSWR from "swr";
 import styled from "styled-components";
 import _3den2013_1 from "../../public/pozadia/2013/3den2013_1.jpg";
@@ -67,7 +67,6 @@ import _IMG_3405 from "../../public/pozadia/IMG_3405.jpg";
 import _IMG_3436 from "../../public/pozadia/IMG_3436.jpg";
 import _IMG_3438 from "../../public/pozadia/IMG_3438.jpg";
 import _IMG_5622_2 from "../../public/pozadia/IMG_5622_2.jpg";
-import { addSeconds, differenceInSeconds } from "date-fns";
 
 const bgArray = [
   _3den2013_1.src,
@@ -195,6 +194,7 @@ animation-delay: ${(i + 2) * 10}s;
 `;
 
 export default function PozadiaUvodnejStranky() {
+  const ul = useRef(null);
   const timeout = useRef(undefined as any);
   const spanIndex = useRef(0);
   const bgIndex = useRef(0);
@@ -219,7 +219,17 @@ export default function PozadiaUvodnejStranky() {
     [randomArray]
   );
 
-  useEffect(() => {
+  useEffect(
+    () => () => {
+      clearTimeout(timeout.current);
+      initDone.current = false;
+      spanIndex.current = 0;
+      bgIndex.current = 0;
+    },
+    []
+  );
+
+  const ulRef = useCallback(() => {
     if (!Array.isArray(randomizedBgArray)) return;
     if (initDone.current) return;
     initDone.current = true;
@@ -251,7 +261,7 @@ export default function PozadiaUvodnejStranky() {
   return (
     <>
       {Array.isArray(randomizedBgArray) ? (
-        <UL className="pozadia">
+        <UL ref={ulRef} className="pozadia">
           {new Array(6).fill(0).map((_, i) => (
             <li key={i}>
               <span />

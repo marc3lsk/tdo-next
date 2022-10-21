@@ -1,7 +1,7 @@
 import { zip } from "lodash-es";
-import { useEffect, useMemo } from "react";
-import styled from "styled-components";
+import { useEffect, useMemo, useRef } from "react";
 import useSWR from "swr";
+import styled from "styled-components";
 import _3den2013_1 from "../../public/pozadia/2013/3den2013_1.jpg";
 import _3den2013_2 from "../../public/pozadia/2013/3den2013_2.jpg";
 import _5den2013 from "../../public/pozadia/2013/5den2013.jpg";
@@ -67,6 +67,7 @@ import _IMG_3405 from "../../public/pozadia/IMG_3405.jpg";
 import _IMG_3436 from "../../public/pozadia/IMG_3436.jpg";
 import _IMG_3438 from "../../public/pozadia/IMG_3438.jpg";
 import _IMG_5622_2 from "../../public/pozadia/IMG_5622_2.jpg";
+import { addSeconds, differenceInSeconds } from "date-fns";
 
 const bgArray = [
   _3den2013_1.src,
@@ -194,6 +195,10 @@ animation-delay: ${(i + 2) * 10}s;
 `;
 
 export default function PozadiaUvodnejStranky() {
+  const timeout = useRef(undefined as any);
+  const spanIndex = useRef(0);
+  const bgIndex = useRef(0);
+  const lastRun = useRef(new Date());
   const { data: randomArray, error } = useSWR(url, () =>
     fetch(url, {
       method: "POST",
@@ -215,34 +220,51 @@ export default function PozadiaUvodnejStranky() {
   );
 
   useEffect(() => {
+    clearTimeout(timeout.current);
     if (!Array.isArray(randomizedBgArray)) return;
-    let spanIndex = 0;
-    let bgIndex = 0;
-    let timeout = null as any;
 
     const nastavitPozadie = (init) => {
+      if (!init) {
+        if (
+          differenceInSeconds(addSeconds(lastRun.current, 10), new Date()) >= 10
+        ) {
+          lastRun.current = new Date();
+        } else {
+          timeout.current = setTimeout(
+            nastavitPozadie,
+            1000 *
+              differenceInSeconds(addSeconds(new Date(), 10), lastRun.current)
+          );
+          return;
+        }
+      }
+
       const pozadia = document.querySelectorAll(
-        ".pozadia li span"
+        `.pozadia li span`
       ) as any as any[];
       pozadia[
-        spanIndex++
+        spanIndex.current++
       ].style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${
-        randomizedBgArray[bgIndex++]
+        randomizedBgArray[bgIndex.current++]
       })`;
+
+      if (spanIndex.current == 6) spanIndex.current = 0;
+
+      if (bgIndex.current == bgArray.length) bgIndex.current = 0;
+
       if (init) return;
 
-      if (spanIndex == 6) spanIndex = 0;
-
-      if (bgIndex == bgArray.length) bgIndex = 0;
-
-      timeout = setTimeout(nastavitPozadie, 10000);
+      timeout.current = setTimeout(
+        nastavitPozadie,
+        1000 * differenceInSeconds(addSeconds(new Date(), 10), lastRun.current)
+      );
     };
 
     nastavitPozadie(true);
     nastavitPozadie(false);
 
     return () => {
-      clearTimeout(timeout);
+      clearTimeout(timeout.current);
     };
   }, [randomizedBgArray]);
 

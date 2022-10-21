@@ -198,7 +198,7 @@ export default function PozadiaUvodnejStranky() {
   const timeout = useRef(undefined as any);
   const spanIndex = useRef(0);
   const bgIndex = useRef(0);
-  const lastRun = useRef(new Date());
+  const initDone = useRef(false);
   const { data: randomArray, error } = useSWR(url, () =>
     fetch(url, {
       method: "POST",
@@ -220,25 +220,11 @@ export default function PozadiaUvodnejStranky() {
   );
 
   useEffect(() => {
-    clearTimeout(timeout.current);
     if (!Array.isArray(randomizedBgArray)) return;
+    if (initDone.current) return;
+    initDone.current = true;
 
     const nastavitPozadie = (init) => {
-      if (!init) {
-        if (
-          differenceInSeconds(addSeconds(lastRun.current, 10), new Date()) >= 10
-        ) {
-          lastRun.current = new Date();
-        } else {
-          timeout.current = setTimeout(
-            nastavitPozadie,
-            1000 *
-              differenceInSeconds(addSeconds(new Date(), 10), lastRun.current)
-          );
-          return;
-        }
-      }
-
       const pozadia = document.querySelectorAll(
         `.pozadia li span`
       ) as any as any[];
@@ -254,18 +240,11 @@ export default function PozadiaUvodnejStranky() {
 
       if (init) return;
 
-      timeout.current = setTimeout(
-        nastavitPozadie,
-        1000 * differenceInSeconds(addSeconds(new Date(), 10), lastRun.current)
-      );
+      timeout.current = setTimeout(nastavitPozadie, 10 * 1000);
     };
 
     nastavitPozadie(true);
     nastavitPozadie(false);
-
-    return () => {
-      clearTimeout(timeout.current);
-    };
   }, [randomizedBgArray]);
 
   return (

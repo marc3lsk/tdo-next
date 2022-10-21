@@ -228,6 +228,7 @@ export default function PozadiaUvodnejStranky() {
       const pozadia = document.querySelectorAll(
         `.pozadia li span`
       ) as any as any[];
+      if (pozadia?.length != 6) return;
       pozadia[
         spanIndex.current++
       ].style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${

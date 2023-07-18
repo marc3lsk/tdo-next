@@ -67,6 +67,16 @@ import _IMG_3405 from "../../public/pozadia/IMG_3405.jpg";
 import _IMG_3436 from "../../public/pozadia/IMG_3436.jpg";
 import _IMG_3438 from "../../public/pozadia/IMG_3438.jpg";
 import _IMG_5622_2 from "../../public/pozadia/IMG_5622_2.jpg";
+import _IMG20231 from "../../public/pozadia/2023/1.jpg";
+import _IMG20232 from "../../public/pozadia/2023/2.jpg";
+import _IMG20233 from "../../public/pozadia/2023/3.jpg";
+import _IMG20234 from "../../public/pozadia/2023/4.jpg";
+import _IMG20235 from "../../public/pozadia/2023/5.jpg";
+import _IMG20236 from "../../public/pozadia/2023/6.jpg";
+import _IMG20237 from "../../public/pozadia/2023/7.jpg";
+import _IMG20238 from "../../public/pozadia/2023/8.jpg";
+import _IMG20239 from "../../public/pozadia/2023/9.jpg";
+import _IMG202310 from "../../public/pozadia/2023/10.jpg";
 
 const bgArray = [
   _3den2013_1.src,
@@ -134,6 +144,15 @@ const bgArray = [
   _IMG_3436.src,
   _IMG_3438.src,
   _IMG_5622_2.src,
+  _IMG20231.src,
+  _IMG20232.src,
+  _IMG20233.src,
+  _IMG20234.src,
+  _IMG20235.src,
+  _IMG20236.src,
+  _IMG20237.src,
+  _IMG20239.src,
+  _IMG202310.src,
 ];
 
 const url = `https://randommer.io/Number/Sequence`;
@@ -172,7 +191,7 @@ const UL = styled.ul`
 & li:nth-child(${i + 3}) span {
 animation-delay: ${(i + 2) * 10}s;
 }
-`
+`,
   )}
   @keyframes imageAnimation {
     0% {
@@ -206,7 +225,7 @@ export default function PozadiaUvodnejStranky() {
         { key: "Min", value: 1 },
         { key: "Max", value: bgArray.length },
       ].reduce((fd, p) => (fd.append(p.key, `${p.value}`), fd), new FormData()),
-    }).then((res) => res.json())
+    }).then((res) => res.json()),
   );
 
   const randomizedBgArray = useMemo(
@@ -216,7 +235,7 @@ export default function PozadiaUvodnejStranky() {
             .sort((a, b) => a[1] - b[1])
             .map((x) => x[0])
         : null,
-    [randomArray]
+    [randomArray],
   );
 
   useEffect(
@@ -226,7 +245,7 @@ export default function PozadiaUvodnejStranky() {
       spanIndex.current = 0;
       bgIndex.current = 0;
     },
-    []
+    [],
   );
 
   const ulRef = useCallback(() => {
@@ -235,15 +254,9 @@ export default function PozadiaUvodnejStranky() {
     initDone.current = true;
 
     const nastavitPozadie = (init) => {
-      const pozadia = document.querySelectorAll(
-        `.pozadia li span`
-      ) as any as any[];
+      const pozadia = document.querySelectorAll(`.pozadia li span`) as any as any[];
       if (pozadia?.length != 6) return;
-      pozadia[
-        spanIndex.current++
-      ].style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${
-        randomizedBgArray[bgIndex.current++]
-      })`;
+      pozadia[spanIndex.current++].style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${randomizedBgArray[bgIndex.current++]})`;
 
       if (spanIndex.current == 6) spanIndex.current = 0;
 

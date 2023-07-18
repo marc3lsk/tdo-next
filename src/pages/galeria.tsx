@@ -1,4 +1,12 @@
 import Head from "next/head";
+import Img2023_1_small from "../../public/galeria/2023/1small.jpg";
+import Img2023_1 from "../../public/galeria/2023/1.jpg";
+import Img2023_2_small from "../../public/galeria/2023/2small.jpg";
+import Img2023_2 from "../../public/galeria/2023/2.jpg";
+import Img2023_3_small from "../../public/galeria/2023/3small.jpg";
+import Img2023_3 from "../../public/galeria/2023/3.jpg";
+import Img2023_4_small from "../../public/galeria/2023/4small.jpg";
+import Img2023_4 from "../../public/galeria/2023/4.jpg";
 import Img2022_1_small from "../../public/galeria/2022/1small.jpg";
 import Img2022_1 from "../../public/galeria/2022/1.jpg";
 import Img2022_2_small from "../../public/galeria/2022/2small.jpg";
@@ -49,25 +57,10 @@ import Galeria from "../components/Galeria";
 import ObrazokGalerie from "../components/ObrazokGalerie";
 import { StaticImageData } from "next/image";
 
-const NadpisRocnik = ({ children }) => (
-  <h1 className="my-8 text-center text-4xl text-white sm:my-16">{children}</h1>
-);
+const NadpisRocnik = ({ children }) => <h1 className="my-8 text-center text-4xl text-white sm:my-16">{children}</h1>;
 
-const Obrazok = ({
-  img,
-  thumb,
-  alt,
-}: {
-  img: StaticImageData;
-  thumb: StaticImageData;
-  alt: string;
-}) => (
-  <ObrazokGalerie
-    img={img}
-    thumb={thumb}
-    alt={alt}
-    className="inline-block !w-auto object-contain p-2 sm:h-96"
-  />
+const Obrazok = ({ img, thumb, alt }: { img: StaticImageData; thumb: StaticImageData; alt: string }) => (
+  <ObrazokGalerie img={img} thumb={thumb} alt={alt} className="inline-block !w-auto object-contain p-2 sm:h-96" />
 );
 
 export default function Page() {
@@ -77,6 +70,13 @@ export default function Page() {
         <title>Galéria - Tour de Orava</title>
       </Head>
       <div className="mb-16 text-center">
+        <NadpisRocnik>2023</NadpisRocnik>
+        <Galeria>
+          <Obrazok img={Img2023_1} thumb={Img2023_1_small} alt="2023 - 1" />
+          <Obrazok img={Img2023_3} thumb={Img2023_3_small} alt="2023 - 3" />
+          <Obrazok img={Img2023_2} thumb={Img2023_2_small} alt="2023 - 2" />
+          <Obrazok img={Img2023_4} thumb={Img2023_4_small} alt="2023 - 4" />
+        </Galeria>
         <NadpisRocnik>2022</NadpisRocnik>
         <Galeria>
           <Obrazok img={Img2022_3} thumb={Img2022_3_small} alt="2022 - 3" />

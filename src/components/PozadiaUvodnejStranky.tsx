@@ -155,7 +155,7 @@ const bgArray = [
   _IMG202310.src,
 ];
 
-const url = `https://randommer.io/Number/Sequence`;
+const url = `http://www.randomnumberapi.com/api/v1.0/random?min=0&max=1000000&count=${bgArray.length}`;
 
 const UL = styled.ul`
   &,
@@ -218,15 +218,7 @@ export default function PozadiaUvodnejStranky() {
   const spanIndex = useRef(0);
   const bgIndex = useRef(0);
   const initDone = useRef(false);
-  const { data: randomArray, error } = useSWR(url, () =>
-    fetch(url, {
-      method: "POST",
-      body: [
-        { key: "Min", value: 1 },
-        { key: "Max", value: bgArray.length },
-      ].reduce((fd, p) => (fd.append(p.key, `${p.value}`), fd), new FormData()),
-    }).then((res) => res.json()),
-  );
+  const { data: randomArray, error } = useSWR(url, () => fetch(url).then((res) => res.json()));
 
   const randomizedBgArray = useMemo(
     () =>

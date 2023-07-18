@@ -67,7 +67,7 @@ export default function Page() {
           sebou síce už väčšinu stúpaní, ale zato ich čakala vysoká horúčava. Na železnom železničnom moste v Hlohovci si vychutnali výhľad na Váh a prejazd vlaku aj s poriadnym rámusom. Za mostom ich
           čakalo ešte pár relatívne kratších stúpaní a potom príjazd do Nitry cyklocestou popri rieke.
         </Odsek>
-        <Nadpis>Historický rebríček – počet účasti na TdO:</Nadpis>
+        <Nadpis>Historický rebríček – počet účastí na TdO:</Nadpis>
         <Odsek>
           <ul>
             <li>12 – Paľo, Ľuboš B.</li>

@@ -155,7 +155,7 @@ const bgArray = [
   _IMG202310.src,
 ];
 
-const url = `http://www.randomnumberapi.com/api/v1.0/random?min=0&max=1000000&count=${bgArray.length}`;
+const url = `https://www.randomnumberapi.com/api/v1.0/random?min=0&max=1000000&count=${bgArray.length}`;
 
 const UL = styled.ul`
   &,

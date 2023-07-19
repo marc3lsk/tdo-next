@@ -73,28 +73,11 @@ class GrafHmotnost extends Component<{ vaha }, { series: any; options: any }> {
   }
 
   render() {
-    return (
-      <ReactApexChart
-        options={this.state.options}
-        series={this.state.series}
-        type="line"
-        height={250}
-      />
-    );
+    return <ReactApexChart options={this.state.options} series={this.state.series} type="line" height={250} />;
   }
 }
 
-const Jazdec = ({
-  foto,
-  meno,
-  popis,
-  vyska,
-  vaha,
-  jedlo,
-  oblubenec,
-  etapa,
-  film,
-}) => (
+const Jazdec = ({ foto, meno, popis, vyska, vaha, jedlo, oblubenec, etapa, film }) => (
   <div className="mb-16">
     <p className="mt-5">
       <h2 className="text-2xl font-bold">{meno} </h2>
@@ -102,11 +85,7 @@ const Jazdec = ({
     <p className="mt-3">{popis}</p>
     <div className="mt-5 lg:flex lg:space-x-5">
       <Galeria>
-        <ObrazokGalerie
-          img={foto}
-          alt={meno}
-          className="h-full w-full max-w-sm lg:w-1/2"
-        />
+        <ObrazokGalerie img={foto} alt={meno} className="h-full w-full max-w-sm lg:w-1/2" />
       </Galeria>
       <div className="mt-5 lg:mt-0 lg:w-1/2">
         <p className="mt-0">
@@ -120,9 +99,7 @@ const Jazdec = ({
       </div>
     </div>
     <p className="lg:mt-5">
-      <span className="font-bold">
-        Obľúbené jedlo, ktoré najradšej pripravuješ:{" "}
-      </span>
+      <span className="font-bold">Obľúbené jedlo, ktoré najradšej pripravuješ: </span>
       {jedlo}
     </p>
     <p className="mt-1">
@@ -147,9 +124,7 @@ export default function Page() {
         <title>Jazdci - Tour de Orava</title>
       </Head>
       <Clanok>
-        <h1 className="mb-5 text-center text-3xl font-bold">
-          Chlastana Pro Team
-        </h1>
+        <h1 className="mb-5 text-center text-3xl font-bold">Chlastana Pro Team</h1>
         <Jazdec
           foto={MichalS}
           meno="Michal S."
@@ -164,6 +139,7 @@ export default function Page() {
             { rok: 2020, kg: 72 },
             { rok: 2021, kg: 71 },
             { rok: 2022, kg: 72 },
+            { rok: 2023, kg: 73 },
           ]}
           jedlo="Hamburgery na grile"
           oblubenec="Ing. Juraj Bernát (netreba za ním šlapať)"
@@ -204,15 +180,14 @@ export default function Page() {
             { rok: 2020, kg: 92 },
             { rok: 2021, kg: 93 },
             { rok: 2022, kg: 94 },
+            { rok: 2023, kg: 94 },
           ]}
           jedlo="Sushi"
           oblubenec="Pavol Lobb"
           etapa="Vodná nádrž Čierny Váh TdO 2014"
           film="Titanic"
         />
-        <h1 className="mb-5 text-center text-3xl font-bold">
-          Team Koniferum Cannondale
-        </h1>
+        <h1 className="mb-5 text-center text-3xl font-bold">Team Koniferum Cannondale</h1>
         <Jazdec
           foto={PavolL}
           meno="Pavol L."
@@ -228,6 +203,7 @@ export default function Page() {
             { rok: 2020, kg: 88 },
             { rok: 2021, kg: 89 },
             { rok: 2022, kg: 91 },
+            { rok: 2023, kg: 91 },
           ]}
           jedlo="Kurací perkelt"
           oblubenec="Juraj Bernát - jednoznačne najlepší zjazdár"
@@ -267,15 +243,14 @@ export default function Page() {
             { rok: 2020, kg: 80 },
             { rok: 2021, kg: 78 },
             { rok: 2022, kg: 78 },
+            { rok: 2023, kg: 78 },
           ]}
           jedlo="Zapekané zemiaky so syrom a zeleninou"
           oblubenec="Pavol a jeho elegancia na bicykli"
           etapa="Vodná nádrž Čierny Váh TdO 2014"
           film="Forrest Gump"
         />
-        <h1 className="mb-5 text-center text-3xl font-bold">
-          Team Bušo-Hansgrohe
-        </h1>
+        <h1 className="mb-5 text-center text-3xl font-bold">Team Bušo-Hansgrohe</h1>
         <Jazdec
           foto={LubosB}
           meno="Ľuboš B."
@@ -291,6 +266,7 @@ export default function Page() {
             { rok: 2020, kg: 77 },
             { rok: 2021, kg: 76 },
             { rok: 2022, kg: 74 },
+            { rok: 2023, kg: 74 },
           ]}
           jedlo="Nemám"
           oblubenec="Zbožňujem rovnako všetkých"

@@ -53,17 +53,6 @@ export default function Page() {
           do Kraľovian. Tam absolvovali jazdu do motorestu na obed a späť, pričom spiatočná jazda bola v daždi. Chalani nakoniec pricestovali vlakom až do Nitry, nakoľko počasie im neumožnilo
           pokračovať na bicykloch z Piešťan, resp. Leopoldova.
         </Odsek>
-        <Nadpis>Historický rebríček – počet účastí na TdO:</Nadpis>
-        <Odsek>
-          <ul>
-            <li>11 – Paľo, Ľuboš B.</li>
-            <li>10 – Mišo, Juro</li>
-            <li>9 – Marcel</li>
-            <li>8 – Peťo, Ľuboš K.</li>
-            <li>3 – Boris</li>
-            <li>2 – Miro</li>
-          </ul>
-        </Odsek>
       </Clanok>
     </>
   );

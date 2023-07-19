@@ -21,38 +21,38 @@ export default function Page() {
         <title>Čo je Tour de Orava</title>
       </Head>
       <Clanok>
-        <p>
+        <Odsek>
           <strong>Tour de Orava</strong> (doslova: Okružná jazda po Orave) sú etapové preteky nedopujúcich cyklistov, trvajúce asi päť dní v lete. História vzniku siaha do roku 2009, kedy koncom
           augusta štvorica neskorších zakladateľov TdO absolvovala po prvý krát jednodňovú cykloklasiku v okolí Nitry. Z klasiky sa stala tradícia, ktorú organizovali minimálne raz do roka, až sa
           napokon rozhodli usporiadať etapové preteky. A tak sa v roku 2012 po prvý krát uskutočnila Tour de Orava, ktorej základným pilierom je jednota. Myšlienka Tour de Orava sa rýchlo rozšírila a
           dodnes sa pelotón TdO stihol zdvojnásobiť. Dnes je toto podujatie jednou z najdôležitejších športových udalostí roka.
-        </p>
+        </Odsek>
         <Nadpis>Tričká</Nadpis>
         <Odsek>Preteky sú spojené s niekoľkými súťažami, ku ktorým je obyčajne pridružené farebné tričko. Aktuálny držiteľ ocenenia je oprávnený nosiť počas jazdy príslušné tričko.</Odsek>
         <div className="mt-5 flex space-x-5">
           <img src={ImgZltyDres.src} alt="Žltý dres" className="h-full w-28" />
-          <p>
+          <Odsek>
             <strong>Žlté tričko</strong> nosí vedúci jazdec celých pretekov a cení sa zo všetkých najviac. Po skončení pretekov je vedúci jazdec vyhlásený za celkového víťaza.
-          </p>
+          </Odsek>
         </div>
         <div className="mt-5 flex space-x-5">
           <img src={ImgZelenyDres.src} alt="Zelený dres" className="h-full w-28" />
-          <p>
+          <Odsek>
             <strong>Zelené tričko</strong> je udeľované za šprintérske body. Na konci každej etapy sa tieto body udelia jazdcom, ktorí skončia prví, druhí atď. V priebehu etapy možno získať nejaké
             body aj za najrýchlejší prejazd určitými kontrolnými miestami.
-          </p>
+          </Odsek>
         </div>
         <div className="mt-5 flex space-x-5">
           <img src={ImgBodkovanyDres.src} alt="Bodkovaný dres" className="h-full w-28" />
-          <p>
+          <Odsek>
             <strong>Bodkované tričko</strong> je určené pre kráľa hôr. Na vrchole každého výjazdu sú najrýchlejším jazdcom rozdeľované body.
-          </p>
+          </Odsek>
         </div>
         <div className="mt-5 flex space-x-5">
           <img src={ImgBielyDres.src} alt="Biely dres" className="h-full w-28" />
-          <p>
+          <Odsek>
             <strong>Biele tričko</strong> je obdobou žltého trička, je však určené jazdcom, ktorí na pretekoch štartujú po prvý krát.
-          </p>
+          </Odsek>
         </div>
         <Nadpis>Bodovanie</Nadpis>
         <Odsek>

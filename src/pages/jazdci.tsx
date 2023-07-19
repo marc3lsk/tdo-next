@@ -16,6 +16,8 @@ import BorisK from "../../public/jazdci/boris.jpg";
 import MiroJ from "../../public/jazdci/miroj2.jpg";
 import Galeria from "../components/Galeria";
 import ObrazokGalerie from "../components/ObrazokGalerie";
+import Nadpis from "../components/Nadpis";
+import Odsek from "../components/Odsek";
 
 class GrafHmotnost extends Component<{ vaha }, { series: any; options: any }> {
   constructor(props) {
@@ -82,7 +84,7 @@ const Jazdec = ({ foto, meno, popis, vyska, vaha, jedlo, oblubenec, etapa, film 
     <p className="mt-5">
       <h2 className="text-2xl font-bold">{meno} </h2>
     </p>
-    <p className="mt-3">{popis}</p>
+    <Odsek>{popis}</Odsek>
     <div className="mt-5 lg:flex lg:space-x-5">
       <Galeria>
         <ObrazokGalerie img={foto} alt={meno} className="h-full w-full max-w-sm lg:w-1/2" />
@@ -302,6 +304,17 @@ export default function Page() {
           etapa="Sólo etapa z chaty Cementár do Púchova"
           film="Leon"
         />
+        <Nadpis>Historický rebríček – počet účastí na TdO:</Nadpis>
+        <Odsek>
+          <ul>
+            <li>12 – Paľo, Ľuboš B.</li>
+            <li>11 – Mišo, Juro</li>
+            <li>10 – Marcel</li>
+            <li>8 – Peťo, Ľuboš K.</li>
+            <li>3 – Boris</li>
+            <li>2 – Miro</li>
+          </ul>
+        </Odsek>
       </Clanok>
     </>
   );

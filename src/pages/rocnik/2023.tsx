@@ -22,7 +22,7 @@ export default function Page() {
       <Clanok>
         <Nadpis prvy>0-tá etapa – 139 km</Nadpis>
         <Galeria>
-          <ObrazokGalerie img={ImgProlog} alt="0-tá etapa – 139 km" className="mt-3 mb-5 w-full" />
+          <ObrazokGalerie img={ImgProlog} alt="0-tá etapa – 139 km" className="mb-5 mt-3 w-full" />
         </Galeria>
         <Odsek>
           Ľuboš B. a Marcel opäť neporušili tradíciu a TdO začali 0-tou etapou. Ľuboš vyrazil na bicykli už z Nitry, Marcel sa rozhodol trochu pošetriť chrbát a odviezol sa vlakom do Leopoldova,
@@ -32,7 +32,7 @@ export default function Page() {
         </Odsek>
         <Nadpis>1 - etapa – 63 km</Nadpis>
         <Galeria>
-          <ObrazokGalerie img={Img1Etapa} alt="1 - etapa – 63 km" className="mt-3 mb-5 w-full" />
+          <ObrazokGalerie img={Img1Etapa} alt="1 - etapa – 63 km" className="mb-5 mt-3 w-full" />
         </Galeria>
         <Odsek>
           Etapu absolvoval kompletný pelotón TdO 2023, t.j. Ľuboša s Marcelom doplnili Paľo, Juro a Mišo. Športový riaditeľ Marcel zakomponoval do trasy niekoľko cyklotrás v rôznom teréne, miestami to
@@ -47,7 +47,7 @@ export default function Page() {
         </Odsek>
         <Nadpis>2 – kráľovská etapa – 88 km</Nadpis>
         <Galeria>
-          <ObrazokGalerie img={ImgKralovska} alt="2 – kráľovská etapa – 88 km" className="mt-3 mb-5 w-full" />
+          <ObrazokGalerie img={ImgKralovska} alt="2 – kráľovská etapa – 88 km" className="mb-5 mt-3 w-full" />
         </Galeria>
         <Odsek>
           Paľo ukázal, že je veľký bojovník a preto nastúpil na kráľovskú etapu aj napriek zraneniu. Po niečo vyše 20 km však usúdil, že nemá zmysel ísť cez bolesť a rozhodol sa nepokračovať v etape a
@@ -58,7 +58,7 @@ export default function Page() {
         </Odsek>
         <Nadpis>Epilóg – 142 km</Nadpis>
         <Galeria>
-          <ObrazokGalerie img={ImgEpilog} alt="Epilóg – 142 km" className="mt-3 mb-5 w-full" />
+          <ObrazokGalerie img={ImgEpilog} alt="Epilóg – 142 km" className="mb-5 mt-3 w-full" />
         </Galeria>
         <Odsek>
           Ľuboš a Marcel sa napriek ponukám na odvoz rozhodli vrátiť do Nitry na bicykli. Záhorácke stúpania absolvovali v miernom tempe. Teda okrem toho posledného. Marcel sa totiž rozhodol stúpanie
@@ -66,17 +66,6 @@ export default function Page() {
           najťažším kopcom v itinerári TdO za posledné roky. Toto stúpanie absolvovali bok po boku a v Dobrej Vode sa osviežili na kúpalisku. Osviežení pokračovali do druhej polovice etapy. Mali za
           sebou síce už väčšinu stúpaní, ale zato ich čakala vysoká horúčava. Na železnom železničnom moste v Hlohovci si vychutnali výhľad na Váh a prejazd vlaku aj s poriadnym rámusom. Za mostom ich
           čakalo ešte pár relatívne kratších stúpaní a potom príjazd do Nitry cyklocestou popri rieke.
-        </Odsek>
-        <Nadpis>Historický rebríček – počet účastí na TdO:</Nadpis>
-        <Odsek>
-          <ul>
-            <li>12 – Paľo, Ľuboš B.</li>
-            <li>11 – Mišo, Juro</li>
-            <li>10 – Marcel</li>
-            <li>8 – Peťo, Ľuboš K.</li>
-            <li>3 – Boris</li>
-            <li>2 – Miro</li>
-          </ul>
         </Odsek>
       </Clanok>
     </>

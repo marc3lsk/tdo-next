@@ -78,7 +78,7 @@ import _IMG20238 from "../../public/pozadia/2023/8.jpg";
 import _IMG20239 from "../../public/pozadia/2023/9.jpg";
 import _IMG202310 from "../../public/pozadia/2023/10.jpg";
 
-const bgArray = [
+const arrayOfBackgrounds = [
   _3den2013_1.src,
   _3den2013_2.src,
   _5den2013.src,
@@ -155,7 +155,7 @@ const bgArray = [
   _IMG202310.src,
 ];
 
-const url = `https://www.randomnumberapi.com/api/v1.0/random?min=0&max=1000000&count=${bgArray.length}`;
+const url = `https://www.random.org/integers/?num=${arrayOfBackgrounds.length}&min=0&max=1000000000&col=1&base=10&format=plain&rnd=new`;
 
 const UL = styled.ul`
   &,
@@ -218,16 +218,35 @@ export default function PozadiaUvodnejStranky() {
   const spanIndex = useRef(0);
   const bgIndex = useRef(0);
   const initDone = useRef(false);
-  const { data: randomArray, error } = useSWR(url, () => fetch(url).then((res) => res.json()));
+  useSWR(url, {
+    revalidateOnFocus: false,
+    revalidateOnMount: false,
+    revalidateOnReconnect: false,
+    refreshWhenOffline: false,
+    refreshWhenHidden: false,
+    refreshInterval: 0,
+  });
+  const { data: linesOfRandomNumbers, error } = useSWR(url, () => fetch(url).then((res) => res.text()));
 
-  const randomizedBgArray = useMemo(
+  const arrayOfRandomNumbers = useMemo(
     () =>
-      Array.isArray(randomArray)
-        ? zip(bgArray, randomArray)
-            .sort((a, b) => a[1] - b[1])
+      linesOfRandomNumbers
+        ? linesOfRandomNumbers
+            .split(/\r?\n/)
+            .map((x) => parseInt(x))
+            .filter((x) => !isNaN(x))
+        : null,
+    [linesOfRandomNumbers],
+  );
+
+  const arrayOfRandomizedBackgrounds = useMemo(
+    () =>
+      arrayOfRandomNumbers
+        ? zip(arrayOfBackgrounds, arrayOfRandomNumbers)
+            .sort((a, b) => a[1]! - b[1]!)
             .map((x) => x[0])
         : null,
-    [randomArray],
+    [arrayOfRandomNumbers],
   );
 
   useEffect(
@@ -241,18 +260,18 @@ export default function PozadiaUvodnejStranky() {
   );
 
   const ulRef = useCallback(() => {
-    if (!Array.isArray(randomizedBgArray)) return;
+    if (!Array.isArray(arrayOfRandomizedBackgrounds)) return;
     if (initDone.current) return;
     initDone.current = true;
 
     const nastavitPozadie = (init) => {
       const pozadia = document.querySelectorAll(`.pozadia li span`) as any as any[];
       if (pozadia?.length != 6) return;
-      pozadia[spanIndex.current++].style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${randomizedBgArray[bgIndex.current++]})`;
+      pozadia[spanIndex.current++].style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${arrayOfRandomizedBackgrounds[bgIndex.current++]})`;
 
       if (spanIndex.current == 6) spanIndex.current = 0;
 
-      if (bgIndex.current == bgArray.length) bgIndex.current = 0;
+      if (bgIndex.current == arrayOfBackgrounds.length) bgIndex.current = 0;
 
       if (init) return;
 
@@ -261,11 +280,11 @@ export default function PozadiaUvodnejStranky() {
 
     nastavitPozadie(true);
     nastavitPozadie(false);
-  }, [randomizedBgArray]);
+  }, [arrayOfRandomizedBackgrounds]);
 
   return (
     <>
-      {Array.isArray(randomizedBgArray) ? (
+      {Array.isArray(arrayOfRandomizedBackgrounds) ? (
         <UL ref={ulRef} className="pozadia">
           {new Array(6).fill(0).map((_, i) => (
             <li key={i}>

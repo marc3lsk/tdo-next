@@ -142,6 +142,7 @@ export default function Page() {
             { rok: 2021, kg: 71 },
             { rok: 2022, kg: 72 },
             { rok: 2023, kg: 73 },
+            { rok: 2024, kg: 75 },
           ]}
           jedlo="Hamburgery na grile"
           oblubenec="Ing. Juraj Bernát (netreba za ním šlapať)"
@@ -183,6 +184,7 @@ export default function Page() {
             { rok: 2021, kg: 93 },
             { rok: 2022, kg: 94 },
             { rok: 2023, kg: 94 },
+            { rok: 2024, kg: 94 },
           ]}
           jedlo="Sushi"
           oblubenec="Pavol Lobb"
@@ -206,6 +208,7 @@ export default function Page() {
             { rok: 2021, kg: 89 },
             { rok: 2022, kg: 91 },
             { rok: 2023, kg: 91 },
+            { rok: 2024, kg: 92 },
           ]}
           jedlo="Kurací perkelt"
           oblubenec="Juraj Bernát - jednoznačne najlepší zjazdár"
@@ -214,7 +217,7 @@ export default function Page() {
         />
         <Jazdec
           foto={LubosK}
-          meno="Ľuboš L."
+          meno="Ľuboš K."
           popis="Jeden z najlepších domestikov súčasnosti."
           vyska={195}
           vaha={[
@@ -224,6 +227,7 @@ export default function Page() {
             { rok: 2020, kg: 72 },
             { rok: 2021, kg: 72 },
             { rok: 2022, kg: 72 },
+            { rok: 2024, kg: 74 },
           ]}
           jedlo="Špagety"
           oblubenec="Baláži s jeho bosými nohami"
@@ -246,6 +250,7 @@ export default function Page() {
             { rok: 2021, kg: 78 },
             { rok: 2022, kg: 78 },
             { rok: 2023, kg: 78 },
+            { rok: 2024, kg: 77 },
           ]}
           jedlo="Zapekané zemiaky so syrom a zeleninou"
           oblubenec="Pavol a jeho elegancia na bicykli"
@@ -269,6 +274,7 @@ export default function Page() {
             { rok: 2021, kg: 76 },
             { rok: 2022, kg: 74 },
             { rok: 2023, kg: 74 },
+            { rok: 2024, kg: 75 },
           ]}
           jedlo="Nemám"
           oblubenec="Zbožňujem rovnako všetkých"
@@ -307,10 +313,11 @@ export default function Page() {
         <Nadpis>Historický rebríček – počet účastí na TdO:</Nadpis>
         <Odsek>
           <ul>
-            <li>12 – Paľo, Ľuboš B.</li>
-            <li>11 – Mišo, Juro</li>
-            <li>10 – Marcel</li>
-            <li>8 – Peťo, Ľuboš K.</li>
+            <li>13 – Paľo, Ľuboš B.</li>
+            <li>12 – Mišo, Juro</li>
+            <li>11 – Marcel</li>
+            <li>9 – Ľuboš K.</li>
+            <li>8 – Peťo</li>
             <li>3 – Boris</li>
             <li>2 – Miro</li>
           </ul>

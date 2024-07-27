@@ -77,6 +77,16 @@ import _IMG20237 from "../../public/pozadia/2023/7.jpg";
 import _IMG20238 from "../../public/pozadia/2023/8.jpg";
 import _IMG20239 from "../../public/pozadia/2023/9.jpg";
 import _IMG202310 from "../../public/pozadia/2023/10.jpg";
+import _IMG20242 from "../../public/pozadia/2024/2.jpg";
+import _IMG20243 from "../../public/pozadia/2024/3.jpg";
+import _IMG20244 from "../../public/pozadia/2024/4.jpg";
+import _IMG20245 from "../../public/pozadia/2024/5.jpg";
+import _IMG20246 from "../../public/pozadia/2024/6.jpg";
+import _IMG20247 from "../../public/pozadia/2024/7.jpg";
+import _IMG20248 from "../../public/pozadia/2024/8.jpg";
+import _IMG20249 from "../../public/pozadia/2024/9.jpg";
+import _IMG202410 from "../../public/pozadia/2024/10.jpg";
+import _IMG202411 from "../../public/pozadia/2024/11.jpg";
 
 const arrayOfBackgrounds = [
   _3den2013_1.src,
@@ -153,6 +163,16 @@ const arrayOfBackgrounds = [
   _IMG20237.src,
   _IMG20239.src,
   _IMG202310.src,
+  _IMG20242.src,
+  _IMG20243.src,
+  _IMG20244.src,
+  _IMG20245.src,
+  _IMG20246.src,
+  _IMG20247.src,
+  _IMG20248.src,
+  _IMG20249.src,
+  _IMG202410.src,
+  _IMG202411.src,
 ];
 
 const url = `https://www.random.org/integers/?num=${arrayOfBackgrounds.length}&min=0&max=1000000000&col=1&base=10&format=plain&rnd=new`;

@@ -143,6 +143,7 @@ export default function Page() {
             { rok: 2022, kg: 72 },
             { rok: 2023, kg: 73 },
             { rok: 2024, kg: 75 },
+            { rok: 2025, kg: 75 },
           ]}
           jedlo="Hamburgery na grile"
           oblubenec="Ing. Juraj Bernát (netreba za ním šlapať)"
@@ -185,6 +186,7 @@ export default function Page() {
             { rok: 2022, kg: 94 },
             { rok: 2023, kg: 94 },
             { rok: 2024, kg: 94 },
+            { rok: 2025, kg: 92 },
           ]}
           jedlo="Sushi"
           oblubenec="Pavol Lobb"
@@ -209,6 +211,7 @@ export default function Page() {
             { rok: 2022, kg: 91 },
             { rok: 2023, kg: 91 },
             { rok: 2024, kg: 92 },
+            { rok: 2025, kg: 93 },
           ]}
           jedlo="Kurací perkelt"
           oblubenec="Juraj Bernát - jednoznačne najlepší zjazdár"
@@ -228,6 +231,7 @@ export default function Page() {
             { rok: 2021, kg: 72 },
             { rok: 2022, kg: 72 },
             { rok: 2024, kg: 74 },
+            { rok: 2025, kg: 73 },
           ]}
           jedlo="Špagety"
           oblubenec="Baláži s jeho bosými nohami"
@@ -251,6 +255,7 @@ export default function Page() {
             { rok: 2022, kg: 78 },
             { rok: 2023, kg: 78 },
             { rok: 2024, kg: 77 },
+            { rok: 2025, kg: 79 },
           ]}
           jedlo="Zapekané zemiaky so syrom a zeleninou"
           oblubenec="Pavol a jeho elegancia na bicykli"
@@ -275,6 +280,7 @@ export default function Page() {
             { rok: 2022, kg: 74 },
             { rok: 2023, kg: 74 },
             { rok: 2024, kg: 75 },
+            { rok: 2025, kg: 74 },
           ]}
           jedlo="Nemám"
           oblubenec="Zbožňujem rovnako všetkých"
@@ -313,10 +319,10 @@ export default function Page() {
         <Nadpis>Historický rebríček – počet účastí na TdO:</Nadpis>
         <Odsek>
           <ul>
-            <li>13 – Paľo, Ľuboš B.</li>
-            <li>12 – Mišo, Juro</li>
-            <li>11 – Marcel</li>
-            <li>9 – Ľuboš K.</li>
+            <li>14 – Paľo, Ľuboš B.</li>
+            <li>13 – Mišo, Juro</li>
+            <li>12 – Marcel</li>
+            <li>10 – Ľuboš K.</li>
             <li>8 – Peťo</li>
             <li>3 – Boris</li>
             <li>2 – Miro</li>

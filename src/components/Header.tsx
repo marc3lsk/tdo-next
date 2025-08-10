@@ -6,7 +6,7 @@ import { Fragment, useEffect, useState } from "react";
 import Logo from "../../public/logo2.svg";
 import useResponsiveBreakpoints from "../hooks/useResponsiveBreakpoints";
 
-const Rocniky = [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012].reverse();
+const Rocniky = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012].reverse();
 
 function HeaderLink({ url, text }) {
   return (
@@ -21,12 +21,12 @@ function HeaderLink({ url, text }) {
 function MenuItems() {
   return (
     <div className="">
-      <nav className="flex-wrap justify-center space-y-3  px-5 pt-4 pb-0 lg:flex lg:space-y-0 lg:space-x-8 lg:px-0">
+      <nav className="flex-wrap justify-center space-y-3  px-5 pb-0 pt-4 lg:flex lg:space-x-8 lg:space-y-0 lg:px-0">
         <HeaderLink url="/o-tour" text="TDO" />
         <HeaderLink url="/jazdci" text="Jazdci" />
         <HeaderLink url="/galeria" text="Galéria" />
       </nav>
-      <nav className="flex-wrap justify-center pt-4 pb-0 lg:flex lg:space-x-8">
+      <nav className="flex-wrap justify-center pb-0 pt-4 lg:flex lg:space-x-8">
         {Rocniky.map((rocnik, i) => (
           <Fragment key={rocnik}>
             <HeaderLink url={`/rocnik/${rocnik}`} text={rocnik} />

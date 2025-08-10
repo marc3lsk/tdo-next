@@ -87,6 +87,12 @@ import _IMG20248 from "../../public/pozadia/2024/8.jpg";
 import _IMG20249 from "../../public/pozadia/2024/9.jpg";
 import _IMG202410 from "../../public/pozadia/2024/10.jpg";
 import _IMG202411 from "../../public/pozadia/2024/11.jpg";
+import _IMG20251 from "../../public/pozadia/2025/1.jpg";
+import _IMG20252 from "../../public/pozadia/2025/2.jpg";
+import _IMG20253 from "../../public/pozadia/2025/3.jpg";
+import _IMG20254 from "../../public/pozadia/2025/4.jpg";
+import _IMG20255 from "../../public/pozadia/2025/5.jpg";
+import _IMG20256 from "../../public/pozadia/2025/6.jpg";
 
 const arrayOfBackgrounds = [
   _3den2013_1.src,
@@ -173,6 +179,12 @@ const arrayOfBackgrounds = [
   _IMG20249.src,
   _IMG202410.src,
   _IMG202411.src,
+  _IMG20251.src,
+  _IMG20252.src,
+  _IMG20253.src,
+  _IMG20254.src,
+  _IMG20255.src,
+  _IMG20256.src,
 ];
 
 const url = `https://www.random.org/integers/?num=${arrayOfBackgrounds.length}&min=0&max=1000000000&col=1&base=10&format=plain&rnd=new`;

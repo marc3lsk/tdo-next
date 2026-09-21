@@ -81,9 +81,9 @@ class GrafHmotnost extends Component<{ vaha }, { series: any; options: any }> {
 
 const Jazdec = ({ foto, meno, popis, vyska, vaha, jedlo, oblubenec, etapa, film }) => (
   <div className="mb-16">
-    <p className="mt-5">
+    <div className="mt-5">
       <h2 className="text-2xl font-bold">{meno} </h2>
-    </p>
+    </div>
     <Odsek>{popis}</Odsek>
     <div className="mt-5 lg:flex lg:space-x-5">
       <Galeria>
@@ -94,10 +94,10 @@ const Jazdec = ({ foto, meno, popis, vyska, vaha, jedlo, oblubenec, etapa, film 
           <span className="font-bold">Výška: </span>
           {vyska} cm
         </p>
-        <p className="mt-3">
+        <div className="mt-3">
           <span className="font-bold">Hmotnosť v KG: </span>
           <GrafHmotnost vaha={vaha} />
-        </p>
+        </div>
       </div>
     </div>
     <p className="lg:mt-5">
@@ -317,7 +317,7 @@ export default function Page() {
           film="Leon"
         />
         <Nadpis>Historický rebríček – počet účastí na TdO:</Nadpis>
-        <Odsek>
+        <div className="mt-3">
           <ul>
             <li>14 – Paľo, Ľuboš B.</li>
             <li>13 – Mišo, Juro</li>
@@ -327,7 +327,7 @@ export default function Page() {
             <li>3 – Boris</li>
             <li>2 – Miro</li>
           </ul>
-        </Odsek>
+        </div>
       </Clanok>
     </>
   );

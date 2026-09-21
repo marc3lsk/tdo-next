@@ -11,8 +11,8 @@ const Rocniky = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 201
 function HeaderLink({ url, text }) {
   return (
     <div className="block lg:inline-block">
-      <Link href={url}>
-        <a className="whitespace-nowrap text-xl uppercase">{text}</a>
+      <Link href={url} className="whitespace-nowrap text-xl uppercase">
+        {text}
       </Link>
     </div>
   );
@@ -43,17 +43,17 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    setIsMenuOpen(false);
-  }, [router.asPath]);
+    const zavrietMenu = () => setIsMenuOpen(false);
+    router.events.on("routeChangeComplete", zavrietMenu);
+    return () => router.events.off("routeChangeComplete", zavrietMenu);
+  }, [router.events]);
 
   return (
     <>
       <header className="relative mx-auto block text-center text-white">
         <div className="flex content-center">
-          <Link href="/">
-            <a className="mx-auto flex self-center">
-              <Logo />
-            </a>
+          <Link href="/" className="mx-auto flex self-center">
+            <Logo />
           </Link>
         </div>
         {responsiveBreakPoints.isLg ? (

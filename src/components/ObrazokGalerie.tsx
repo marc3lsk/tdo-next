@@ -39,7 +39,7 @@ export default function ObrazokGalerie(obrazok: ObrazokGalerieProps) {
           style={{ ...imgStyle, ...obrazok.style }}
           src={thumb?.src ?? img.src}
           alt={alt}
-          ref={ref as React.MutableRefObject<HTMLImageElement>}
+          ref={ref}
           onClick={open}
           {...obrazokAttrs}
         />

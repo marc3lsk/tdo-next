@@ -80,7 +80,7 @@ import { StaticImageData } from "next/image";
 const NadpisRocnik = ({ children }) => <h1 className="my-8 text-center text-4xl text-white sm:my-16">{children}</h1>;
 
 const Obrazok = ({ img, thumb, alt }: { img: StaticImageData; thumb: StaticImageData; alt: string }) => (
-  <ObrazokGalerie img={img} thumb={thumb} alt={alt} className="inline-block !w-auto object-contain p-2 sm:h-96" />
+  <ObrazokGalerie img={img} thumb={thumb} alt={alt} className="inline-block w-auto! object-contain p-2 sm:h-96" />
 );
 
 export default function Page() {

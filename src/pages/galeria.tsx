@@ -1,4 +1,16 @@
 import Head from "next/head";
+import Img2026_1_small from "../../public/galeria/2026/1small.jpg";
+import Img2026_1 from "../../public/galeria/2026/1.jpg";
+import Img2026_2_small from "../../public/galeria/2026/2small.jpg";
+import Img2026_2 from "../../public/galeria/2026/2.jpg";
+import Img2026_3_small from "../../public/galeria/2026/3small.jpg";
+import Img2026_3 from "../../public/galeria/2026/3.jpg";
+import Img2026_4_small from "../../public/galeria/2026/4small.jpg";
+import Img2026_4 from "../../public/galeria/2026/4.jpg";
+import Img2026_5_small from "../../public/galeria/2026/5small.jpg";
+import Img2026_5 from "../../public/galeria/2026/5.jpg";
+import Img2026_6_small from "../../public/galeria/2026/6small.jpg";
+import Img2026_6 from "../../public/galeria/2026/6.jpg";
 import Img2025_1_small from "../../public/galeria/2025/1small.jpg";
 import Img2025_1 from "../../public/galeria/2025/1.jpg";
 import Img2025_2_small from "../../public/galeria/2025/2small.jpg";
@@ -90,6 +102,15 @@ export default function Page() {
         <title>Galéria - Tour de Orava</title>
       </Head>
       <div className="mb-16 text-center">
+        <NadpisRocnik>2026</NadpisRocnik>
+        <Galeria>
+          <Obrazok img={Img2026_1} thumb={Img2026_1_small} alt="2026 - 1" />
+          <Obrazok img={Img2026_2} thumb={Img2026_2_small} alt="2026 - 2" />
+          <Obrazok img={Img2026_3} thumb={Img2026_3_small} alt="2026 - 3" />
+          <Obrazok img={Img2026_4} thumb={Img2026_4_small} alt="2026 - 4" />
+          <Obrazok img={Img2026_5} thumb={Img2026_5_small} alt="2026 - 5" />
+          <Obrazok img={Img2026_6} thumb={Img2026_6_small} alt="2026 - 6" />
+        </Galeria>
         <NadpisRocnik>2025</NadpisRocnik>
         <Galeria>
           <Obrazok img={Img2025_1} thumb={Img2025_1_small} alt="2024 - 1" />

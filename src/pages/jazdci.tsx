@@ -75,7 +75,7 @@ class GrafHmotnost extends Component<{ vaha }, { series: any; options: any }> {
   }
 
   render() {
-    return <ReactApexChart options={this.state.options} series={this.state.series} type="line" height={250} />;
+    return <ReactApexChart options={this.state.options} series={this.state.series} type="line" height={300} />;
   }
 }
 
@@ -87,9 +87,9 @@ const Jazdec = ({ foto, meno, popis, vyska, vaha, jedlo, oblubenec, etapa, film 
     <Odsek>{popis}</Odsek>
     <div className="mt-5 lg:flex lg:space-x-5">
       <Galeria>
-        <ObrazokGalerie img={foto} alt={meno} className="h-full w-full max-w-sm lg:w-1/2" />
+        <ObrazokGalerie img={foto} alt={meno} className="h-full w-full max-w-sm lg:w-1/3" />
       </Galeria>
-      <div className="mt-5 lg:mt-0 lg:w-1/2">
+      <div className="mt-5 lg:mt-0 lg:flex-1">
         <p className="mt-0">
           <span className="font-bold">Výška: </span>
           {vyska} cm
@@ -125,7 +125,7 @@ export default function Page() {
       <Head>
         <title>Jazdci - Tour de Orava</title>
       </Head>
-      <Clanok>
+      <Clanok className="max-w-5xl">
         <h1 className="mb-5 text-center text-3xl font-bold">Chlastana Pro Team</h1>
         <Jazdec
           foto={MichalS}
@@ -144,6 +144,7 @@ export default function Page() {
             { rok: 2023, kg: 73 },
             { rok: 2024, kg: 75 },
             { rok: 2025, kg: 75 },
+            { rok: 2026, kg: 75 },
           ]}
           jedlo="Hamburgery na grile"
           oblubenec="Ing. Juraj Bernát (netreba za ním šlapať)"
@@ -187,6 +188,7 @@ export default function Page() {
             { rok: 2023, kg: 94 },
             { rok: 2024, kg: 94 },
             { rok: 2025, kg: 92 },
+            { rok: 2026, kg: 92 },
           ]}
           jedlo="Sushi"
           oblubenec="Pavol Lobb"
@@ -212,6 +214,7 @@ export default function Page() {
             { rok: 2023, kg: 91 },
             { rok: 2024, kg: 92 },
             { rok: 2025, kg: 93 },
+            { rok: 2026, kg: 93 },
           ]}
           jedlo="Kurací perkelt"
           oblubenec="Juraj Bernát - jednoznačne najlepší zjazdár"
@@ -232,6 +235,7 @@ export default function Page() {
             { rok: 2022, kg: 72 },
             { rok: 2024, kg: 74 },
             { rok: 2025, kg: 73 },
+            { rok: 2026, kg: 73 },
           ]}
           jedlo="Špagety"
           oblubenec="Baláži s jeho bosými nohami"
@@ -256,6 +260,7 @@ export default function Page() {
             { rok: 2023, kg: 78 },
             { rok: 2024, kg: 77 },
             { rok: 2025, kg: 79 },
+            { rok: 2026, kg: 79 },
           ]}
           jedlo="Zapekané zemiaky so syrom a zeleninou"
           oblubenec="Pavol a jeho elegancia na bicykli"
@@ -281,6 +286,7 @@ export default function Page() {
             { rok: 2023, kg: 74 },
             { rok: 2024, kg: 75 },
             { rok: 2025, kg: 74 },
+            { rok: 2026, kg: 74 },
           ]}
           jedlo="Nemám"
           oblubenec="Zbožňujem rovnako všetkých"
@@ -319,13 +325,19 @@ export default function Page() {
         <Nadpis>Historický rebríček – počet účastí na TdO:</Nadpis>
         <div className="mt-3">
           <ul>
-            <li>14 – Paľo, Ľuboš B.</li>
-            <li>13 – Mišo, Juro</li>
-            <li>12 – Marcel</li>
-            <li>10 – Ľuboš K.</li>
+            <li>15 – Ľuboš B.</li>
+            <li>14 – Paľo, Mišo, Juro</li>
+            <li>13 – Marcel</li>
+            <li>11 – Ľuboš K.</li>
             <li>8 – Peťo</li>
             <li>3 – Boris</li>
             <li>2 – Miro</li>
+          </ul>
+        </div>
+        <Nadpis>Najviac najazdených kilometrov za jeden deň:</Nadpis>
+        <div className="mt-3">
+          <ul>
+            <li>Marcel – 169 km – 0. etapa 2025</li>
           </ul>
         </div>
       </Clanok>

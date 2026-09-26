@@ -1,6 +1,4 @@
-import { zip } from "lodash-es";
-import { useCallback, useEffect, useMemo, useRef } from "react";
-import useSWR from "swr";
+import { useCallback, useEffect, useRef } from "react";
 import styled from "styled-components";
 import _3den2013_1 from "../../public/pozadia/2013/3den2013_1.jpg";
 import _3den2013_2 from "../../public/pozadia/2013/3den2013_2.jpg";
@@ -93,6 +91,15 @@ import _IMG20253 from "../../public/pozadia/2025/3.jpg";
 import _IMG20254 from "../../public/pozadia/2025/4.jpg";
 import _IMG20255 from "../../public/pozadia/2025/5.jpg";
 import _IMG20256 from "../../public/pozadia/2025/6.jpg";
+import _IMG20261 from "../../public/pozadia/2026/1.jpg";
+import _IMG20262 from "../../public/pozadia/2026/2.jpg";
+import _IMG20263 from "../../public/pozadia/2026/3.jpg";
+import _IMG20264 from "../../public/pozadia/2026/4.jpg";
+import _IMG20265 from "../../public/pozadia/2026/5.jpg";
+import _IMG20266 from "../../public/pozadia/2026/6.jpg";
+import _IMG20267 from "../../public/pozadia/2026/7.jpg";
+import _IMG20268 from "../../public/pozadia/2026/8.jpg";
+import _IMG20269 from "../../public/pozadia/2026/9.jpg";
 
 const arrayOfBackgrounds = [
   _3den2013_1.src,
@@ -185,9 +192,25 @@ const arrayOfBackgrounds = [
   _IMG20254.src,
   _IMG20255.src,
   _IMG20256.src,
+  _IMG20261.src,
+  _IMG20262.src,
+  _IMG20263.src,
+  _IMG20264.src,
+  _IMG20265.src,
+  _IMG20266.src,
+  _IMG20267.src,
+  _IMG20268.src,
+  _IMG20269.src,
 ];
 
-const url = `https://www.random.org/integers/?num=${arrayOfBackgrounds.length}&min=0&max=1000000000&col=1&base=10&format=plain&rnd=new`;
+function zamiesat<T>(pole: T[]): T[] {
+  const vysledok = [...pole];
+  for (let i = vysledok.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [vysledok[i], vysledok[j]] = [vysledok[j]!, vysledok[i]!];
+  }
+  return vysledok;
+}
 
 const UL = styled.ul`
   &,
@@ -250,37 +273,6 @@ export default function PozadiaUvodnejStranky() {
   const spanIndex = useRef(0);
   const bgIndex = useRef(0);
   const initDone = useRef(false);
-  useSWR(url, {
-    revalidateOnFocus: false,
-    revalidateOnMount: false,
-    revalidateOnReconnect: false,
-    refreshWhenOffline: false,
-    refreshWhenHidden: false,
-    refreshInterval: 0,
-  });
-  const { data: linesOfRandomNumbers, error } = useSWR(url, () => fetch(url).then((res) => res.text()));
-
-  const arrayOfRandomNumbers = useMemo(
-    () =>
-      linesOfRandomNumbers
-        ? linesOfRandomNumbers
-            .split(/\r?\n/)
-            .map((x) => parseInt(x))
-            .filter((x) => !isNaN(x))
-        : null,
-    [linesOfRandomNumbers],
-  );
-
-  const arrayOfRandomizedBackgrounds = useMemo(
-    () =>
-      arrayOfRandomNumbers
-        ? zip(arrayOfBackgrounds, arrayOfRandomNumbers)
-            .sort((a, b) => a[1]! - b[1]!)
-            .map((x) => x[0])
-        : null,
-    [arrayOfRandomNumbers],
-  );
-
   useEffect(
     () => () => {
       clearTimeout(timeout.current);
@@ -292,9 +284,11 @@ export default function PozadiaUvodnejStranky() {
   );
 
   const ulRef = useCallback(() => {
-    if (!Array.isArray(arrayOfRandomizedBackgrounds)) return;
     if (initDone.current) return;
     initDone.current = true;
+
+    // ref callback beží len v prehliadači, takže poradie sa mieša pri každej návšteve
+    const arrayOfRandomizedBackgrounds = zamiesat(arrayOfBackgrounds);
 
     const nastavitPozadie = (init) => {
       const pozadia = document.querySelectorAll(`.pozadia li span`) as any as any[];
@@ -312,19 +306,15 @@ export default function PozadiaUvodnejStranky() {
 
     nastavitPozadie(true);
     nastavitPozadie(false);
-  }, [arrayOfRandomizedBackgrounds]);
+  }, []);
 
   return (
-    <>
-      {Array.isArray(arrayOfRandomizedBackgrounds) ? (
-        <UL ref={ulRef} className="pozadia">
-          {new Array(6).fill(0).map((_, i) => (
-            <li key={i}>
-              <span />
-            </li>
-          ))}
-        </UL>
-      ) : null}
-    </>
+    <UL ref={ulRef} className="pozadia">
+      {new Array(6).fill(0).map((_, i) => (
+        <li key={i}>
+          <span />
+        </li>
+      ))}
+    </UL>
   );
 }
